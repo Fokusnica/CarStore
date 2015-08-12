@@ -10,24 +10,28 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
-    # Here is an example of a simple dashboard with columns and panels.
-    #
-    # columns do
-    #   column do
-    #     panel "Recent Posts" do
-    #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
-    #         end
-    #       end
-    #     end
-    #   end
+ #   Here is an example of a simple dashboard with columns and panels.
 
-    #   column do
-    #     panel "Info" do
-    #       para "Welcome to ActiveAdmin."
-    #     end
-    #   end
-    # end
+    columns do
+      column do
+        panel "Последние зарегистрированные клиенты" do
+          ul do
+            User.all.map do |user|
+              li link_to(user.name, admin_user_path(user))
+            end
+          end
+        end
+      end
+
+      column do
+        panel "Последние добавленные модели" do
+          ul do
+            Product.all.map do |car|
+              li link_to(car.title, admin_product_path(car))
+            end
+          end
+        end
+      end
+    end
   end # content
 end
