@@ -34,7 +34,7 @@ ActiveAdmin.register User do
 
 
   form do |f|
-    f.inputs "Users" do
+    f.inputs "Пользователи" do
       f.input :name
       f.input :email
       f.input :password

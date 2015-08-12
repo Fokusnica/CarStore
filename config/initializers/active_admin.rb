@@ -1,14 +1,10 @@
 ActiveAdmin.setup do |config|
 
 
-  config.before_filter do
-    I18n.locale = 'en'
-  end
-
   config.namespace :admin do |admin|
     admin.build_menu do |menu|
-      menu.add label: 'Каталог', priority: 1
-      menu.add label: 'Клиенты', priority: 2
+      menu.add label: 'Каталог', priority: 2
+      menu.add label: 'Клиенты', priority: 3
     end
   end
 

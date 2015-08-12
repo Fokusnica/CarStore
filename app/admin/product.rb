@@ -31,13 +31,13 @@ ActiveAdmin.register Product do
   index do
     selectable_column
     id_column
-    column "Название", :title
-    column "Категория", :category
-    column "Цена", :price
-    column "Кол-во", :quantity
-    column "Производитель", :manufacturer
-    column "Год", :year
-    column "Наличие", :status
+    column :title
+    column :category
+    column :price
+    column :quantity
+    column :manufacturer
+    column :year
+    column :status
     actions
   end
 
@@ -47,7 +47,7 @@ ActiveAdmin.register Product do
   end
 
   form do |f|
-    f.inputs "Users" do
+    f.inputs "Товары" do
       f.input :title
       f.input :category
       f.input :description

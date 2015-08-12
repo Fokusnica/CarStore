@@ -13,7 +13,6 @@ ActiveAdmin.register Provider do
 #   permitted
 # end
   menu parent: "Каталог"
-
   permit_params :name, :phone, :address, :description, :comment
 
 
@@ -22,7 +21,7 @@ ActiveAdmin.register Provider do
     id_column
     column :name
     column :phone
-    column :email
+
 
     actions
   end
@@ -34,7 +33,7 @@ ActiveAdmin.register Provider do
 
 
   form do |f|
-    f.inputs "Users" do
+    f.inputs "Поставщики" do
       f.input :name
       f.input :phone
       f.input :address

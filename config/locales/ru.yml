@@ -1,4 +1,58 @@
 ru:
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M:%S"
+  activerecord:
+    models:
+      provider:
+        one: "Поставщик"
+        other: 'Поставщики'
+      category:
+         one: "Категория"
+         other: 'Категории'
+      group_user:
+         one: "Группа клиентов"
+         other: 'Группы клиентов'
+      product:
+         one: "Товар"
+         other: 'Товары'
+      user:
+         one: "Клиент"
+         other: 'Клиенты'
+    attributes:
+      user:
+        email: "E-mail"
+        name: "Имя"
+        group_user: "Группа"
+        phone: "Телефон"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+      category:
+        name: "Название"
+        description: "Описание"
+      group_user:
+        title: "Название"
+        description: "Описание"
+      product:
+        title: "Наименование"
+        category: "Категория"
+        price: "Цена"
+        quantity: "Кол-во"
+        manufacturer: "Производитель"
+        year: "Год"
+        status: "Наличие"
+        description: "Описание"
+        img: "Изображение"
+        weight: "Вес"
+        height: "Высота"
+        width: "Ширина"
+        length: "Длина"
+      provider:
+        name: "Название"
+        phone: "Телефон"
+        address: "Адрес"
+        description: "Описание"
+        comment: "Комментарий"
   active_admin:
     dashboard: "Панель управления"
     dashboard_welcome:

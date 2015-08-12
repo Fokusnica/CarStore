@@ -32,7 +32,7 @@ ActiveAdmin.register GroupUser do
 
 
   form do |f|
-    f.inputs "Group Users" do
+    f.inputs "Группа Клиентов" do
       f.input :title
       f.input :description
     end
