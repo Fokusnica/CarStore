@@ -20,6 +20,10 @@ ru:
     has_many_new: "Добавить %{model}"
     has_many_delete: "Удалить"
     has_many_remove: "Убрать"
+    scopes:
+      all: "Все"
+      available: "В наличии"
+      not_avialable: "Отсутствует"
     filters:
       buttons:
         filter: "Фильтровать"

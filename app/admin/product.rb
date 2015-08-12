@@ -13,31 +13,43 @@ ActiveAdmin.register Product do
 #   permitted
 # end
 
+  menu parent: "Каталог"
 
   permit_params :title, :description, :img, :price, :quantity, :manufacturer,
-                :weight, :height, :width, :length, :year, :status
+                :weight, :height, :width, :length, :year, :status, :category_id
+
+  scope :all, :default => true
+
+  scope :available do |products|
+    products.where("status = 'true'")
+  end
+  scope :not_avialable do |products|
+    products.where("status = 'false'")
+  end
 
 
   index do
     selectable_column
     id_column
-    column :title
-    column :price
-    column :quantity
-    column :manufacturer
-    column :year
-    column :status
+    column "Название", :title
+    column "Категория", :category
+    column "Цена", :price
+    column "Кол-во", :quantity
+    column "Производитель", :manufacturer
+    column "Год", :year
+    column "Наличие", :status
     actions
   end
 
   show do
-    attributes_table :title, :description, :img, :price, :quantity, :manufacturer,
+    attributes_table :title, :category, :description, :img, :price, :quantity, :manufacturer,
                      :weight, :height, :width, :length, :year, :status
   end
 
   form do |f|
     f.inputs "Users" do
       f.input :title
+      f.input :category
       f.input :description
       f.input :img
       f.input :price

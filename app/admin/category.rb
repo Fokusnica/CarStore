@@ -1,4 +1,4 @@
-ActiveAdmin.register User do
+ActiveAdmin.register Category do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -12,35 +12,29 @@ ActiveAdmin.register User do
 #   permitted << :other if resource.something?
 #   permitted
 # end
-
-  menu parent: "Клиенты"
-  permit_params :email, :password, :password_confirmation, :name, :phone, :group_user_id
+  menu parent: "Каталог"
+  permit_params :name, :description
 
 
   index do
     selectable_column
     id_column
     column :name
-    column :group_user
-    column :email
-    column :phone
+    column :description
+
     actions
   end
 
 
   show do
-    attributes_table :name, :email, :phone, :group_user
+    attributes_table :name, :description
   end
 
 
   form do |f|
-    f.inputs "Users" do
+    f.inputs "Categories" do
       f.input :name
-      f.input :email
-      f.input :password
-      f.input :password_confirmation
-      f.input :phone
-      f.input :group_user
+      f.input :description
     end
     f.actions
   end
