@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812102747) do
+ActiveRecord::Schema.define(version: 20150812132536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,21 @@ ActiveRecord::Schema.define(version: 20150812102747) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "parent_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "group_users", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -64,6 +79,29 @@ ActiveRecord::Schema.define(version: 20150812102747) do
     t.boolean  "status"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "category_id"
+  end
+
+  add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
+
+  create_table "products_providers", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "provider_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "products_providers", ["product_id"], name: "index_products_providers_on_product_id", using: :btree
+  add_index "products_providers", ["provider_id"], name: "index_products_providers_on_provider_id", using: :btree
+
+  create_table "providers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.text     "address"
+    t.text     "description"
+    t.text     "comment"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -84,9 +122,16 @@ ActiveRecord::Schema.define(version: 20150812102747) do
     t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "group_user_id"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["group_user_id"], name: "index_users_on_group_user_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "products", "categories"
+  add_foreign_key "products_providers", "products"
+  add_foreign_key "products_providers", "providers"
+  add_foreign_key "users", "group_users"
 end

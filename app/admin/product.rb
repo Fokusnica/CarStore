@@ -30,12 +30,10 @@ ActiveAdmin.register Product do
     actions
   end
 
-
   show do
     attributes_table :title, :description, :img, :price, :quantity, :manufacturer,
                      :weight, :height, :width, :length, :year, :status
   end
-
 
   form do |f|
     f.inputs "Users" do
