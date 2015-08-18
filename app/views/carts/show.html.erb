@@ -1,0 +1,69 @@
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+
+<div id="columns" class="container">
+
+  <div id="center_column" class="center_column col-xs-12 col-sm-12">
+    <h1 id="cart_title" class="page-heading">Оформление заказа
+			<span class="heading-counter">Товаров в Вашей корзине:
+			<span id="summary_products_quantity"><%= @cart.line_items.count%></span>
+		</span>
+    </h1>
+
+    <table class="table table-bordered stock-management-on" id="cart_summary">
+      <thead>
+      <tr>
+        <th class="cart_product first_item">Товар</th>
+        <th class="cart_description item">Описание</th>
+        <th class="cart_avail item">Наличие</th>
+        <th class="cart_unit item">Цена</th>
+        <th class="cart_quantity item">Кол-во</th>
+        <th class="cart_delete last_item">&nbsp;</th>
+        <th class="cart_total item">Сумма</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @cart.line_items.each do |item| %>
+          <tr>
+
+
+            <td><%= image_tag('0.jpg', size: "130x98") %></td>
+            <td><p class="product-name"><%= item.product.title%></p><small class="cart_ref"><%= item.product.description %></td></small>
+            <td><%= item.product.status ? "В наличии" : "Не в наличии" %></td>
+            <td><span class="price"><%= item.product.price %></span></td>
+            <td><%= item.quantity %></td>
+            <td>
+              <div><i class="icon-trash"></i></div>
+            </td>
+            <td><span class="price"><%= @cart.total_of_product(item.product.id) %></span></td>
+          </tr>
+      <% end %>
+
+      </tbody>
+      <tfoot>
+      <tr class="cart_total_price">
+        <td rowspan="3" colspan="2" id="cart_voucher" class="cart_voucher">
+        </td>
+        <td colspan="3" class="text-right">Общая цена за товар</td>
+        <td colspan="2" class="price" id="total_product"><%= @cart.total_summ %></td>
+      </tr>
+      <tr class="cart_total_delivery">
+        <td colspan="3" class="text-right">Доставка</td>
+        <td colspan="2" class="price" id="total_shipping">Пока нашару..</td>
+      </tr>
+      <tr class="cart_total_price">
+        <td colspan="3" class="total_price_container text-right">
+          <span>Всего</span>
+        </td>
+        <td colspan="2" class="price" id="total_price_container">
+          <span><%= @cart.total_summ %></span>
+        </td>
+      </tr>
+      </tfoot>
+
+    </table>
+
+  </div>
+</div>
