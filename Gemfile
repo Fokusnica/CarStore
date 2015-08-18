@@ -7,6 +7,8 @@ gem 'rails', '4.2.3'
 gem 'pg'
 gem 'activeadmin', github: 'activeadmin'
 
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
 gem 'rails_12factor'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
