@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 get 'categories', to: 'category#index'
   resources :line_items
   resources :carts
+  resources :myaccount
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'welcome#index'
