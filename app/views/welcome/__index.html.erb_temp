@@ -1,0 +1,87 @@
+<br>
+<br>
+<!-- Page Content -->
+<div class="container">
+
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <%= image_tag('0.jpg') %>
+        <div class="carousel-caption">
+          ...
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag('0.jpg') %>
+        <div class="carousel-caption">
+          ...
+        </div>
+      </div>
+      ...
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <hr>
+
+  <!-- Title -->
+  <div class="row">
+    <div class="col-lg-12">
+      <h3>Latest Features</h3>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <!-- Page Features -->
+  <div class="row text-center">
+        <% @products.each do |product|  %>
+
+    <div class="col-md-3 col-sm-6 hero-feature">
+      <div class="thumbnail">
+        <%= image_tag('0.jpg', size: "800x500") %>
+        <div class="caption">
+          <h3><%= product.title %></h3>
+          <p><%= product.description %></p>
+          <p>
+            <%= button_to 'В корзину', line_items_path(product_id: product), {class: 'btn btn-primary'} %> <%= button_to 'Смотреть', line_items_path(product_id: product), {class: 'btn btn-primary'} %>
+          </p>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+
+  </div>
+  <!-- /.row -->
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Copyright &copy; Your Website 2014</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<!-- /.container -->
