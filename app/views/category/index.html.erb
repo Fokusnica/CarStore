@@ -1,0 +1,145 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="left-sidebar">
+          <h2>Категории</h2>
+          <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordian" href="#volkswagen">
+                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                    Volkswagen
+                  </a>
+                </h4>
+              </div>
+              <div id="volkswagen" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li><a href="#">Седан </a></li>
+                    <li><a href="#">Хечбек</a></li>
+                    <li><a href="#">Универсал</a></li>
+                    <li><a href="#">Купе</a></li>
+                    <li><a href="#">Минивен</a></li>
+                    <li><a href="#">Кабриолет</a></li>
+                    <li><a href="#">Пикап</a></li>
+                    <li><a href="#">Внедорожник</a></li>
+                    <li><a href="#">Кроссовер</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordian" href="#skoda">
+                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                    Škoda
+                  </a>
+                </h4>
+              </div>
+              <div id="skoda" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li><a href="#">Седан </a></li>
+                    <li><a href="#">Хечбек</a></li>
+                    <li><a href="#">Универсал</a></li>
+                    <li><a href="#">Купе</a></li>
+                    <li><a href="#">Минивен</a></li>
+                    <li><a href="#">Кабриолет</a></li>
+                    <li><a href="#">Пикап</a></li>
+                    <li><a href="#">Внедорожник</a></li>
+                    <li><a href="#">Кроссовер</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordian" href="#audi">
+                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                    Audi
+                  </a>
+                </h4>
+              </div>
+              <div id="audi" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <ul>
+                    <li><a href="#">Седан </a></li>
+                    <li><a href="#">Хечбек</a></li>
+                    <li><a href="#">Универсал</a></li>
+                    <li><a href="#">Купе</a></li>
+                    <li><a href="#">Минивен</a></li>
+                    <li><a href="#">Кабриолет</a></li>
+                    <li><a href="#">Пикап</a></li>
+                    <li><a href="#">Внедорожник</a></li>
+                    <li><a href="#">Кроссовер</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"><a href="#">Bentley</a></h4>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"><a href="#">Bugatti</a></h4>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"><a href="#">Lamborghini</a></h4>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title"><a href="#">Porsche</a></h4>
+              </div>
+            </div>
+
+          </div><!--/category-products-->
+        </div>
+      </div>
+
+      <div class="col-sm-9 padding-right">
+        <div class="features_items"><!--features_items-->
+          <h2 class="title text-center">Популярные модели </h2>
+          <% @products.each do |product|  %>
+              <div class="col-sm-4">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <%= image_tag(product.image.url, size: '255x210')%>
+                      <h2><%= product.price %></h2>
+                      <p><%= product.title %></p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2><%= product.price %></h2>
+                        <p><%= product.description %></p>
+                        <%= button_to 'В корзину', line_items_path(product_id: product), {class: 'btn btn-default add-to-cart'} %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="choose">
+                    <ul class="nav nav-pills nav-justified">
+                      <li><a href="#"><i class="fa fa-plus-square"></i>В закладки</a></li>
+                      <li><a href="#"><i class="fa fa-plus-square"></i>В сравнение</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+          <% end %>
+        </div><!--features_items-->
+        <%= paginate @products , :window => 1, :left => 1, :right => 3 %>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,20 @@
 ru:
+  views:
+    pagination:
+      first: "<<"
+      last: ">>"
+      previous: "<"
+      next: ">"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Не найден %{entry_name}"
+          one: "Показано с <b>1</b> %{entry_name}"
+          other: "Показать <b>все %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Показано %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> из <b>%{total}</b> всего"
   date:
     abbr_day_names:
     - Вс
