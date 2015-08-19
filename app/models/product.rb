@@ -12,7 +12,6 @@ class Product < ActiveRecord::Base
   before_validation { image.clear if delete_asset == '1' }
 
 
-
   def product_not_have_line_items
     if line_items.empty?
       return true

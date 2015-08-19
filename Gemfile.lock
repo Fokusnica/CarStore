@@ -291,6 +291,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   mailcatcher
   paperclip!
   pg
