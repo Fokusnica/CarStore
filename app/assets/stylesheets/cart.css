@@ -1,0 +1,87 @@
+#cart_summary tfoot td.text-right {
+    font-weight: bold;
+    color: #333333;
+}
+
+#cart_summary tfoot td.price {
+    text-align: right;
+}
+
+td#total_price_container {
+    font: 600 21px/25px "Open Sans", sans-serif;
+    color: #333333;
+    background: white;
+}
+#cart_summary tbody td.cart_description small {
+    display: block;
+    padding: 5px 0 0 0;
+    color: #777777
+}
+
+
+.table thead > tr > th, .table thead > tr > td, .table tbody > tr > th, .table tbody > tr > td, .table tfoot > tr > th, .table tfoot > tr > td {
+    padding: 9px 8px 11px 18px;
+    line-height: 1.42857;
+    vertical-align: top;
+    border-top: 1px solid #d6d4d4;
+}
+.table > thead > tr > th {
+    background: #fbfbfb;
+    border-bottom-width: 1px;
+    color: #333333;
+    vertical-align: middle;
+}
+
+.table tfoot tr {
+    background: #fbfbfb;
+}
+
+.table tbody > tr > td {
+    vertical-align: middle;
+}
+
+table > thead > tr > th {
+    background: #fbfbfb;
+    border-bottom-width: 1px;
+    color: #333333;
+    vertical-align: middle;
+}
+table td, table th {
+    text-align: left;
+}
+
+.product-name {
+    font-size: 17px;
+    line-height: 23px;
+    color: #3a3939;
+    margin-bottom: 0;
+}
+th.cart_product.first_item {
+    width: 164px;
+}
+.price {
+    font-size: 13px;
+    color: #777777;
+    white-space: nowrap;
+}
+.text-right {
+    text-align: right;
+}
+/* =============== global.css ===============*/
+.page-heading {
+    font: 300 30px/35px "bodonixtregular",sans-serif;
+    color: #333333;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.page-heading span.heading-counter {
+    font: normal 12px/22px Arial, Helvetica, sans-serif;
+    float: none;
+    clear: both;
+    display: block;
+
+    text-transform: none;
+    margin-bottom: 10px;
+    color: #c0c0c0;
+}
