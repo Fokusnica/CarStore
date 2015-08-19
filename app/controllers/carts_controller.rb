@@ -5,11 +5,13 @@ class CartsController < ApplicationController
   # GET /carts.json
   def index
     @carts = Cart.all
+    @categories = Category.all
   end
 
   # GET /carts/1
   # GET /carts/1.json
   def show
+    @categories = Category.all
   end
 
   # GET /carts/new
