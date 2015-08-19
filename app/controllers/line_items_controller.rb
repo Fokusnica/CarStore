@@ -8,11 +8,13 @@ class LineItemsController < ApplicationController
   # GET /line_items.json
   def index
     @line_items = LineItem.all
+    @categories = Category.all
   end
 
   # GET /line_items/1
   # GET /line_items/1.json
   def show
+    @categories = Category.all
   end
 
   # GET /line_items/new
