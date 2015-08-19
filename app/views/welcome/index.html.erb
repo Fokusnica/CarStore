@@ -91,101 +91,34 @@
           <h2>Категории</h2>
           <div class="panel-group category-products" id="accordian"><!--category-productsr-->
             <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordian" href="#volkswagen">
-                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                    Volkswagen
-                  </a>
-                </h4>
-              </div>
-              <div id="volkswagen" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <ul>
-                    <li><a href="#">Седан </a></li>
-                    <li><a href="#">Хечбек</a></li>
-                    <li><a href="#">Универсал</a></li>
-                    <li><a href="#">Купе</a></li>
-                    <li><a href="#">Минивен</a></li>
-                    <li><a href="#">Кабриолет</a></li>
-                    <li><a href="#">Пикап</a></li>
-                    <li><a href="#">Внедорожник</a></li>
-                    <li><a href="#">Кроссовер</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordian" href="#skoda">
-                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                    Škoda
-                  </a>
-                </h4>
-              </div>
-              <div id="skoda" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <ul>
-                    <li><a href="#">Седан </a></li>
-                    <li><a href="#">Хечбек</a></li>
-                    <li><a href="#">Универсал</a></li>
-                    <li><a href="#">Купе</a></li>
-                    <li><a href="#">Минивен</a></li>
-                    <li><a href="#">Кабриолет</a></li>
-                    <li><a href="#">Пикап</a></li>
-                    <li><a href="#">Внедорожник</a></li>
-                    <li><a href="#">Кроссовер</a></li>
-                  </ul>
-                </div>
-              </div>
+              <% @categories.each do |category| %>
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#accordian" href="#<%= category.name %>">
+                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                        <%= category.name %>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="<%= category.name %>" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <ul>
+                        <li><%= link_to 'Все модели', category_path(category) %></li>
+                        <li><a href="#">Седан </a></li>
+                        <li><a href="#">Хечбек</a></li>
+                        <li><a href="#">Универсал</a></li>
+                        <li><a href="#">Купе</a></li>
+                        <li><a href="#">Минивен</a></li>
+                        <li><a href="#">Кабриолет</a></li>
+                        <li><a href="#">Пикап</a></li>
+                        <li><a href="#">Внедорожник</a></li>
+                        <li><a href="#">Кроссовер</a></li>
+                      </ul>
+                    </div>
+                  </div>
+              <% end %>
             </div>
 
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordian" href="#audi">
-                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                    Audi
-                  </a>
-                </h4>
-              </div>
-              <div id="audi" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <ul>
-                    <li><a href="#">Седан </a></li>
-                    <li><a href="#">Хечбек</a></li>
-                    <li><a href="#">Универсал</a></li>
-                    <li><a href="#">Купе</a></li>
-                    <li><a href="#">Минивен</a></li>
-                    <li><a href="#">Кабриолет</a></li>
-                    <li><a href="#">Пикап</a></li>
-                    <li><a href="#">Внедорожник</a></li>
-                    <li><a href="#">Кроссовер</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title"><a href="#">Bentley</a></h4>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title"><a href="#">Bugatti</a></h4>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title"><a href="#">Lamborghini</a></h4>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title"><a href="#">Porsche</a></h4>
-              </div>
-            </div>
 
           </div><!--/category-products-->
         </div>

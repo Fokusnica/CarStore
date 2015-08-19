@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 #  get 'category/index'
-get 'categories', to: 'category#index'
+#get 'categories', to: 'category#index'
+  resources :category
+  # do
+  #   member do
+  #     get ':id', to: 'category#show'
+  #   end
+  # end
   resources :line_items
   resources :carts
   devise_for :admin_users, ActiveAdmin::Devise.config
