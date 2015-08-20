@@ -70,11 +70,17 @@
         <div class="col-sm-8">
           <div class="shop-menu pull-right">
             <ul class="nav navbar-nav">
-              <li><a href="#"><i class="fa fa-user"></i>Аккаунт</a></li>
+              <li><a href="/myaccount"><i class="fa fa-user"></i>Аккаунт</a></li>
               <li><a href="#"><i class="fa fa-star"></i>Закладки</a></li>
               <li><a href="checkout.html"><i class="fa fa-crosshairs"></i>Оформление</a></li>
               <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Корзина</a></li>
-              <li><a href="login.html"><i class="fa fa-lock"></i>Войти</a></li>
+              <li>
+              <% if user_signed_in? %>
+                  <%= link_to "Выйти", destroy_user_session_path, :method => :delete %>
+              <% else %>
+                  <%= link_to "Войти", "/myaccount" %>
+              <% end %>
+              </li>
             </ul>
           </div>
         </div>
@@ -99,6 +105,7 @@
             <li><a href="/" class="active">Главная</a></li>
             <li class="dropdown"><a href="#">Категории<i class="fa fa-angle-down"></i></a>
               <ul role="menu" class="sub-menu">
+
                 <% @categories.each do |category| %>
                     <li><%= link_to category.name, category_path(category) %></li>
                 <% end %>

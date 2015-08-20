@@ -1,35 +1,86 @@
-<section id="form"><!--form-->
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4 col-sm-offset-1">
-					<div class="login-form"><!--login form-->
-						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email Address" />
-							<span>
-								<input type="checkbox" class="checkbox">
-								Keep me signed in
-							</span>
-							<button type="submit" class="btn btn-default">Login</button>
-						</form>
-					</div><!--/login form-->
-				</div>
-				<div class="col-sm-1">
-					<h2 class="or">OR</h2>
-				</div>
-				<div class="col-sm-4">
-					<div class="signup-form"><!--sign up form-->
-						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
-							<button type="submit" class="btn btn-default">Signup</button>
-						</form>
-					</div><!--/sign up form-->
-				</div>
-			</div>
-		</div>
-	</section><!--/form-->
+<% if !user_signed_in? %>
+    <section id="form"><!--form-->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-sm-offset-1">
+            <div class="login-form"><!--login form-->
+              <h2>Зайди если осмелишься!</h2>
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                  <%= devise_error_messages! %>
+                  <%= f.email_field :email, autofocus: true %>
+                  <%= f.password_field :password, autocomplete: "off" %>
 
+                  <% if devise_mapping.rememberable? -%>
+                              <span>
+                     <%= f.check_box :remember_me %>
+                                запомнить меня
+							</span>
+
+                  <% end -%>
+                  <%= f.submit "Войти", class: "btn btn-success" %>
+              <% end %>
+            </div>
+            <!--/login form-->
+          </div>
+          <div class="col-sm-1">
+            <h2 class="or">ИЛИ</h2>
+          </div>
+          <div class="col-sm-4">
+            <div class="signup-form"><!--sign up form-->
+              <h2>Зарегистрироваться!</h2>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+                  <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Введите Имя" %>
+                  <%= f.email_field :email, class: "form-control", placeholder: "Введите Email" %>
+                  <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Введите Пароль" %>
+                  <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите Пароль" %>
+                  <%= f.submit "Зарегистрироваться", class: "btn btn-success" %>
+              <% end %>
+            </div>
+            <!--/sign up form-->
+          </div>
+        </div>
+      </div>
+    </section><!--/form-->
+<% else %>
+    <div id="contact-page" class="container">
+      <div class="bg">
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="contact-form">
+              <h2 class="title text-center">Редактирование Профиля</h2>
+
+              <div class="status alert alert-success" style="display: none"></div>
+
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
+                  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                  <% end %>
+                  <div class="form-group col-md-6">
+                    <%= f.text_field :name, autofocus: true, class: "form-control", value: current_user.name %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= f.email_field :email, class: "form-control", value: current_user.email %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Введите Пароль" %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите Пароль" %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Введите прошлый пароль!" %>
+                  </div>
+
+
+                  <div class="form-group col-md-12">
+                    <%= f.submit "Обновить", class: "btn btn-primary pull-right" %>
+                  </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<% end %>

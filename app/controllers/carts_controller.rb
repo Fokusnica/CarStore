@@ -1,7 +1,5 @@
 class CartsController < ApplicationController
-  include ListOfCategories
 
-  before_action :list, only: [:index, :show]
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
 
   # GET /carts
