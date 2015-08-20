@@ -1,6 +1,4 @@
 <% if !user_signed_in? %>
-
-
     <section id="form"><!--form-->
       <div class="container">
         <div class="row">
@@ -71,7 +69,7 @@
                     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите Пароль" %>
                   </div>
                   <div class="form-group col-md-6">
-                    <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Введите прошлый пароль!"  %>
+                    <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Введите прошлый пароль!" %>
                   </div>
 
 
