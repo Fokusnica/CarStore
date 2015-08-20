@@ -1,8 +1,8 @@
 ActiveAdmin.register_page "Dashboard" do
 
-  menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
+  menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
 
-  content title: proc{ I18n.t("active_admin.dashboard") } do
+  content title: proc { I18n.t("active_admin.dashboard") } do
     # div class: "blank_slate_container", id: "dashboard_default_message" do
     #   span class: "blank_slate" do
     #     span I18n.t("active_admin.dashboard_welcome.welcome")
@@ -10,42 +10,48 @@ ActiveAdmin.register_page "Dashboard" do
     #   end
     # end
 
- #   Here is an example of a simple dashboard with columns and panels.
+    #   Here is an example of a simple dashboard with columns and panels.
 
     columns do
       column do
         panel "Последние зарегистрированные клиенты" do
-          ul do
-            User.all.map do |user|
-              li link_to(user.name, admin_user_path(user))
-            end
+
+          table_for User.order("created_at desc").limit(5) do
+            column :name
+            column :email
           end
+          strong { link_to "Просмотр всех клиентов", admin_users_path }
+
         end
       end
-
-
 
       column do
         panel "Последние добавленные модели" do
-          ul do
-            Product.all.map do |car|
-              li link_to(car.title, admin_product_path(car))
-            end
+
+          table_for Product.order("created_at desc").limit(10) do
+            column :title
+            column :price
+            column :status
           end
+          strong { link_to "Просмотреть все модели", admin_users_path }
+
         end
       end
     end
+
     columns do
+
       column do
-        panel "Последние зарегистрированные поставщики" do
-          ul do
-            Provider.all.map do |provider|
-              li link_to(provider.name, admin_provider_path(provider))
-            end
+        panel "Последние добавленные поставщики" do
+
+          table_for Provider.order("created_at desc").limit(10) do
+            column :name
+            column :phone
+
           end
+          strong { link_to "Просмотреть всех поставщиков", admin_providers_path }
         end
       end
-
     end
   end # content
 end
