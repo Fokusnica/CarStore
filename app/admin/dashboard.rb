@@ -33,7 +33,7 @@ ActiveAdmin.register_page "Dashboard" do
             column :price
             column :status
           end
-          strong { link_to "Просмотреть все модели", admin_users_path }
+          strong { link_to "Просмотреть все модели", admin_products_path }
 
         end
       end
