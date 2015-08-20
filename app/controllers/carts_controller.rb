@@ -1,17 +1,19 @@
 class CartsController < ApplicationController
+  include ListOfCategories
+
+  before_action :list, only: [:index, :show]
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
 
   # GET /carts
   # GET /carts.json
   def index
     @carts = Cart.all
-    @categories = Category.all
   end
 
   # GET /carts/1
   # GET /carts/1.json
   def show
-    @categories = Category.all
+
   end
 
   # GET /carts/new

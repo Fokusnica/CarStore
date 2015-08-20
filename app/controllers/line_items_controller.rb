@@ -1,5 +1,8 @@
 class LineItemsController < ApplicationController
   include CurrentCart
+  include ListOfCategories
+
+  before_action :list, only: [:index, :show]
 
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
@@ -8,7 +11,6 @@ class LineItemsController < ApplicationController
   # GET /line_items.json
   def index
     @line_items = LineItem.all
-    @categories = Category.all
   end
 
   # GET /line_items/1
