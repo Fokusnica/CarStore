@@ -11,8 +11,15 @@
           <div class="product-overlay">
             <div class="overlay-content">
               <h2><%= product.price %></h2>
-              <p><%= product.description %></p>
-              <%= button_to 'В корзину', line_items_path(product_id: product), {class: 'btn btn-default add-to-cart'} %>
+              <p><%= product.description.html_safe %></p>
+              <%= button_to  line_items_path(product_id: product), {class: 'btn btn-default add-to-cart'} do %>
+                  <i class="fa fa-shopping-cart"></i>
+                  В корзину
+              <% end %>
+              <%= link_to  product_path(product), {class: 'btn btn-default add-to-cart'} do %>
+                  <i class="fa fa-eye"></i>
+                  Смотреть
+              <% end %>
             </div>
           </div>
         </div>

@@ -272,6 +272,7 @@ ru:
     pm: вечера
   activerecord:
     models:
+      catalog: "Категории"
       provider:
         one: "Поставщик"
         other: 'Поставщики'
