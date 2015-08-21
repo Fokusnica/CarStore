@@ -299,6 +299,7 @@ ru:
       category:
         name: "Название"
         description: "Описание"
+        category: "НадКатегория"
       group_user:
         title: "Название"
         description: "Описание"

@@ -13,57 +13,69 @@
             <div class="item active">
               <div class="col-sm-6">
                 <h1><span>Car</span>-Store</h1>
+
                 <h2>Porsche Macan Turbo</h2>
+
                 <p>Macan Turbo. Жизнь в ритме Porsche. </p>
                 <button type="button" class="btn btn-default get">Перейти</button>
               </div>
               <div class="col-sm-6">
-                <img src="/assets/slider/slide1.jpg" class="girl img-responsive" alt="" />
+                <img src="/assets/slider/slide1.jpg" class="girl img-responsive" alt=""/>
               </div>
             </div>
             <div class="item">
               <div class="col-sm-6">
                 <h1><span>Car</span>-Store</h1>
+
                 <h2>Audi A6</h2>
-                <p>Внешний вид Audi A6 очаровывает с первого взгляда, пробуждает эмоции и олицетворяет движение вперед. </p>
+
+                <p>Внешний вид Audi A6 очаровывает с первого взгляда, пробуждает эмоции и олицетворяет движение
+                  вперед. </p>
                 <button type="button" class="btn btn-default get">Перейти</button>
               </div>
               <div class="col-sm-6">
-                <img src="/assets/slider/slide2.jpg" class="girl img-responsive" alt="" />
+                <img src="/assets/slider/slide2.jpg" class="girl img-responsive" alt=""/>
               </div>
             </div>
 
             <div class="item">
               <div class="col-sm-6">
                 <h1><span>Car</span>-Store</h1>
+
                 <h2>Suzuki Vitara</h2>
-                <p>Vitara выглядит как настоящий атлет. Мускулистый, пропорциональный корпус создан именно для условий бездорожья.</p>
+
+                <p>Vitara выглядит как настоящий атлет. Мускулистый, пропорциональный корпус создан именно для условий
+                  бездорожья.</p>
                 <button type="button" class="btn btn-default get">Перейти</button>
               </div>
               <div class="col-sm-6">
-                <img src="/assets/slider/slide3.jpg" class="girl img-responsive" alt="" />
+                <img src="/assets/slider/slide3.jpg" class="girl img-responsive" alt=""/>
               </div>
             </div>
             <div class="item">
               <div class="col-sm-6">
                 <h1><span>Car</span>-Store</h1>
+
                 <h2>Škoda Octavia RS</h2>
+
                 <p>Яркая внешность Octavia RS подчеркивает спортивный характер автомобиля и делает его узнаваемым. </p>
                 <button type="button" class="btn btn-default get">Перейти</button>
               </div>
               <div class="col-sm-6">
-                <img src="/assets/slider/slide4.jpg" class="girl img-responsive" alt="" />
+                <img src="/assets/slider/slide4.jpg" class="girl img-responsive" alt=""/>
               </div>
             </div>
             <div class="item">
               <div class="col-sm-6">
                 <h1><span>Car</span>-Store</h1>
+
                 <h2>Volkswagen New_Passat</h2>
+
                 <p>Volkswagen Passat никогда ещё не выглядел так элегантно и достойно.</p>
                 <button type="button" class="btn btn-default get">Перейти</button>
               </div>
               <div class="col-sm-6">
-                <img src="/assets/slider/slide5.jpg" class="girl img-responsive" alt="" />
+                <img src="/assets/slider/slide5.jpg" class="girl img-responsive" alt=""/>
               </div>
             </div>
 
@@ -86,83 +98,51 @@
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-sm-3">
-        <div class="left-sidebar">
-          <h2>Категории</h2>
-          <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-            <div class="panel panel-default">
-              <% @categories.each do |category| %>
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordian" href="#<%= category.name %>">
-                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                        <%= category.name %>
-                      </a>
-                    </h4>
-                  </div>
-                  <div id="<%= category.name %>" class="panel-collapse collapse">
-                    <div class="panel-body">
-                      <ul>
-                        <li><%= link_to 'Все модели', category_path(category) %></li>
-                        <li><a href="#">Седан </a></li>
-                        <li><a href="#">Хечбек</a></li>
-                        <li><a href="#">Универсал</a></li>
-                        <li><a href="#">Купе</a></li>
-                        <li><a href="#">Минивен</a></li>
-                        <li><a href="#">Кабриолет</a></li>
-                        <li><a href="#">Пикап</a></li>
-                        <li><a href="#">Внедорожник</a></li>
-                        <li><a href="#">Кроссовер</a></li>
-                      </ul>
-                    </div>
-                  </div>
-              <% end %>
-            </div>
 
-
-          </div><!--/category-products-->
-        </div>
-      </div>
+      <%= render 'category/categories' %>
 
       <div class="col-sm-9 padding-right">
         <div class="features_items"><!--features_items-->
           <h2 class="title text-center">Популярные модели </h2>
-          <% @products.first(6).each do |product|  %>
-          <div class="col-sm-4">
-            <div class="product-image-wrapper">
-              <div class="single-products">
-                <div class="productinfo text-center">
-                  <%= image_tag(product.image.url, size: '255x210')%>
-                  <h2><%= product.price %></h2>
-                  <p><%= product.title %></p>
-                  <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                </div>
-                <div class="product-overlay">
-                  <div class="overlay-content">
-                    <h2><%= product.price %></h2>
-                    <p><%= product.description.html_safe %></p>
-                    <%= button_to  line_items_path(product_id: product), {class: 'btn btn-default add-to-cart'} do %>
-                      <i class="fa fa-shopping-cart"></i>
-                        В корзину
-                       <% end %>
-                    <%= link_to  product_path(product), {class: 'btn btn-default add-to-cart'} do %>
-                        <i class="fa fa-eye"></i>
-                        Смотреть
-                    <% end %>
+          <% @products.first(6).each do |product| %>
+              <div class="col-sm-4">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <%= image_tag(product.image.url, size: '255x210') %>
+                      <h2><%= product.price %></h2>
+
+                      <p><%= product.title %></p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                    </div>
+                    <div class="product-overlay">
+                      <div class="overlay-content">
+                        <h2><%= product.price %></h2>
+
+                        <p><%= product.description.html_safe %></p>
+                        <%= button_to line_items_path(product_id: product), {class: 'btn btn-default add-to-cart'} do %>
+                            <i class="fa fa-shopping-cart"></i>
+                            В корзину
+                        <% end %>
+                        <%= link_to product_path(product), {class: 'btn btn-default add-to-cart'} do %>
+                            <i class="fa fa-eye"></i>
+                            Смотреть
+                        <% end %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="choose">
+                    <ul class="nav nav-pills nav-justified">
+                      <li><a href="#"><i class="fa fa-plus-square"></i>В закладки</a></li>
+                      <li><a href="#"><i class="fa fa-plus-square"></i>В сравнение</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
-              <div class="choose">
-                <ul class="nav nav-pills nav-justified">
-                  <li><a href="#"><i class="fa fa-plus-square"></i>В закладки</a></li>
-                  <li><a href="#"><i class="fa fa-plus-square"></i>В сравнение</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
 
-<% end %>
-        </div><!--features_items-->
+          <% end %>
+        </div>
+        <!--features_items-->
 
         <div class="category-tab"><!--category-tab-->
           <div class="col-sm-12">
@@ -177,33 +157,37 @@
             </ul>
           </div>
           <div class="tab-content">
-            <div class="tab-pane fade active in" id="tshirt" >
+            <div class="tab-pane fade active in" id="tshirt">
 
-                <% @products.first(4).each do |product| %>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-                      <%= image_tag(product.image.url, size: '184x162')%>
-                      <h2><%= product.price %></h2>
-                      <p><%= product.title %></p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+              <% @products.first(4).each do |product| %>
+                  <div class="col-sm-3">
+                    <div class="product-image-wrapper">
+                      <div class="single-products">
+                        <div class="productinfo text-center">
+                          <%= image_tag(product.image.url, size: '184x162') %>
+                          <h2><%= product.price %></h2>
+
+                          <p><%= product.title %></p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В
+                            корзину</a>
+                        </div>
+
+                      </div>
                     </div>
-
                   </div>
-                </div>
-              </div>
-    <% end %>
+              <% end %>
 
             </div>
 
-            <div class="tab-pane fade" id="blazers" >
+            <div class="tab-pane fade" id="blazers">
               <div class="col-sm-3">
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery4.jpg" alt="" />
+                      <img src="/assets/home/gallery4.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -215,8 +199,10 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery3.jpg" alt="" />
+                      <img src="/assets/home/gallery3.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -228,8 +214,10 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery2.jpg" alt="" />
+                      <img src="/assets/home/gallery2.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -241,63 +229,10 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery1.jpg" alt="" />
-                      <h2>$56</h2>
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                    </div>
+                      <img src="/assets/home/gallery1.jpg" alt=""/>
 
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tab-pane fade" id="sunglass" >
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-                      <img src="/assets/home/gallery3.jpg" alt="" />
                       <h2>$56</h2>
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                    </div>
 
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-                      <img src="/assets/home/gallery4.jpg" alt="" />
-                      <h2>$56</h2>
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-                      <img src="/assets/home/gallery1.jpg" alt="" />
-                      <h2>$56</h2>
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-                      <img src="/assets/home/gallery2.jpg" alt="" />
-                      <h2>$56</h2>
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -307,13 +242,15 @@
               </div>
             </div>
 
-            <div class="tab-pane fade" id="kids" >
+            <div class="tab-pane fade" id="sunglass">
               <div class="col-sm-3">
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery1.jpg" alt="" />
+                      <img src="/assets/home/gallery3.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -325,8 +262,10 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery2.jpg" alt="" />
+                      <img src="/assets/home/gallery4.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -338,8 +277,10 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery3.jpg" alt="" />
+                      <img src="/assets/home/gallery1.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -351,8 +292,10 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery4.jpg" alt="" />
+                      <img src="/assets/home/gallery2.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -362,13 +305,15 @@
               </div>
             </div>
 
-            <div class="tab-pane fade" id="poloshirt" >
+            <div class="tab-pane fade" id="kids">
               <div class="col-sm-3">
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery2.jpg" alt="" />
+                      <img src="/assets/home/gallery1.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -380,8 +325,10 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery4.jpg" alt="" />
+                      <img src="/assets/home/gallery2.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -393,8 +340,10 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery3.jpg" alt="" />
+                      <img src="/assets/home/gallery3.jpg" alt=""/>
+
                       <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -406,8 +355,73 @@
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <img src="/assets/home/gallery1.jpg" alt="" />
+                      <img src="/assets/home/gallery4.jpg" alt=""/>
+
                       <h2>$56</h2>
+
+                      <p>Easy Polo Black Edition</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="poloshirt">
+              <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/assets/home/gallery2.jpg" alt=""/>
+
+                      <h2>$56</h2>
+
+                      <p>Easy Polo Black Edition</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/assets/home/gallery4.jpg" alt=""/>
+
+                      <h2>$56</h2>
+
+                      <p>Easy Polo Black Edition</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/assets/home/gallery3.jpg" alt=""/>
+
+                      <h2>$56</h2>
+
+                      <p>Easy Polo Black Edition</p>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="product-image-wrapper">
+                  <div class="single-products">
+                    <div class="productinfo text-center">
+                      <img src="/assets/home/gallery1.jpg" alt=""/>
+
+                      <h2>$56</h2>
+
                       <p>Easy Polo Black Edition</p>
                       <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                     </div>
@@ -417,7 +431,8 @@
               </div>
             </div>
           </div>
-        </div><!--/category-tab-->
+        </div>
+        <!--/category-tab-->
 
         <div class="recommended_items"><!--recommended_items-->
           <h2 class="title text-center">recommended items</h2>
@@ -430,8 +445,9 @@
                       <div class="product-image-wrapper">
                         <div class="single-products">
                           <div class="productinfo text-center">
-                            <%= image_tag(product.image.url, size: '184x162')%>
+                            <%= image_tag(product.image.url, size: '184x162') %>
                             <h2><%= product.price %></h2>
+
                             <p><%= product.title %></p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                           </div>
@@ -447,8 +463,9 @@
                       <div class="product-image-wrapper">
                         <div class="single-products">
                           <div class="productinfo text-center">
-                            <%= image_tag(product.image.url, size: '184x162')%>
+                            <%= image_tag(product.image.url, size: '184x162') %>
                             <h2><%= product.price %></h2>
+
                             <p><%= product.title %></p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                           </div>
@@ -466,7 +483,8 @@
               <i class="fa fa-angle-right"></i>
             </a>
           </div>
-        </div><!--/recommended_items-->
+        </div>
+        <!--/recommended_items-->
 
       </div>
     </div>

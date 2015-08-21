@@ -13,7 +13,7 @@ ActiveAdmin.register Category , as: "Catalog"  do
 #   permitted
 # end
   menu parent: "Каталог"
-  permit_params :name, :description
+  permit_params :name, :description, :category_id
 
 
   index do
@@ -21,6 +21,7 @@ ActiveAdmin.register Category , as: "Catalog"  do
     id_column
     column :name
     column :description
+    column :category, label: "Неужели подкатегория?!?!"
 
     actions
   end
@@ -35,6 +36,7 @@ ActiveAdmin.register Category , as: "Catalog"  do
     f.inputs "Категории" do
       f.input :name
       f.input :description
+      f.input :category, label: "В Какую засунуть?"
     end
     f.actions
   end
