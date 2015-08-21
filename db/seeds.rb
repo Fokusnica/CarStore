@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Product.delete_all
+
 
 Product.create!(title: 'New_Polo',
   description:
@@ -19,7 +19,8 @@ Product.create!(title: 'New_Polo',
     оба боковых зеркала. Въезжайте и выезжайте с узких парковок без проблем.
 
     </p>},
-    price: 3600.00)
+    price: 3600.00,
+    image_file_name: )
 
 Product.create!(title: 'New_Passat',
   description:
