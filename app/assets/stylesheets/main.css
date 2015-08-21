@@ -1173,7 +1173,7 @@ h2.title {
 
 .view-product img {
   border: 1px solid #F7F7F0;
-  height: 380px;
+  /*height: 380px;*/
   width: 100%;
 }
 
@@ -1252,10 +1252,10 @@ h2.title {
   color: #A80000;
   float: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: 700;
   margin-right: 20px;
-  margin-top: 0px;
+  margin-top: 10px;
 }
 .product-information span input {
   border: 1px solid #DEDEDC;
@@ -1275,6 +1275,14 @@ h2.title {
   font-weight: 700;
   margin-right: 5px;
 }
+
+#product_description {
+  padding-left: 25px;
+  padding-right: 25px;
+  text-indent: 20px;
+  color: #363432;
+}
+
 
 .share {
   margin-top: 15px;
