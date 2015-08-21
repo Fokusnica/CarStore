@@ -2527,5 +2527,7 @@ h2.title {
 .contact-info .social-networks ul li a:hover{
   color: #A80000;
 }
-
+form.button_to {
+    display: inline-block;
+}
 
