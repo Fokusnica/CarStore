@@ -5,34 +5,30 @@
     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
       <div class="panel panel-default">
         <% @categories.each do |category| %>
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordian" href="#<%= category.name %>">
-                  <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                  <%= category.name %>
-                </a>
-              </h4>
-            </div>
-            <div id="<%= category.name %>" class="panel-collapse collapse">
-              <div class="panel-body">
-                <ul>
-                  <li><%= link_to 'Все модели', category_path(category) %></li>
-                  <li><a href="#">Седан </a></li>
-                  <li><a href="#">Хечбек</a></li>
-                  <li><a href="#">Универсал</a></li>
-                  <li><a href="#">Купе</a></li>
-                  <li><a href="#">Минивен</a></li>
-                  <li><a href="#">Кабриолет</a></li>
-                  <li><a href="#">Пикап</a></li>
-                  <li><a href="#">Внедорожник</a></li>
-                  <li><a href="#">Кроссовер</a></li>
-                </ul>
-              </div>
-            </div>
+            <% if category.category_id.nil? %>
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordian" href="#<%= category.name %>">
+                      <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                      <%= category.name %>
+                    </a>
+                  </h4>
+                </div>
+                <div id="<%= category.name %>" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <ul>
+                      <li><%= link_to 'Все модели', category_path(category) %></li>
+                      <% @categories.select do |subcategory| %>
+                          <% if subcategory.category_id == category.id %>
+                              <li><%= link_to subcategory.name, category_path(subcategory) %></li>
+                          <% end %>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+            <% end %>
         <% end %>
       </div>
-
-
     </div>
     <!--/category-products-->
   </div>
