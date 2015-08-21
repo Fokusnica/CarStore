@@ -4538,7 +4538,7 @@ h2.title {
 
 .view-product img {
   border: 1px solid #F7F7F0;
-  height: 380px;
+  /*height: 380px;*/
   width: 100%;
 }
 
@@ -4617,10 +4617,10 @@ h2.title {
   color: #A80000;
   float: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: 700;
   margin-right: 20px;
-  margin-top: 0px;
+  margin-top: 10px;
 }
 .product-information span input {
   border: 1px solid #DEDEDC;
@@ -4640,6 +4640,14 @@ h2.title {
   font-weight: 700;
   margin-right: 5px;
 }
+
+#product_description {
+  padding-left: 25px;
+  padding-right: 25px;
+  text-indent: 20px;
+  color: #363432;
+}
+
 
 .share {
   margin-top: 15px;
@@ -5884,7 +5892,9 @@ h2.title {
 .contact-info .social-networks ul li a:hover{
   color: #A80000;
 }
-
+form.button_to {
+    display: inline-block;
+}
 
 div.pp_default .pp_top,div.pp_default .pp_top .pp_middle,div.pp_default .pp_top .pp_left,div.pp_default .pp_top .pp_right,div.pp_default .pp_bottom,div.pp_default .pp_bottom .pp_left,div.pp_default .pp_bottom .pp_middle,div.pp_default .pp_bottom .pp_right{height:13px}
 div.pp_default .pp_top .pp_left{background:url(../images/prettyPhoto/default/sprite.png) -78px -93px no-repeat}
