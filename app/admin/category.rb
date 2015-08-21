@@ -21,7 +21,7 @@ ActiveAdmin.register Category , as: "Catalog"  do
     id_column
     column :name
     column :description
-    column :category, label: "Неужели подкатегория?!?!"
+    column :category
 
     actions
   end
@@ -36,7 +36,7 @@ ActiveAdmin.register Category , as: "Catalog"  do
     f.inputs "Категории" do
       f.input :name
       f.input :description
-      f.input :category, label: "В Какую засунуть?"
+      f.input :category
     end
     f.actions
   end
