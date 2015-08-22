@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'search/show'
+
   resources :product
 
   resources :category

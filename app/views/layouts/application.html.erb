@@ -123,9 +123,10 @@
         </div>
       </div>
       <div class="col-sm-3">
-        <div class="search_box pull-right">
-          <input type="text" placeholder="Поиск"/>
-        </div>
+        <%= form_tag(search_show_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+            <%= submit_tag "Search" %>
+        <% end %>
       </div>
     </div>
   </div>
