@@ -34,3 +34,28 @@ en:
       watch: "View"
       add_to_bookmarks: "Add to bookmarks"
       compare: "Compare"
+  product:
+    show:
+      quantity: "Quantity"
+      availability: "Availability"
+      manufacturer: "Manufacturer"
+      add_to_cart: "Add to cart"
+      in_stock: "In stock"
+      out_of_stock: "Out of stock"
+      description: "Description"
+      specifications: "Specifications"
+      comments: "Comments"
+      weight: "Weight"
+      height: "Height"
+      width: "Width"
+      length: "Length"
+      year: "Year"
+      feedback: "Leave your feedback!"
+      recom_items: "Recommended models"
+      send: "Send"
+  search:
+    show:
+      models: "Models"
+      find: "Found"
+      models_find: "models"
+      nothing_find: "I was looking for the truth, all the polls, but no one knows where "
