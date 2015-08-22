@@ -48,15 +48,15 @@
 
 								<span>
 									<span>US <%= @product.price %></span>
-									<label>Кол-во:</label>
+									<label><%=t('.quantity')%>:</label>
 									<input type="text" value="1" />
 									<button type="button" class="btn btn-fefault cart">
                                       <i class="fa fa-shopping-cart"></i>
-                                      Add to cart
+                                      <%=t('.add_to_cart')%>
                                     </button>
 								</span>
-              <p><b>Наличие:</b> <%= @product.status ? "В наличии" : "Нет в наличии" %></p>
-              <p><b>Производитель:</b> New</p>
+              <p><b><%=t('.availability')%>:</b> <%= @product.status ? t('.in_stock') : t('.out_of_stock') %></p>
+              <p><b><%=t('.manufacturer')%>:</b> New</p>
             </div><!--/product-information-->
           </div>
         </div><!--/product-details-->
