@@ -123,10 +123,12 @@
         </div>
       </div>
       <div class="col-sm-3">
+        <div class="search_box pull-right">
         <%= form_tag(search_show_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-            <%= submit_tag "Search" %>
+            <%= text_field_tag :search, params[:search], placeholder: "Поиск"%>
+            <%= submit_tag "GO!", style: "display:none" %>
         <% end %>
+</div>
       </div>
     </div>
   </div>
