@@ -16,8 +16,8 @@
 
                 <h2>Porsche Macan Turbo</h2>
 
-                <p>Macan Turbo. Жизнь в ритме Porsche. </p>
-                <button type="button" class="btn btn-default get">Перейти</button>
+                <p><%=t('.slider_one')%></p>
+                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide1.jpg" class="girl img-responsive" alt=""/>
@@ -29,9 +29,8 @@
 
                 <h2>Audi A6</h2>
 
-                <p>Внешний вид Audi A6 очаровывает с первого взгляда, пробуждает эмоции и олицетворяет движение
-                  вперед. </p>
-                <button type="button" class="btn btn-default get">Перейти</button>
+                <p><%=t('.slider_two')%> </p>
+                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide2.jpg" class="girl img-responsive" alt=""/>
@@ -44,9 +43,8 @@
 
                 <h2>Suzuki Vitara</h2>
 
-                <p>Vitara выглядит как настоящий атлет. Мускулистый, пропорциональный корпус создан именно для условий
-                  бездорожья.</p>
-                <button type="button" class="btn btn-default get">Перейти</button>
+                <p><%=t('.slider_three')%></p>
+                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide3.jpg" class="girl img-responsive" alt=""/>
@@ -58,8 +56,8 @@
 
                 <h2>Škoda Octavia RS</h2>
 
-                <p>Яркая внешность Octavia RS подчеркивает спортивный характер автомобиля и делает его узнаваемым. </p>
-                <button type="button" class="btn btn-default get">Перейти</button>
+                <p><%=t('.slider_four')%></p>
+                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide4.jpg" class="girl img-responsive" alt=""/>
@@ -71,8 +69,8 @@
 
                 <h2>Volkswagen New_Passat</h2>
 
-                <p>Volkswagen Passat никогда ещё не выглядел так элегантно и достойно.</p>
-                <button type="button" class="btn btn-default get">Перейти</button>
+                <p><%=t('.slider_five')%></p>
+                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide5.jpg" class="girl img-responsive" alt=""/>
@@ -103,7 +101,7 @@
 
       <div class="col-sm-9 padding-right">
         <div class="features_items"><!--features_items-->
-          <h2 class="title text-center">Популярные модели </h2>
+          <h2 class="title text-center"><%=t('.pop_models')%></h2>
           <% @products.first(6).each do |product| %>
               <div class="col-sm-4">
                 <div class="product-image-wrapper">
@@ -113,7 +111,7 @@
                       <h2><%= product.price %></h2>
 
                       <p><%= product.title %></p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
                     <div class="product-overlay">
                       <div class="overlay-content">
@@ -122,19 +120,19 @@
                         <p><%= product.description.html_safe %></p>
                         <%= button_to line_items_path(product_id: product), {class: 'btn btn-default add-to-cart'} do %>
                             <i class="fa fa-shopping-cart"></i>
-                            В корзину
+                            <%= t('.add_to_cart')%>
                         <% end %>
                         <%= link_to product_path(product), {class: 'btn btn-default add-to-cart'} do %>
                             <i class="fa fa-eye"></i>
-                            Смотреть
+                            <%=t('.watch')%>
                         <% end %>
                       </div>
                     </div>
                   </div>
                   <div class="choose">
                     <ul class="nav nav-pills nav-justified">
-                      <li><a href="#"><i class="fa fa-plus-square"></i>В закладки</a></li>
-                      <li><a href="#"><i class="fa fa-plus-square"></i>В сравнение</a></li>
+                      <li><a href="#"><i class="fa fa-plus-square"></i><%=t('.add_to_bookmarks')%></a></li>
+                      <li><a href="#"><i class="fa fa-plus-square"></i><%=t('.compare')%></a></li>
                     </ul>
                   </div>
                 </div>
@@ -168,8 +166,7 @@
                           <h2><%= product.price %></h2>
 
                           <p><%= product.title %></p>
-                          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В
-                            корзину</a>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                         </div>
 
                       </div>
@@ -189,7 +186,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -204,7 +201,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -219,7 +216,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -234,7 +231,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -252,7 +249,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -267,7 +264,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -282,7 +279,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -297,7 +294,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -315,7 +312,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -330,7 +327,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -345,7 +342,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -360,7 +357,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -378,7 +375,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -393,7 +390,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -408,7 +405,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -423,7 +420,7 @@
                       <h2>$56</h2>
 
                       <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                     </div>
 
                   </div>
@@ -435,7 +432,7 @@
         <!--/category-tab-->
 
         <div class="recommended_items"><!--recommended_items-->
-          <h2 class="title text-center">recommended items</h2>
+          <h2 class="title text-center"><%= t('.recom_items')%></h2>
 
           <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -449,7 +446,7 @@
                             <h2><%= product.price %></h2>
 
                             <p><%= product.title %></p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                           </div>
 
                         </div>
@@ -467,7 +464,7 @@
                             <h2><%= product.price %></h2>
 
                             <p><%= product.title %></p>
-                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
                           </div>
 
                         </div>

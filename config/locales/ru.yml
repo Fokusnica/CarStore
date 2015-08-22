@@ -1,4 +1,26 @@
 ru:
+  welcome:
+    index:
+      go: "Перейти"
+      slider_one: "Macan Turbo. Жизнь в ритме Porsche."
+      add_to_cart: "Корзина"
+      slider_two: "Внешний вид Audi A6 очаровывает с первого взгляда, пробуждает эмоции и олицетворяет движение вперед."
+      slider_three: "Vitara выглядит как настоящий атлет. Мускулистый, пропорциональный корпус создан именно для условий бездорожья."
+      slider_four: "Яркая внешность Octavia RS подчеркивает спортивный характер автомобиля и делает его узнаваемым."
+      slider_five: "Volkswagen Passat никогда ещё не выглядел так элегантно и достойно."
+      pop_models: "Популярные модели"
+      recom_items: "Рекомендуемые товары"
+      watch: "Смотреть"
+      add_to_bookmarks: "В закладки"
+      compare: "В сравнение"
+  product:
+    show:
+      quantity: "Кол-во"
+      availability: "Наличие"
+      manufacturer: "Производитель"
+      add_to_cart: "В корзину"
+      in_stock: "В наличии"
+      out_of_stock: "Нет в наличии"
   views:
     pagination:
       first: "<<"
