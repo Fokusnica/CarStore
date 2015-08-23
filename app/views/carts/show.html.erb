@@ -45,6 +45,7 @@
       <tfoot>
       <tr class="cart_total_price">
         <td rowspan="3" colspan="2" id="cart_voucher" class="cart_voucher">
+          <%= button_to 'Empty cart', @cart, method: :delete,  data: { confirm: 'Are you sure?' }, class: 'btn btn-default add-to-cart' %>
         </td>
         <td colspan="3" class="text-right">Общая цена за товар</td>
         <td colspan="2" class="price" id="total_product"><%= @cart.total_summ %></td>
@@ -64,6 +65,7 @@
       </tfoot>
 
     </table>
+
 
   </div>
 </div>
