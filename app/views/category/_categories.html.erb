@@ -1,6 +1,6 @@
 <div class="col-sm-3">
   <div class="left-sidebar">
-    <h2>Категории</h2>
+    <h2><%=t('.category')%></h2>
 
     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
       <div class="panel panel-default">
@@ -17,7 +17,7 @@
                 <div id="<%= category.name %>" class="panel-collapse collapse">
                   <div class="panel-body">
                     <ul>
-                      <li><%= link_to 'Все модели', category_path(category) %></li>
+                      <li><%= link_to t('.all_models'), category_path(category) %></li>
                       <% @categories.select do |subcategory| %>
                           <% if subcategory.category_id == category.id %>
                               <li><%= link_to subcategory.name, category_path(subcategory) %></li>

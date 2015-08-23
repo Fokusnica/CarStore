@@ -6,7 +6,7 @@
             <%= image_tag(product.image.url, size: '255x210')%>
             <h2><%= product.price %></h2>
             <p><%= product.title %></p>
-            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%=t('.add_to_cart')%></a>
           </div>
           <div class="product-overlay">
             <div class="overlay-content">
@@ -14,19 +14,19 @@
               <p><%= product.description.html_safe %></p>
               <%= button_to  line_items_path(product_id: product), {class: 'btn btn-default add-to-cart'} do %>
                   <i class="fa fa-shopping-cart"></i>
-                  В корзину
+                  <%=t('.add_to_cart')%>
               <% end %>
               <%= link_to  product_path(product), {class: 'btn btn-default add-to-cart'} do %>
                   <i class="fa fa-eye"></i>
-                  Смотреть
+                  <%=t('.watch')%>
               <% end %>
             </div>
           </div>
         </div>
         <div class="choose">
           <ul class="nav nav-pills nav-justified">
-            <li><a href="#"><i class="fa fa-plus-square"></i>В закладки</a></li>
-            <li><a href="#"><i class="fa fa-plus-square"></i>В сравнение</a></li>
+            <li><a href="#"><i class="fa fa-plus-square"></i><%=t('.add_to_bookmarks')%></a></li>
+            <li><a href="#"><i class="fa fa-plus-square"></i><%=t('.compare')%></a></li>
           </ul>
         </div>
       </div>

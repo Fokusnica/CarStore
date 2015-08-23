@@ -6,9 +6,9 @@
       <div class="col-sm-9 padding-right">
         <div class="features_items"><!--features_items-->
           <% if @products.present? %>
-          <h2 class="title text-center">Модели: </h2>
+          <h2 class="title text-center"><%=t('.models')%> : </h2>
               <div class="alert alert-info" role="alert">
-                Найдено: <%= @products.total_count %> моделей
+                <%=t('.find')%>  : <%= @products.total_count %> <%=t('.models_find')%>
               </div>
 
           <div id="product">
@@ -25,7 +25,7 @@
               <div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                Я правда искал, всех опросил, но никто не знает где <%= params[:search] %>
+                <%=t('.nothing_find')%><%= params[:search] %>
               </div>
 
 <% end %>
