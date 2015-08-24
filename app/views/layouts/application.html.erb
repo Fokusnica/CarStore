@@ -73,13 +73,18 @@
               <li><a href="/myaccount"><i class="fa fa-user"></i><%= t('.account') %></a></li>
               <li><a href="#"><i class="fa fa-star"></i><%= t('.bookmarks') %></a></li>
               <li><a href="checkout.html"><i class="fa fa-crosshairs"></i><%= t('.ordering') %></a></li>
-              <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><%= t('.cart') %></a></li>
-              <li>
-              <% if user_signed_in? %>
-                  <%= link_to t('.sign_out'), destroy_user_session_path, :method => :delete %>
-              <% else %>
-                  <%= link_to t('.sign_in'), "/myaccount" %>
+              <% unless session[:cart_id].nil? %>
+                  <li><%= link_to(cart_url(session[:cart_id])) do %>
+                        <i class="fa fa-shopping-cart"></i><%= t('.cart') %>
+                    <%  end %>
+                  </li>
               <% end %>
+              <li>
+                <% if user_signed_in? %>
+                    <%= link_to t('.sign_out'), destroy_user_session_path, :method => :delete %>
+                <% else %>
+                    <%= link_to t('.sign_in'), "/myaccount" %>
+                <% end %>
               </li>
             </ul>
           </div>
@@ -108,9 +113,9 @@
 
                 <% @categories.each do |category| %>
                     <% if category.category_id.nil?%>
-                    <li><%= link_to category.name, category_path(category) %></li>
-                <% end %>
+                        <li><%= link_to category.name, category_path(category) %></li>
                     <% end %>
+                <% end %>
               </ul>
             </li>
             <li class="dropdown"><a href="#"><%= t('.store') %><i class="fa fa-angle-down"></i></a>
@@ -126,11 +131,11 @@
       </div>
       <div class="col-sm-3">
         <div class="search_box pull-right">
-        <%= form_tag(search_show_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], placeholder: t('.search')%>
-            <%= submit_tag "GO!", style: "display:none" %>
-        <% end %>
-</div>
+          <%= form_tag(search_show_path, :method => "get", id: "search-form") do %>
+              <%= text_field_tag :search, params[:search], placeholder: t('.search')%>
+              <%= submit_tag "GO!", style: "display:none" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
@@ -250,9 +255,9 @@
             <ul class="nav nav-pills nav-stacked">
               <% @categories.each do |category| %>
                   <% if category.category_id.nil?%>
-                  <li><%= link_to category.name, category_path(category) %></li>
+                      <li><%= link_to category.name, category_path(category) %></li>
                   <% end %>
-                  <% end %>
+              <% end %>
             </ul>
           </div>
         </div>
