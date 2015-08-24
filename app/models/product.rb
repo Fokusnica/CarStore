@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   has_many :products_providers, dependent: :destroy
   has_many :providers, through: :products_providers
   has_many :line_items
+  has_many :galleries, dependent: :nullify
   include Paperclip::Glue
   has_attached_file :image, :styles => { :medium => "255x237>", :thumb => "100x100>" }, :default_url => "missing.png"
   validates_attachment :image, content_type: { content_type:     ["image/jpg", "image/jpeg", "image/png"] }

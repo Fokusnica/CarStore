@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150823103209) do
+ActiveRecord::Schema.define(version: 20150824224635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,18 @@ ActiveRecord::Schema.define(version: 20150823103209) do
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
   end
+
+  create_table "galleries", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.integer  "product_id"
+  end
+
+  add_index "galleries", ["product_id"], name: "index_galleries_on_product_id", using: :btree
 
   create_table "group_users", force: :cascade do |t|
     t.string   "title"
@@ -153,6 +165,7 @@ ActiveRecord::Schema.define(version: 20150823103209) do
   add_index "users", ["group_user_id"], name: "index_users_on_group_user_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "galleries", "products"
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "products"
   add_foreign_key "products", "categories"

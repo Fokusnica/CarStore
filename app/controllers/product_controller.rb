@@ -6,6 +6,7 @@ class ProductController < ApplicationController
 
     @product = Product.find(params[:id])
     @products = Product.all
+    @gallery = @product.galleries
 
   end
 end
