@@ -73,7 +73,12 @@
               <li><a href="/myaccount"><i class="fa fa-user"></i>Аккаунт</a></li>
               <li><a href="#"><i class="fa fa-star"></i>Закладки</a></li>
               <li><a href="checkout.html"><i class="fa fa-crosshairs"></i>Оформление</a></li>
-              <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Корзина</a></li>
+                <% unless session[:cart_id].nil? %>
+              <li><%= link_to(cart_url(session[:cart_id])) do %>
+                    <i class="fa fa-shopping-cart"></i>Корзина
+                    <%  end %>
+              </li>
+              <% end %>
               <li>
               <% if user_signed_in? %>
                   <%= link_to "Выйти", destroy_user_session_path, :method => :delete %>
