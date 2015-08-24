@@ -20,9 +20,9 @@ ActiveAdmin.register Gallery do
     id_column
 
     column :product
-    column "Images" do |m|
-          image_tag(m.photo.url(:thumb), size: "50x50")
-      end
+    column "Изображения" do |m|
+      image_tag(m.photo.url(:thumb), size: "50x50")
+    end
     actions
   end
 
@@ -37,13 +37,11 @@ ActiveAdmin.register Gallery do
 
 
   form do |f|
-    f.inputs "Группа Клиентов" do
+    f.inputs "Добавление фото" do
       f.input :product
       f.input :photo, :as => :file
     end
     f.actions
   end
-
-
 
 end
