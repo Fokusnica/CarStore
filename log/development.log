@@ -13005,3 +13005,542 @@ Processing by Admin::CatalogsController#new as HTML
   [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
   Rendered /home/lu/.rvm/gems/ruby-2.2.2/bundler/gems/activeadmin-803262417983/app/views/active_admin/resource/new.html.arb (236.8ms)
 Completed 200 OK in 246ms (Views: 239.2ms | ActiveRecord: 0.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mProduct Load (12.9ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 95]]
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (28.9ms)[0m  UPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3  [["image_file_name", "test.jpg"], ["updated_at", "2015-08-25 22:35:37.895149"], ["id", 95]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "1.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.037090"], ["id", 1]]
+  [1m[36m (12.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "2"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.053999"], ["id", 2]]
+  [1m[36m (6.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "3"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.063285"], ["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "4"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.068479"], ["id", 4]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "5"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.072088"], ["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "6"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.075829"], ["id", 6]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "7"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.079239"], ["id", 7]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "8"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.082629"], ["id", 8]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "9"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.088826"], ["id", 9]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "10"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.092051"], ["id", 10]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "11"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.095064"], ["id", 11]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "12"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.098184"], ["id", 12]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "13"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.101463"], ["id", 13]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "14"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.104795"], ["id", 14]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "15"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.108060"], ["id", 15]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "16"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.111346"], ["id", 16]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "17"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.114357"], ["id", 17]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "18"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.117373"], ["id", 18]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "19"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.120646"], ["id", 19]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "20"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.123647"], ["id", 20]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "21"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.126946"], ["id", 21]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "22"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.129895"], ["id", 22]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "23"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.133052"], ["id", 23]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 24]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "24"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.136123"], ["id", 24]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "25"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.139202"], ["id", 25]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 26]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "26"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.142306"], ["id", 26]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 27]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "27"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.145244"], ["id", 27]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 28]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "28"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.148377"], ["id", 28]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 29]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "29"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.151414"], ["id", 29]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "30"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.154481"], ["id", 30]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "31"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.157906"], ["id", 31]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "32"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.163663"], ["id", 32]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "33"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.167054"], ["id", 33]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "34"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.170216"], ["id", 34]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 35]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "35"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.173139"], ["id", 35]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "36"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.176174"], ["id", 36]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "37"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.179250"], ["id", 37]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4  [["image_file_name", "38"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 22:43:20.182346"], ["id", 38]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mProduct Load (2.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "2.jpg"], ["updated_at", "2015-08-25 23:03:27.277292"], ["id", 2]]
+  [1m[35m (12.1ms)[0m  COMMIT
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "3.jpg"], ["updated_at", "2015-08-25 23:03:27.293990"], ["id", 3]]
+  [1m[35m (4.8ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "4.jpg"], ["updated_at", "2015-08-25 23:03:27.302318"], ["id", 4]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "5.jpg"], ["updated_at", "2015-08-25 23:03:27.307879"], ["id", 5]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "6.jpg"], ["updated_at", "2015-08-25 23:03:27.311609"], ["id", 6]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "7.jpg"], ["updated_at", "2015-08-25 23:03:27.315132"], ["id", 7]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "8.jpg"], ["updated_at", "2015-08-25 23:03:27.319931"], ["id", 8]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "9.jpg"], ["updated_at", "2015-08-25 23:03:27.323356"], ["id", 9]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "10.jpg"], ["updated_at", "2015-08-25 23:03:27.326886"], ["id", 10]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "11.jpg"], ["updated_at", "2015-08-25 23:03:27.330339"], ["id", 11]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "12.jpg"], ["updated_at", "2015-08-25 23:03:27.333602"], ["id", 12]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "13.jpg"], ["updated_at", "2015-08-25 23:03:27.336650"], ["id", 13]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "14.jpg"], ["updated_at", "2015-08-25 23:03:27.340283"], ["id", 14]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "15.jpg"], ["updated_at", "2015-08-25 23:03:27.347237"], ["id", 15]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "16.jpg"], ["updated_at", "2015-08-25 23:03:27.351847"], ["id", 16]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "17.jpg"], ["updated_at", "2015-08-25 23:03:27.355334"], ["id", 17]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "18.jpg"], ["updated_at", "2015-08-25 23:03:27.358512"], ["id", 18]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "19.jpg"], ["updated_at", "2015-08-25 23:03:27.361827"], ["id", 19]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "20.jpg"], ["updated_at", "2015-08-25 23:03:27.365240"], ["id", 20]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "21.jpg"], ["updated_at", "2015-08-25 23:03:27.368397"], ["id", 21]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "22.jpg"], ["updated_at", "2015-08-25 23:03:27.371499"], ["id", 22]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "23.jpg"], ["updated_at", "2015-08-25 23:03:27.375337"], ["id", 23]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 24]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "24.jpg"], ["updated_at", "2015-08-25 23:03:27.378527"], ["id", 24]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "25.jpg"], ["updated_at", "2015-08-25 23:03:27.381530"], ["id", 25]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "26.jpg"], ["updated_at", "2015-08-25 23:03:27.384758"], ["id", 26]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 27]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "27.jpg"], ["updated_at", "2015-08-25 23:03:27.388372"], ["id", 27]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 28]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "28.jpg"], ["updated_at", "2015-08-25 23:03:27.391697"], ["id", 28]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "29.jpg"], ["updated_at", "2015-08-25 23:03:27.395069"], ["id", 29]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "30.jpg"], ["updated_at", "2015-08-25 23:03:27.398425"], ["id", 30]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "31.jpg"], ["updated_at", "2015-08-25 23:03:27.401966"], ["id", 31]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "32.jpg"], ["updated_at", "2015-08-25 23:03:27.406340"], ["id", 32]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "33.jpg"], ["updated_at", "2015-08-25 23:03:27.413962"], ["id", 33]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "34.jpg"], ["updated_at", "2015-08-25 23:03:27.418830"], ["id", 34]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 35]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "35.jpg"], ["updated_at", "2015-08-25 23:03:27.423949"], ["id", 35]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "36.jpg"], ["updated_at", "2015-08-25 23:03:27.428155"], ["id", 36]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "37.jpg"], ["updated_at", "2015-08-25 23:03:27.431723"], ["id", 37]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "38.jpg"], ["updated_at", "2015-08-25 23:03:27.435063"], ["id", 38]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "39.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.438302"], ["id", 39]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "40.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.444417"], ["id", 40]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 41]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "41.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.450804"], ["id", 41]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "42.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.454562"], ["id", 42]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "43.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.461089"], ["id", 43]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "44.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.464552"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 45]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "45.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.468477"], ["id", 45]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "46.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.471749"], ["id", 46]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 47]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "47.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.475239"], ["id", 47]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 48]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "48.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.479479"], ["id", 48]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "49.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.482944"], ["id", 49]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "50.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.485919"], ["id", 50]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 51]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "51.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.489289"], ["id", 51]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 52]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "52.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.493186"], ["id", 52]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 53]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (3.1ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "53.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.497002"], ["id", 53]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 54]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "54.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.504109"], ["id", 54]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 55]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "55.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.507495"], ["id", 55]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 56]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "56.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.510854"], ["id", 56]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 57]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "57.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.514345"], ["id", 57]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 58]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "58.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.517658"], ["id", 58]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 59]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "59.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.520902"], ["id", 59]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 60]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "60.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.524452"], ["id", 60]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 61]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "61.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.528059"], ["id", 61]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 62]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "62.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.531169"], ["id", 62]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 63]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "63.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.534486"], ["id", 63]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 64]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "64.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.537783"], ["id", 64]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 65]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "65.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.541363"], ["id", 65]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 66]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "66.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.544562"], ["id", 66]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 67]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "67.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.548176"], ["id", 67]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 68]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "68.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.551413"], ["id", 68]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 69]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "69.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.554531"], ["id", 69]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 70]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "70.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.557924"], ["id", 70]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 71]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "71.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.562442"], ["id", 71]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 72]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "72.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.565739"], ["id", 72]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 73]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "73.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.568853"], ["id", 73]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 74]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "74.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.572482"], ["id", 74]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 75]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "75.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.576575"], ["id", 75]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 76]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "76.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.579613"], ["id", 76]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 77]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "77.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.582911"], ["id", 77]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 78]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "78.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.586118"], ["id", 78]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 79]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "79.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.589147"], ["id", 79]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 80]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "80.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.592105"], ["id", 80]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 81]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "81.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.596827"], ["id", 81]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 82]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "82.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.606428"], ["id", 82]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 83]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "83.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.610563"], ["id", 83]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 84]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "84.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.613833"], ["id", 84]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 85]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "foto_001.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.617347"], ["id", 85]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 86]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "2011-bentley-continental-supersports-convertible-photo-357008-s-1280x782.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.620754"], ["id", 86]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 87]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "Bentley-Flying-Spu_2485008k.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.623955"], ["id", 87]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 88]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "verde-mantis-lamborghini-huracan-zero2turbo.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.627180"], ["id", 88]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 89]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "autowp.ru_lamborghini_aventador_lp700-4_30.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.630787"], ["id", 89]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 90]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "lamborghini-aventador-roadster.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.634164"], ["id", 90]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 91]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "Lamborghini_Gallardo_LP560_4_Spy_pic_67462.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.637366"], ["id", 91]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 92]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "lamborghini-gallardo-lp-560-4-spyder-06.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.640975"], ["id", 92]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 93]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "eb218.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.644352"], ["id", 93]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 94]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "image_content_type" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["image_file_name", "bugatti-veyron-164-2.jpg"], ["image_content_type", "image/jpeg"], ["updated_at", "2015-08-25 23:03:27.647526"], ["id", 94]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 95]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "bugatti-veyron-grand-sport_100333153_l.jpg"], ["updated_at", "2015-08-25 23:03:27.650568"], ["id", 95]]
+  [1m[35m (0.4ms)[0m  COMMIT
