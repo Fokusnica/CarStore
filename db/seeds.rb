@@ -19,8 +19,7 @@ Product.create!(title: 'New_Polo',
     оба боковых зеркала. Въезжайте и выезжайте с узких парковок без проблем.
 
     </p>},
-    price: 3600.00,
-    image_file_name: )
+    price: 3600.00)
 
 Product.create!(title: 'New_Passat',
   description:
