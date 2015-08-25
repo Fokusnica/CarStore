@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
     @user = self
 
     if @user.confirmed_at_changed?
-      UserMailer.greeting_mail(@user.email).deliver_now
+      UserMailer.greeting_mail(@user).deliver_now
     end
   end
 
