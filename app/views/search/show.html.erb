@@ -1,0 +1,41 @@
+
+<section>
+  <div class="container">
+    <div class="row">
+      <%=render 'category/categories' %>
+      <div class="col-sm-9 padding-right">
+        <div class="features_items"><!--features_items-->
+          <% if @products.present? %>
+          <h2 class="title text-center"><%=t('.models')%> : </h2>
+              <div class="alert alert-info" role="alert">
+                <%=t('.find')%>  : <%= @products.total_count %> <%=t('.models_find')%>
+              </div>
+
+          <div id="product">
+
+            <%= render 'category/products' %>
+          </div>
+
+        </div>
+        <!--features_items-->
+        <div id="paginator">
+          <%= paginate @products, :window => 1, :remote => true %>
+        </div>
+<% else %>
+              <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                <%=t('.nothing_find')%><%= params[:search] %>
+              </div>
+
+<% end %>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+

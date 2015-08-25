@@ -15,8 +15,8 @@ ActiveAdmin.register Product do
 
   menu parent: "Каталог"
 
-  permit_params :title, :description, :img, :price, :quantity, :manufacturer,
-                :weight, :height, :width, :length, :year, :status, :category_id
+  permit_params :title, :description, :image, :price, :quantity, :manufacturer,
+                :weight, :height, :width, :length, :year, :status, :category_id, :delete_asset
 
   scope :all, :default => true
 
@@ -41,17 +41,52 @@ ActiveAdmin.register Product do
     actions
   end
 
-  show do
-    attributes_table :title, :category, :description, :img, :price, :quantity, :manufacturer,
-                     :weight, :height, :width, :length, :year, :status
+  show do |ad|
+    attributes_table do
+      row :title
+      row :category
+      row :description
+      row :image do
+        image_tag(ad.image.url(:thumb))
+      end
+      row :price
+      row :quantity
+      row :manufacturer
+      row :weight
+      row :height
+      row :width
+      row :length
+      row :year
+      row :status
+    end
   end
+
 
   form do |f|
     f.inputs "Товары" do
+      @hash = Hash.new { |h, k| h[k]=Hash.new(&h.default_proc) }
+      @hash["category"] = {}
+      @categories = Category.all
+
+      @categories.each do |item|
+        if item.category_id.nil?
+          @hash["category"][item.id] ||= item.name
+          @categories.select do |x|
+            if x.category_id == item.id
+              @hash["category"][x.id] ||= "-" + x.name
+            end
+          end
+        end
+      end
+
+
+      # byebug
+
       f.input :title
-      f.input :category
+      f.input :category, :as => :select, :collection => @hash["category"].collect { |x, v| [v, x] }
       f.input :description
-      f.input :img
+      f.input :image, :as => :file, :hint => image_tag(f.object.image.url(:thumb))
+      f.input :delete_asset, as: :boolean, required: false, label: "Удалить изображение?"
       f.input :price
       f.input :quantity
       f.input :manufacturer
@@ -61,6 +96,7 @@ ActiveAdmin.register Product do
       f.input :length
       f.input :year
       f.input :status
+
     end
     f.actions
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812132536) do
+ActiveRecord::Schema.define(version: 20150824224635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,13 +49,31 @@ ActiveRecord::Schema.define(version: 20150812132536) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "parent_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "category_id"
   end
+
+  create_table "galleries", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.integer  "product_id"
+  end
+
+  add_index "galleries", ["product_id"], name: "index_galleries_on_product_id", using: :btree
 
   create_table "group_users", force: :cascade do |t|
     t.string   "title"
@@ -63,6 +81,17 @@ ActiveRecord::Schema.define(version: 20150812132536) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "cart_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "quantity",   default: 1
+  end
+
+  add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id", using: :btree
+  add_index "line_items", ["product_id"], name: "index_line_items_on_product_id", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "title"
@@ -77,9 +106,13 @@ ActiveRecord::Schema.define(version: 20150812132536) do
     t.float    "length"
     t.integer  "year"
     t.boolean  "status"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "category_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
@@ -124,14 +157,20 @@ ActiveRecord::Schema.define(version: 20150812132536) do
     t.datetime "updated_at",                          null: false
     t.integer  "group_user_id"
     t.string   "phone"
+    t.integer  "cart_id"
   end
 
+  add_index "users", ["cart_id"], name: "index_users_on_cart_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["group_user_id"], name: "index_users_on_group_user_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "galleries", "products"
+  add_foreign_key "line_items", "carts"
+  add_foreign_key "line_items", "products"
   add_foreign_key "products", "categories"
   add_foreign_key "products_providers", "products"
   add_foreign_key "products_providers", "providers"
+  add_foreign_key "users", "carts"
   add_foreign_key "users", "group_users"
 end

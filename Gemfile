@@ -1,13 +1,20 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'activeadmin', github: 'activeadmin'
 
-gem 'rails_12factor'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+gem 'kaminari'
+#gem 'rails_12factor'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

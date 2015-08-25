@@ -1,4 +1,4 @@
-ActiveAdmin.register Category do
+ActiveAdmin.register Category , as: "Catalog"  do
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -13,7 +13,7 @@ ActiveAdmin.register Category do
 #   permitted
 # end
   menu parent: "Каталог"
-  permit_params :name, :description
+  permit_params :name, :description, :category_id
 
 
   index do
@@ -21,6 +21,7 @@ ActiveAdmin.register Category do
     id_column
     column :name
     column :description
+    column :category
 
     actions
   end
@@ -35,6 +36,7 @@ ActiveAdmin.register Category do
     f.inputs "Категории" do
       f.input :name
       f.input :description
+      f.input :category
     end
     f.actions
   end
