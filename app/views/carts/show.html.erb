@@ -30,7 +30,7 @@
 
 
             <td><%= image_tag('0.jpg', size: "130x98") %></td>
-            <td><p class="product-name"><%= item.product.title%></p><small class="cart_ref"><%= item.product.description %></td></small>
+            <td><p class="product-name"><%= item.product.title%></p><small class="cart_ref"><%= item.product.description.html_safe %></td></small>
             <td><%= item.product.status ? t('.in_stock') : t('.out_of_stock') %></td>
             <td><span class="price"><%= item.product.price %></span></td>
             <td><%= item.quantity %></td>
