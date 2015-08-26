@@ -7,9 +7,9 @@
 
   <title>Car Store - Один из лучших автосалонов Харькова</title>
 
-  <meta name="description" content="Free download theme onepage, clean and modern responsive for all"/>
-  <meta name="keywords" content="responsive, html5, onepage, themes, template, clean layout, free web"/>
-  <meta name="author" content="Thomsoon.com"/>
+  <meta name="description" content="Car Store - Один из лучших автосалонов Харькова"/>
+  <meta name="keywords" content="Car Store Один из лучших автосалонов Харькова"/>
+
 
   <link rel="shortcut icon" href="img/favicon.png">
 
@@ -46,10 +46,10 @@
 
         <div class="logo"><img src="/assets/home/logo_admin.png"></div>
 
-        <h1>Один из лучших автосалонов Харькова</h1><hr/>
+        <h1>Лидер автосалонов Харькова</h1><hr/>
         <p>Лучший выбор машин, лучшее обслуживание - все для клиента!</p>
 
-        <a href="#about-us"><div class="read-more">Хочешь больше?</div></a>
+        <a href="#about-us"><div class="read-more">Узнать больше</div></a>
 
       </div>
       <div class="arrow-down"></div>
@@ -261,7 +261,7 @@
 
       </ul>
 
-      <a href="#contact"><div class="read-more">Read more</div></a>
+      <a href="#contact"><div class="read-more">Узнать больше</div></a>
 
     </div>
 
@@ -299,51 +299,33 @@
 
   <!-- Contact-->
 
-  <section class="contact" id="contact">
-    <h1>Contact</h1>
+  <section class="contact">
+    <h1 id="contact">ЗАПИСЬ НА ТЕСТ-ДРАЙВ</h1>
     <hr/>
 
     <div class="content">
 
       <div class="form">
+        <%= form_tag(about_mail_path, :method => "post", id: "send") do %>
+            <div class="column">
+            <%= text_field_tag :name, params[:name], placeholder: "Ваше имя"%>
+              </div>
+            <div class="column-2">
+            <%= text_field_tag :email, params[:email], placeholder: "Ваш E-mail"%>
+              </div>
+            <div class="column-3">
+            <%= text_area_tag :text_area, params[:text], placeholder: "Заявка и пожелания" %>
+              </div>
+            <%= submit_tag "GO!" %>
+        <% end %>
 
-        <form method="post" action="mail.php" name="kontakt">
-
-          <div class="column">
-            YOUR NAME<br/><br/>
-            <input name="name" id="name" value="" />
-          </div>
-
-          <div class="column-2">
-            YOUR E-MAIL<br/><br/>
-            <input name="email" id="email" value="" />
-          </div>
-
-
-          <div class="column-3">
-            MESSAGE<br/><br/>
-            <textarea id="message" name="message" ></textarea>
-          </div>
-
-          <div class="button">
-            <span><input class="submit" id="submit" name="submit" type="submit" value="SEND"></span>
-          </div>
-
-        </form>
 
       </div>
 
 
       <div class="contact-text">
 
-        To contact us please use the contact form visible<br/><br/>
-
-        When sending files, please use<br/>
-        the following e-mail<br/><br/>
-
-        <strong>Tomasz Mazurczak</strong><br/><br/>
-
-        e-mail: <strong>contact@thomsoon.com</strong>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.919127487383!2d36.22196459999999!3d50.0316112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a14aa1c825fb%3A0x5bc05fcc065de7be!2z0L_RgNC-0YHQvy4g0JvQtdC90ZbQvdCwLCA1Niwg0KXQsNGA0LrRltCyLCDQpdCw0YDQutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1440583882162" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 
       </div>
 
@@ -358,17 +340,13 @@
     <div class="logo"><img src="/assets/landpageimg/logo-footer.png"></div>
     <div class="menu-footer">
 
-      <a href="#home">Home</a>
-      <a href="#">Privacy policy</a>
-      <a href="#">RSS</a>
-      <a href="#">Facebook</a>
-      <a href="#">Dribble</a>
-      <a href="#">Twitter</a>
-      <a href="#">Contact</a>
+      <a href="/">Главная</a>
+      <a href="/category">Все модели</a>
+      <a href="/myaccount">Мой аккаунт</a>
 
     </div>
 
-    <div class="copyright">© 2014. All Rights Reserved Thomsoon.com</div>
+    <div class="copyright">© 2015. <a href="/" style="color: grey"> Car Store - Один из лучших автосалонов Харькова</a></div>
 
 
   </section>

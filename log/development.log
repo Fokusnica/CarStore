@@ -13544,3 +13544,1625 @@ Completed 200 OK in 246ms (Views: 239.2ms | ActiveRecord: 0.8ms)
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "image_file_name" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["image_file_name", "bugatti-veyron-grand-sport_100333153_l.jpg"], ["updated_at", "2015-08-25 23:03:27.650568"], ["id", 95]]
   [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started POST "/about" for 127.0.0.1 at 2015-08-26 14:10:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (11.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [POST] "/about"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.3) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.3) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `load'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `call'
+  spring (1.3.6) lib/spring/client/command.rb:7:in `call'
+  spring (1.3.6) lib/spring/client.rb:26:in `run'
+  spring (1.3.6) bin/spring:48:in `<top (required)>'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `load'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:13:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.9ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.6ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (204.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.7ms)
+
+
+Started POST "/about" for 127.0.0.1 at 2015-08-26 14:16:00 +0300
+
+ActionController::RoutingError (No route matches [POST] "/about"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.3) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.3) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `load'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `call'
+  spring (1.3.6) lib/spring/client/command.rb:7:in `call'
+  spring (1.3.6) lib/spring/client.rb:26:in `run'
+  spring (1.3.6) bin/spring:48:in `<top (required)>'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `load'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:13:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.9ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (188.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.0ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (107.8ms)
+
+
+Started POST "/about" for 127.0.0.1 at 2015-08-26 14:16:27 +0300
+
+ActionController::RoutingError (No route matches [POST] "/about"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.3) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.3) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `load'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `call'
+  spring (1.3.6) lib/spring/client/command.rb:7:in `call'
+  spring (1.3.6) lib/spring/client.rb:26:in `run'
+  spring (1.3.6) bin/spring:48:in `<top (required)>'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `load'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:13:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (177.7ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.9ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (106.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2015-08-26 14:16:33 +0300
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb (110.1ms)
+Completed 200 OK in 160ms (Views: 121.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landpagecss/reset.css" for 127.0.0.1 at 2015-08-26 14:16:33 +0300
+
+
+Started GET "/assets/landpagecss/style.css" for 127.0.0.1 at 2015-08-26 14:16:33 +0300
+
+
+Started GET "/assets/landpagecss/style-responsive.css" for 127.0.0.1 at 2015-08-26 14:16:33 +0300
+
+
+Started GET "/assets/landpageimg/loading.gif" for 127.0.0.1 at 2015-08-26 14:16:33 +0300
+
+
+Started GET "/assets/landpagejs/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-08-26 14:16:33 +0300
+
+
+Started GET "/assets/landpagejs/jquery-ui-1.10.4.min.js" for 127.0.0.1 at 2015-08-26 14:16:33 +0300
+
+
+Started GET "/assets/landpagejs/masonry.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:16:33 +0300
+
+
+Started GET "/assets/landpagejs/jquery.nicescroll.js" for 127.0.0.1 at 2015-08-26 14:16:33 +0300
+
+
+Started GET "/assets/landpagejs/imagesloaded.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpagejs/jquery.sticky.js" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpagejs/jquery.parallax.js" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpagejs/script.js" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/logo-footer.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/home/logo_admin.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/icons/menu-media.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/icons/12a.jpg" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/icons/11a.jpg" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/icons/03a.jpg" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/icons/10a.jpg" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/icons/08a.jpg" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/icons/01a.jpg" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/1.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/2.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/3.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/4.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/5.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/6.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/7.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/8.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/9.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/background/partners.jpg" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/logos/infocar-logo-2.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/logos/kraina.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/logos/logoeurope.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/logos/ingo.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/arrow-down.png" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started GET "/assets/landpageimg/background/start-page.jpg" for 127.0.0.1 at 2015-08-26 14:16:34 +0300
+
+
+Started POST "/about/mail" for 127.0.0.1 at 2015-08-26 14:16:42 +0300
+Processing by AboutController#mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rJKhD7qlVIph4nOIpHofLc+FewP14CnAtRhaIi4TyQc+EjZCFbVHSvmZN+fSNObRMck43lkFnJV9QmLdQ8lO+A==", "name"=>"Александр", "email"=>"servermed@gmail.com", "text_area"=>"ывывыв", "commit"=>"GO!"}
+Completed 500 Internal Server Error in 1091004ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/about_controller.rb:10:in `exit'
+  app/controllers/about_controller.rb:10:in `mail'
+  app/controllers/about_controller.rb:10:in `mail'
+
+
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (123.0ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.6ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (222.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (98.5ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (181.4ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2015-08-26 14:41:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (6.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/ru"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.3) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.3) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `load'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `call'
+  spring (1.3.6) lib/spring/client/command.rb:7:in `call'
+  spring (1.3.6) lib/spring/client.rb:26:in `run'
+  spring (1.3.6) bin/spring:48:in `<top (required)>'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `load'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:13:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.8ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (40.8ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (234.9ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (51.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (131.1ms)
+
+
+Started GET "/rails/mailers" for 127.0.0.1 at 2015-08-26 14:41:15 +0300
+Processing by Rails::MailersController#index as HTML
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/railties-4.2.3/lib/rails/templates/rails/mailers/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/user_mailer/test_drive" for 127.0.0.1 at 2015-08-26 14:41:17 +0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/test_drive"}
+  Rendered user_mailer/test_drive.html.erb within layouts/mailer (0.6ms)
+  Rendered user_mailer/test_drive.text.erb within layouts/mailer (0.5ms)
+
+UserMailer#test_drive: processed outbound mail in 196.7ms
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/railties-4.2.3/lib/rails/templates/rails/mailers/email.html.erb (14.9ms)
+Completed 200 OK in 263ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/user_mailer/test_drive?part=text%2Fhtml" for 127.0.0.1 at 2015-08-26 14:41:17 +0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"user_mailer/test_drive"}
+  Rendered user_mailer/test_drive.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/test_drive.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#test_drive: processed outbound mail in 40.6ms
+  Rendered text template (0.1ms)
+Completed 200 OK in 60ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/user_mailer/test_drive" for 127.0.0.1 at 2015-08-26 14:42:18 +0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/test_drive"}
+  Rendered user_mailer/test_drive.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/test_drive.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#test_drive: processed outbound mail in 20.5ms
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/railties-4.2.3/lib/rails/templates/rails/mailers/email.html.erb (6.9ms)
+Completed 200 OK in 46ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/user_mailer/test_drive?part=text%2Fhtml" for 127.0.0.1 at 2015-08-26 14:42:19 +0300
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"user_mailer/test_drive"}
+  Rendered user_mailer/test_drive.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/test_drive.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#test_drive: processed outbound mail in 31.4ms
+  Rendered text template (0.0ms)
+Completed 200 OK in 39ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about/mail" for 127.0.0.1 at 2015-08-26 14:42:50 +0300
+
+ActionController::RoutingError (No route matches [GET] "/about/mail"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.3) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.3) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `load'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `call'
+  spring (1.3.6) lib/spring/client/command.rb:7:in `call'
+  spring (1.3.6) lib/spring/client.rb:26:in `run'
+  spring (1.3.6) bin/spring:48:in `<top (required)>'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `load'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:13:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (184.5ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (59.7ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (120.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb (2.2ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landpagecss/reset.css" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagecss/style.css" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagecss/style-responsive.css" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpageimg/loading.gif" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagejs/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagejs/jquery-ui-1.10.4.min.js" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagejs/jquery.nicescroll.js" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagejs/jquery.sticky.js" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagejs/masonry.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagejs/imagesloaded.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagejs/jquery.parallax.js" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpagejs/script.js" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpageimg/logo-footer.png" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpageimg/background/start-page.jpg" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpageimg/arrow-down.png" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/home/logo_admin.png" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpageimg/icons/menu-media.png" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpageimg/icons/12a.jpg" for 127.0.0.1 at 2015-08-26 14:42:54 +0300
+
+
+Started GET "/assets/landpageimg/icons/11a.jpg" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/icons/03a.jpg" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/icons/10a.jpg" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/icons/08a.jpg" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/icons/01a.jpg" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/1.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/2.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/3.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/4.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/5.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/6.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/7.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/8.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/9.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/logos/infocar-logo-2.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/logos/kraina.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/logos/logoeurope.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/logos/ingo.png" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started GET "/assets/landpageimg/background/partners.jpg" for 127.0.0.1 at 2015-08-26 14:42:55 +0300
+
+
+Started POST "/about/mail" for 127.0.0.1 at 2015-08-26 14:43:20 +0300
+Processing by AboutController#mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LMKqJkdLKv+N4ABaeucF2LNmDPHnKsYNv6Ul6usvDrG+Qj1r6Fs5PxWbRDUMqfwkTSpPLEvPc1h3/x0VhvWJTg==", "name"=>"Александр", "email"=>"servermed@gmail.com", "text_area"=>"sdadasdasdad", "commit"=>"GO!"}
+  Rendered user_mailer/test_drive.html.erb within layouts/mailer (0.2ms)
+  Rendered user_mailer/test_drive.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#test_drive: processed outbound mail in 34.3ms
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `delivery_now' for #<ActionMailer::MessageDelivery:0x007fc18e3fb4c8>):
+  app/controllers/about_controller.rb:11:in `mail'
+
+
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (114.9ms)
+
+
+Started POST "/about/mail" for 127.0.0.1 at 2015-08-26 14:43:51 +0300
+Processing by AboutController#mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LMKqJkdLKv+N4ABaeucF2LNmDPHnKsYNv6Ul6usvDrG+Qj1r6Fs5PxWbRDUMqfwkTSpPLEvPc1h3/x0VhvWJTg==", "name"=>"Александр", "email"=>"servermed@gmail.com", "text_area"=>"sdadasdasdad", "commit"=>"GO!"}
+  Rendered user_mailer/test_drive.html.erb within layouts/mailer (0.3ms)
+  Rendered user_mailer/test_drive.text.erb within layouts/mailer (0.1ms)
+
+UserMailer#test_drive: processed outbound mail in 27.0ms
+
+Sent mail to octohellstore@gmail.com (71.1ms)
+Date: Wed, 26 Aug 2015 14:43:51 +0300
+From: octohellstore@gmail.com
+To: octohellstore@gmail.com
+Message-ID: <55dda6779053b_5773fe0c505e20094664@MacBook-Pro-Sasha.local.mail>
+Subject: =?UTF-8?Q?=D0=97=D0=B0=D1=8F=D0=B2=D0=BA=D0=B0_=D0=BD=D0=B0?=
+ =?UTF-8?Q?_=D1=82=D0=B5=D1=81=D1=82_-_=D0=B4=D1=80=D0=B0=D0=B9=D0=B2?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_55dda6778d85f_5773fe0c505e200945d1";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_55dda6778d85f_5773fe0c505e200945d1
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+0JfQsNGP0LLQutCwINC90LAg0YLQtdGB0YIgLSDQtNGA0LDQudCyCtCSINC9
+0LDRiNC10Lwg0LzQsNCz0LDQt9C40L3QtSDQt9Cw0Y/QstC60LAg0L7RgiDQ
+kNC70LXQutGB0LDQvdC00YAK0J7QsdGA0LDRgtC90YvQuSDQsNC00YDQtdGB
+OiBzZXJ2ZXJtZWRAZ21haWwuY29tCtCi0LXQutGB0YIg0LfQsNGP0LLQutC4
+OgpzZGFkYXNkYXNkYWQK
+
+----==_mimepart_55dda6778d85f_5773fe0c505e200945d1
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+CiAgPGJvZHk+CiAgICA8aDE+0JfQsNGP0LLQutCwINC90LAg0YLQ
+tdGB0YIgLSDQtNGA0LDQudCyPC9oMT4KPHA+0JIg0L3QsNGI0LXQvCDQvNCw
+0LPQsNC30LjQvdC1INC30LDRj9Cy0LrQsCDQvtGCINCQ0LvQtdC60YHQsNC9
+0LTRgDwvcD4KPHA+0J7QsdGA0LDRgtC90YvQuSDQsNC00YDQtdGBOiBzZXJ2
+ZXJtZWRAZ21haWwuY29tPC9wPgo8cD7QotC10LrRgdGCINC30LDRj9Cy0LrQ
+uDo8L3A+PGJyPgo8cHJlPnNkYWRhc2Rhc2RhZDwvcHJlPgogIDwvYm9keT4K
+PC9odG1sPgo=
+
+----==_mimepart_55dda6778d85f_5773fe0c505e200945d1--
+
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template about/mail, application/mail with {:locale=>[:ru], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :arb, :jbuilder]}. Searched in:
+  * "/Users/sasha/RubymineProjects/CarStore/app/views"
+  * "/Users/sasha/.rvm/gems/ruby-2.2.2/gems/devise-3.5.2/app/views"
+  * "/Users/sasha/.rvm/gems/ruby-2.2.2/bundler/gems/activeadmin-803262417983/app/views"
+  * "/Users/sasha/.rvm/gems/ruby-2.2.2/gems/kaminari-0.16.3/app/views"
+):
+  actionview (4.2.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/sasha/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.5) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.6.4) lib/rack/handler/thin.rb:19:in `run'
+  rack (1.6.4) lib/rack/server.rb:286:in `start'
+  railties (4.2.3) lib/rails/commands/server.rb:80:in `start'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:80:in `block in server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `tap'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:75:in `server'
+  railties (4.2.3) lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+  railties (4.2.3) lib/rails/commands.rb:17:in `<top (required)>'
+  bin/rails:8:in `require'
+  bin/rails:8:in `<top (required)>'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `load'
+  spring (1.3.6) lib/spring/client/rails.rb:28:in `call'
+  spring (1.3.6) lib/spring/client/command.rb:7:in `call'
+  spring (1.3.6) lib/spring/client.rb:26:in `run'
+  spring (1.3.6) bin/spring:48:in `<top (required)>'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `load'
+  spring (1.3.6) lib/spring/binstub.rb:11:in `<top (required)>'
+  bin/spring:13:in `require'
+  bin/spring:13:in `<top (required)>'
+  bin/rails:3:in `load'
+  bin/rails:3:in `<main>'
+
+
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (60.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sasha/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (107.4ms)
+
+
+Started POST "/about/mail" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+Processing by AboutController#mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LMKqJkdLKv+N4ABaeucF2LNmDPHnKsYNv6Ul6usvDrG+Qj1r6Fs5PxWbRDUMqfwkTSpPLEvPc1h3/x0VhvWJTg==", "name"=>"Александр", "email"=>"servermed@gmail.com", "text_area"=>"sdadasdasdad", "commit"=>"GO!"}
+  Rendered user_mailer/test_drive.html.erb within layouts/mailer (0.1ms)
+  Rendered user_mailer/test_drive.text.erb within layouts/mailer (0.0ms)
+
+UserMailer#test_drive: processed outbound mail in 20.1ms
+
+Sent mail to octohellstore@gmail.com (87.1ms)
+Date: Wed, 26 Aug 2015 14:45:02 +0300
+From: octohellstore@gmail.com
+To: octohellstore@gmail.com
+Message-ID: <55dda6be57cb2_5773fe0c505e200948bd@MacBook-Pro-Sasha.local.mail>
+Subject: =?UTF-8?Q?=D0=97=D0=B0=D1=8F=D0=B2=D0=BA=D0=B0_=D0=BD=D0=B0?=
+ =?UTF-8?Q?_=D1=82=D0=B5=D1=81=D1=82_-_=D0=B4=D1=80=D0=B0=D0=B9=D0=B2?=
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_55dda6be56929_5773fe0c505e200947bb";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_55dda6be56929_5773fe0c505e200947bb
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+0JfQsNGP0LLQutCwINC90LAg0YLQtdGB0YIgLSDQtNGA0LDQudCyCtCSINC9
+0LDRiNC10Lwg0LzQsNCz0LDQt9C40L3QtSDQt9Cw0Y/QstC60LAg0L7RgiDQ
+kNC70LXQutGB0LDQvdC00YAK0J7QsdGA0LDRgtC90YvQuSDQsNC00YDQtdGB
+OiBzZXJ2ZXJtZWRAZ21haWwuY29tCtCi0LXQutGB0YIg0LfQsNGP0LLQutC4
+OgpzZGFkYXNkYXNkYWQK
+
+----==_mimepart_55dda6be56929_5773fe0c505e200947bb
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PGh0bWw+CiAgPGJvZHk+CiAgICA8aDE+0JfQsNGP0LLQutCwINC90LAg0YLQ
+tdGB0YIgLSDQtNGA0LDQudCyPC9oMT4KPHA+0JIg0L3QsNGI0LXQvCDQvNCw
+0LPQsNC30LjQvdC1INC30LDRj9Cy0LrQsCDQvtGCINCQ0LvQtdC60YHQsNC9
+0LTRgDwvcD4KPHA+0J7QsdGA0LDRgtC90YvQuSDQsNC00YDQtdGBOiBzZXJ2
+ZXJtZWRAZ21haWwuY29tPC9wPgo8cD7QotC10LrRgdGCINC30LDRj9Cy0LrQ
+uDo8L3A+PGJyPgo8cHJlPnNkYWRhc2Rhc2RhZDwvcHJlPgogIDwvYm9keT4K
+PC9odG1sPgo=
+
+----==_mimepart_55dda6be56929_5773fe0c505e200947bb--
+
+Redirected to http://localhost:3000/about
+Completed 302 Found in 119ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb (1.1ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landpagecss/reset.css" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagecss/style-responsive.css" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagecss/style.css" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/loading.gif" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagejs/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagejs/jquery.nicescroll.js" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagejs/jquery-ui-1.10.4.min.js" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagejs/jquery.sticky.js" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagejs/masonry.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagejs/imagesloaded.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagejs/jquery.parallax.js" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpagejs/script.js" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/home/logo_admin.png" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/logo-footer.png" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/background/start-page.jpg" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/arrow-down.png" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/icons/menu-media.png" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/icons/12a.jpg" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/icons/11a.jpg" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/icons/03a.jpg" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/icons/10a.jpg" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/icons/01a.jpg" for 127.0.0.1 at 2015-08-26 14:45:02 +0300
+
+
+Started GET "/assets/landpageimg/icons/08a.jpg" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/1.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/2.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/3.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/4.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/5.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/6.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/7.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/8.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/9.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/logos/infocar-logo-2.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/logos/logoeurope.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/logos/kraina.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/logos/ingo.png" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpageimg/background/partners.jpg" for 127.0.0.1 at 2015-08-26 14:45:03 +0300
+
+
+Started GET "/assets/landpagecss/reset.css" for 127.0.0.1 at 2015-08-26 14:50:16 +0300
+
+
+Started GET "/assets/landpagecss/style.css" for 127.0.0.1 at 2015-08-26 14:50:16 +0300
+
+
+Started GET "/assets/landpagecss/style-responsive.css" for 127.0.0.1 at 2015-08-26 14:50:16 +0300
+
+
+Started GET "/about" for 127.0.0.1 at 2015-08-26 14:51:03 +0300
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb (16.5ms)
+Completed 200 OK in 38ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landpagecss/reset.css" for 127.0.0.1 at 2015-08-26 14:51:03 +0300
+
+
+Started GET "/assets/landpagecss/style.css" for 127.0.0.1 at 2015-08-26 14:51:03 +0300
+
+
+Started GET "/assets/landpagecss/style-responsive.css" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpagejs/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/loading.gif" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpagejs/jquery-ui-1.10.4.min.js" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpagejs/jquery.nicescroll.js" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpagejs/script.js" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpagejs/jquery.sticky.js" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpagejs/masonry.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpagejs/imagesloaded.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpagejs/jquery.parallax.js" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/home/logo_admin.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/logo-footer.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/icons/menu-media.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/icons/12a.jpg" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/icons/11a.jpg" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/icons/03a.jpg" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/icons/10a.jpg" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/icons/08a.jpg" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/1.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/2.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/3.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/icons/01a.jpg" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/4.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/5.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/7.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/6.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/8.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/9.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/logos/infocar-logo-2.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/logos/kraina.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/logos/ingo.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/logos/logoeurope.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/background/start-page.jpg" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/arrow-down.png" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/assets/landpageimg/background/partners.jpg" for 127.0.0.1 at 2015-08-26 14:51:04 +0300
+
+
+Started GET "/category" for 127.0.0.1 at 2015-08-26 14:52:32 +0300
+Processing by CategoryController#index as HTML
+  [1m[35mCategory Load (32.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered category/_categories.html.erb (112.5ms)
+  [1m[36mProduct Load (25.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."title" ASC LIMIT 15 OFFSET 0[0m
+  Rendered category/_products.html.erb (227.6ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "products"
+  Rendered category/index.html.erb within layouts/application (377.6ms)
+  [1m[36mUser Load (25.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 793ms (Views: 634.2ms | ActiveRecord: 140.6ms)
+
+
+Started GET "/assets//bootstrap.min.js" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/jquery.scrollUp.min.js" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/main.js" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/price-range.js" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/jquery.prettyPhoto.js" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/home/logo.png" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/home/iframe1.png" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/home/iframe2.png" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/home/iframe3.png" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/home/iframe4.png" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/home/map.png" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/assets/home/searchicon.png" for 127.0.0.1 at 2015-08-26 14:52:34 +0300
+
+
+Started GET "/about" for 127.0.0.1 at 2015-08-26 14:53:29 +0300
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb (36.2ms)
+Completed 200 OK in 95ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landpagecss/reset.css" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagecss/style-responsive.css" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagecss/style.css" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/loading.gif" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagejs/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagejs/jquery-ui-1.10.4.min.js" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagejs/jquery.nicescroll.js" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagejs/jquery.sticky.js" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagejs/masonry.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagejs/imagesloaded.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagejs/jquery.parallax.js" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpagejs/script.js" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/home/logo_admin.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/logo-footer.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/icons/menu-media.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/icons/12a.jpg" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/icons/11a.jpg" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/icons/03a.jpg" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/icons/10a.jpg" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/icons/08a.jpg" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/icons/01a.jpg" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/2.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/1.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/3.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/4.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/5.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/6.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/8.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/7.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/9.png" for 127.0.0.1 at 2015-08-26 14:53:30 +0300
+
+
+Started GET "/assets/landpageimg/logos/infocar-logo-2.png" for 127.0.0.1 at 2015-08-26 14:53:31 +0300
+
+
+Started GET "/assets/landpageimg/logos/kraina.png" for 127.0.0.1 at 2015-08-26 14:53:31 +0300
+
+
+Started GET "/assets/landpageimg/logos/logoeurope.png" for 127.0.0.1 at 2015-08-26 14:53:31 +0300
+
+
+Started GET "/assets/landpageimg/logos/ingo.png" for 127.0.0.1 at 2015-08-26 14:53:31 +0300
+
+
+Started GET "/assets/landpageimg/background/start-page.jpg" for 127.0.0.1 at 2015-08-26 14:53:31 +0300
+
+
+Started GET "/assets/landpageimg/arrow-down.png" for 127.0.0.1 at 2015-08-26 14:53:31 +0300
+
+
+Started GET "/assets/landpageimg/background/partners.jpg" for 127.0.0.1 at 2015-08-26 14:53:31 +0300
+
+
+Started GET "/myaccount" for 127.0.0.1 at 2015-08-26 14:53:36 +0300
+Processing by MyaccountController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered myaccount/_login.html.erb (66.0ms)
+  Rendered myaccount/index.html.erb within layouts/application (68.5ms)
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 320ms (Views: 316.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets//bootstrap.min.js" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/jquery.scrollUp.min.js" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/price-range.js" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/jquery.prettyPhoto.js" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/main.js" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/home/logo.png" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/home/iframe1.png" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/home/iframe2.png" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/home/iframe3.png" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/home/iframe4.png" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/home/map.png" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/assets/home/searchicon.png" for 127.0.0.1 at 2015-08-26 14:53:37 +0300
+
+
+Started GET "/about" for 127.0.0.1 at 2015-08-26 14:54:43 +0300
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb (6.4ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landpagecss/reset.css" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagecss/style.css" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagecss/style-responsive.css" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/loading.gif" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagejs/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagejs/jquery-ui-1.10.4.min.js" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagejs/jquery.nicescroll.js" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagejs/jquery.sticky.js" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagejs/masonry.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagejs/imagesloaded.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagejs/jquery.parallax.js" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpagejs/script.js" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/home/logo_admin.png" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/logo-footer.png" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/icons/menu-media.png" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/icons/12a.jpg" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/icons/11a.jpg" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/icons/03a.jpg" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/icons/10a.jpg" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/icons/08a.jpg" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/icons/01a.jpg" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/1.png" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/2.png" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/3.png" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/4.png" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/5.png" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/6.png" for 127.0.0.1 at 2015-08-26 14:54:44 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/7.png" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/8.png" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/9.png" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/assets/landpageimg/logos/infocar-logo-2.png" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/assets/landpageimg/logos/kraina.png" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/assets/landpageimg/logos/logoeurope.png" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/assets/landpageimg/logos/ingo.png" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/assets/landpageimg/background/partners.jpg" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/assets/landpageimg/arrow-down.png" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/assets/landpageimg/background/start-page.jpg" for 127.0.0.1 at 2015-08-26 14:54:45 +0300
+
+
+Started GET "/about" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb (2.7ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landpagecss/reset.css" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpagecss/style.css" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpagecss/style-responsive.css" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpageimg/loading.gif" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpagejs/jquery-1.11.0.min.js" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpagejs/jquery-ui-1.10.4.min.js" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpagejs/jquery.nicescroll.js" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpagejs/jquery.sticky.js" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpagejs/masonry.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpagejs/imagesloaded.pkgd.min.js" for 127.0.0.1 at 2015-08-26 14:55:15 +0300
+
+
+Started GET "/assets/landpagejs/jquery.parallax.js" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpagejs/script.js" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/home/logo_admin.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/logo-footer.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/icons/menu-media.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/icons/12a.jpg" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/icons/11a.jpg" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/icons/03a.jpg" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/icons/10a.jpg" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/icons/08a.jpg" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/icons/01a.jpg" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/1.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/2.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/3.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/4.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/5.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/6.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/7.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/8.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/portfolio/9.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/logos/infocar-logo-2.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/logos/kraina.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/logos/logoeurope.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/logos/ingo.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/arrow-down.png" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/background/start-page.jpg" for 127.0.0.1 at 2015-08-26 14:55:16 +0300
+
+
+Started GET "/assets/landpageimg/background/partners.jpg" for 127.0.0.1 at 2015-08-26 14:55:17 +0300
