@@ -8,4 +8,12 @@ class UserMailer < ApplicationMailer
 
   end
 
+  def test_drive(client)
+
+    @client = client
+
+    mail to: "octohellstore@gmail.com", subject: 'Заявка на тест - драйв'
+
+  end
+
 end
