@@ -15,4 +15,5 @@
 .ruby-gemset
 /config/database.yml
 .rudsd
+/log
 .idea/*
