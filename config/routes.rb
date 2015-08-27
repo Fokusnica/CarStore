@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
+
+  get 'search/show'
+  match "/about", to: "about#index", :via => 'get'
+  post 'about/mail'
+
+  resources :product
+
+  resources :category
   resources :line_items
   resources :carts
+  resources :myaccount
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'welcome#index'

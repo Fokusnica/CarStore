@@ -1,56 +1,61 @@
-<div class="container">
-  <div class="row text-center pad-top ">
-    <div class="col-md-12">
-      <h2>Форма регистрации</h2>
-    </div>
-  </div>
-  <div class="row  pad-top">
-
-    <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-         <center> <strong> Заполните поля ниже:</strong></center>
+<% if !user_signed_in? %>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="signup-form"><!--sign up form-->
+              <h2>Зарегистрироваться!</h2>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                  <%= devise_error_messages! %>
+                  <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Введите Имя" %>
+                  <%= f.email_field :email, class: "form-control", placeholder: "Введите Email" %>
+                  <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Введите Пароль" %>
+                  <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите Пароль" %>
+                  <%= f.submit "Зарегистрироваться", class: "btn btn-success" %>
+              <% end %>
+            </div>
+            <!--/sign up form-->
+          </div>
         </div>
-        <div class="panel-body">
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-              <%= devise_error_messages! %>
-            <br/>
+      </div>
+<% else %>
+    <div id="contact-page" class="container">
+      <div class="bg">
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="contact-form">
+              <h2 class="title text-center">Редактирование Профиля</h2>
 
-            <div class="form-group input-group">
+              <div class="status alert alert-success" style="display: none"></div>
 
-              <span class="input-group-addon"><i class="icon-user"></i></span>
-              <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Введите Имя" %>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
+                  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                  <% end %>
+                  <div class="form-group col-md-6">
+                    <%= f.text_field :name, autofocus: true, class: "form-control", value: current_user.name %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= f.email_field :email, class: "form-control", value: current_user.email %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Введите Пароль" %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите Пароль" %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Введите прошлый пароль!" %>
+                  </div>
+
+
+                  <div class="form-group col-md-12">
+                    <%= f.submit "Обновить", class: "btn btn-primary pull-right" %>
+                  </div>
+              <% end %>
             </div>
-
-            <div class="form-group input-group">
-              <span class="input-group-addon"><i class="icon-envelope"></i></span>
-              <%= f.email_field :email, class: "form-control", placeholder: "Введите Email" %>
-            </div>
-            <div class="form-group input-group">
-              <span class="input-group-addon"><i class="icon-lock"></i></span>
-              <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Введите Пароль" %>
-            </div>
-            <div class="form-group input-group">
-              <span class="input-group-addon"><i class="icon-lock"></i></span>
-              <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите Пароль" %>
-            </div>
-
-
-              <%= f.submit "Зарегистрироваться", class:"btn btn-success" %>
-            <hr />
-            Уже зарегистрированы ?
-              <%= render "devise/shared/links" %>
-          </form>
-          <% end %>
+          </div>
         </div>
-
       </div>
     </div>
 
-
-  </div>
-</div>
-
-
-
-
+<% end %>

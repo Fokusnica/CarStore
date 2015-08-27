@@ -1,7 +1,7 @@
 class LineItemsController < ApplicationController
   include CurrentCart
-
-  before_action :set_cart, only: [:create]
+  before_action :set_user_cart, only: [:create]
+  # before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -13,6 +13,7 @@ class LineItemsController < ApplicationController
   # GET /line_items/1
   # GET /line_items/1.json
   def show
+    @categories = Category.all
   end
 
   # GET /line_items/new

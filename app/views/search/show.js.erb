@@ -1,0 +1,2 @@
+$('#product').fadeOut().html('<%= escape_javascript render 'category/products' %>').fadeIn();
+$('#paginator').html('<%= escape_javascript(paginate(@products , :window => 1, :remote => true).to_s) %>');

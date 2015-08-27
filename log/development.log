@@ -21226,3 +21226,180 @@ Started GET "/assets/home/iframe4.png" for 127.0.0.1 at 2015-08-27 16:19:36 +030
 
 
 Started GET "/assets/home/map.png" for 127.0.0.1 at 2015-08-27 16:19:36 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-27 16:24:15 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mCategory Load (7.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered category/_categories.html.erb (40.7ms)
+  [1m[36mProduct Load (2.2ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 6[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 4
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 3[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 3
+  Rendered welcome/index.html.erb within layouts/application (98.7ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 533ms (Views: 489.3ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+Processing by WelcomeController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered category/_categories.html.erb (8.2ms)
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 6[0m
+  [1m[35mProduct Load (0.9ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 4
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 3[0m
+  [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 3
+  Rendered welcome/index.html.erb within layouts/application (56.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 227ms (Views: 222.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/about.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/animate.self-3c4fa28dc52dee0c5ab8e61b5e6c88510cf8ca23ee08cd313809cb15a05205a9.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/bootstrap.min.self-d78b3ebeb9da6c3b00a9dfcb6d81a1e6de20a2e771c1637d95fb715873c1c1f6.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/cart.self-2c66a96eb8baa923f8f6416fdc51e97c048983946abf3cac1ce90eaa39c0fb93.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/carts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/category.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/font-awesome.min.self-4427186c7c4d0d05a9ccdb3d5c45be174f8dd37eb058678cdcfc4bf159df700f.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/main.self-2947ad281bb25a238139206efd758d062390ab6df8857d3bba3be8be9de52f99.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/myaccount.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/prettyPhoto.self-8bf3a10a48be88bdc9a5d6fc0cd616b9356f1919c0c012957ab41e74cf6fb368.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/price-range.self-6e1ac7f5cf2e0fe2c52312b3ab7f335e073573886367056f1c151ec5e09870ab.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/product.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/responsive.self-3df5a5867ee216d70599ef05409ea89b9c164d58126dcd5a68c79d056cbd1434.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/search.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/application.self-6a879e736afda96826634ab914561896fe5a3b17fc9e7363451b07b7a507fa57.css?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/about.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/carts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/category.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/contact.self-f25fb4c041e4669829f3ea887519f6d163ad1c3aa7dfd40b0a0ba6ef248c05e3.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/html5shiv.self-1f432d487ed3790f765994dd831280ac2373eb894c0c2cec7b1fc3372f1ac6db.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/line_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/myaccount.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/product.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/search.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets//bootstrap.min.js" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/jquery.scrollUp.min.js" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/price-range.js" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/jquery.prettyPhoto.js" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/main.js" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/__meta_request/644aaa20-0519-404a-80b5-24bc33ba3490.json" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/home/logo.png" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/slider/slide1.jpg" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/slider/slide2.jpg" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/slider/slide3.jpg" for 127.0.0.1 at 2015-08-27 16:24:16 +0300
+
+
+Started GET "/assets/home/searchicon.png" for 127.0.0.1 at 2015-08-27 16:24:17 +0300
+
+
+Started GET "/assets/slider/slide4.jpg" for 127.0.0.1 at 2015-08-27 16:24:17 +0300
+
+
+Started GET "/assets/slider/slide5.jpg" for 127.0.0.1 at 2015-08-27 16:24:17 +0300
+
+
+Started GET "/assets/home/iframe1.png" for 127.0.0.1 at 2015-08-27 16:24:17 +0300
+
+
+Started GET "/assets/home/iframe2.png" for 127.0.0.1 at 2015-08-27 16:24:17 +0300
+
+
+Started GET "/assets/home/iframe3.png" for 127.0.0.1 at 2015-08-27 16:24:17 +0300
+
+
+Started GET "/assets/home/iframe4.png" for 127.0.0.1 at 2015-08-27 16:24:17 +0300
+
+
+Started GET "/assets/home/map.png" for 127.0.0.1 at 2015-08-27 16:24:17 +0300

@@ -1,5 +1,6 @@
 class Cart < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
+  has_one :user, dependent: :nullify
 
 
   def add_product(product_id)

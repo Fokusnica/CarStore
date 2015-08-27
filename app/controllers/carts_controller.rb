@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
 
   # GET /carts
@@ -10,6 +11,7 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
+
   end
 
   # GET /carts/new
@@ -55,9 +57,13 @@ class CartsController < ApplicationController
   # DELETE /carts/1.json
   def destroy
     @cart.destroy
+    session[:cart_id] = nil
     respond_to do |format|
-      format.html { redirect_to carts_url, notice: 'Cart was successfully destroyed.' }
+      format.html { redirect_to @cart,
+                                notice: 'Теперь ваша корзина пуста!' }
       format.json { head :no_content }
+
+
     end
   end
 
