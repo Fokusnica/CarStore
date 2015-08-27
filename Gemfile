@@ -62,5 +62,9 @@ group :development, :test do
 
   gem 'mailcatcher'
 
+  gem 'capybara'
+
+  gem 'selenium-webdriver'
+
 end
 
