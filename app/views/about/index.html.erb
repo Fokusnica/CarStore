@@ -5,11 +5,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Car Store - Один из лучших автосалонов Харькова</title>
+  <title><%=t('.header')%></title>
 
-  <meta name="description" content="Free download theme onepage, clean and modern responsive for all"/>
-  <meta name="keywords" content="responsive, html5, onepage, themes, template, clean layout, free web"/>
-  <meta name="author" content="Thomsoon.com"/>
+  <meta name="description" content="Car Store - Один из лучших автосалонов Харькова"/>
+  <meta name="keywords" content="Car Store Один из лучших автосалонов Харькова"/>
+
 
   <link rel="shortcut icon" href="img/favicon.png">
 
@@ -46,10 +46,10 @@
 
         <div class="logo"><img src="/assets/home/logo_admin.png"></div>
 
-        <h1>Один из лучших автосалонов Харькова</h1><hr/>
-        <p>Лучший выбор машин, лучшее обслуживание - все для клиента!</p>
+        <h1><%=t('.p1_t1')%></h1><hr/>
+        <p><%=t('.p1_t2')%></p>
 
-        <a href="#about-us"><div class="read-more">Хочешь больше?</div></a>
+        <a href="#about-us"><div class="read-more"><%=t('.p1_t3')%></div></a>
 
       </div>
       <div class="arrow-down"></div>
@@ -89,11 +89,11 @@
       <div class="logo">Cart Store</div>
 
       <ul id="menu">
-        <li><a href="#home">Главная</a></li>
-        <li><a href="#about-us">ЛУЧШИЕ</a></li>
-        <li><a href="#portfolio">ФАКТЫ</a></li>
-        <li><a href="#partners">ПАРТНЕРЫ</a></li>
-        <li><a href="#contact">КОНТАКТЫ</a></li>
+        <li><a href="#home"><%=t('.p2_t1')%></a></li>
+        <li><a href="#about-us"><%=t('.p2_t2')%></a></li>
+        <li><a href="#portfolio"><%=t('.p2_t3')%></a></li>
+        <li><a href="#partners"><%=t('.p2_t4')%></a></li>
+        <li><a href="#contact"><%=t('.p2_t5')%></a></li>
       </ul>
     </div>
 
@@ -107,25 +107,25 @@
 
     <div class="content">
 
-      <h1  id="about-us">Наши преимущества</h1>
+      <h1  id="about-us"><%=t('.advant')%></h1>
       <hr/>
-      <p class="title" >Почему стоит купить автомобиль именно в нашем магазине?</p>
+      <p class="title" ><%=t('.why')%></p>
 
       <div class="column-one" >
-        <img title="Гибкая система скидок" src="/assets/landpageimg/icons/12a.jpg" alt="Гибкая система скидок">
-        <img title="Более 8000 отзывов от клиентов" src="/assets/landpageimg/icons/11a.jpg" alt="Более 8000 отзывов от клиентов в магазине Car Store">
+        <img title=<%=t('.one')%> src="/assets/landpageimg/icons/12a.jpg" alt=<%=t('.one')%> >
+        <img title=<%=t('.two')%> src="/assets/landpageimg/icons/11a.jpg" alt=<%=t('.two')%> >
 
       </div>
 
       <div class="column-two">
-        <img title="Бонусы и подарки для постоянных клиентов" src="/assets/landpageimg/icons/03a.jpg" alt="Бонусы и подарки для постоянных клиентов в магазине Car Store">
-        <img title="Первоклассная служба поддержки" src="/assets/landpageimg/icons/10a.jpg" alt="Первоклассная служба поддержки">
+        <img title=<%=t('.three')%> src="/assets/landpageimg/icons/03a.jpg" alt=<%=t('.three')%>>
+        <img title=<%=t('.four')%> src="/assets/landpageimg/icons/10a.jpg" alt=<%=t('.four')%>>
       </div>
 
 
       <div class="column-three">
-        <img title="Различные способы доставки" src="/assets/landpageimg/icons/08a.jpg" alt="Различные способы доставки">
-        <img title="Легкий и удобный сайт" src="/assets/landpageimg/icons/01a.jpg" alt="Lunifera - легкий и удобный в использовании сайт">
+        <img title=<%=t('.five')%> src="/assets/landpageimg/icons/08a.jpg" alt=<%=t('.five')%>>
+        <img title=<%=t('.six')%> src="/assets/landpageimg/icons/01a.jpg" alt=<%=t('.six')%>>
 
       </div>
     </div>
@@ -142,7 +142,7 @@
 
     <div class="portfolio-margin">
 
-      <h1  id="portfolio">Факты о нашем магазине</h1>
+      <h1  id="portfolio"><%=t('.facts')%></h1>
       <hr/>
 
       <!-- 1 item portoflio-->
@@ -153,8 +153,8 @@
           <a href="#">
             <img src="/assets/landpageimg/portfolio/1.png" alt="Portfolio item" />
             <div class="text">
-              <p>Наш склад</p>
-              <p class="description">Складской комплекс нашего магазина заслуживает отдельного внимания! Общая площадь составляет более 30 000 м2, а также есть собственная железнодорожная ветка, проходящая вдоль рампы всего складского комплекса.</p>
+              <p><%=t('.sklad')%></p>
+              <p class="description"><%=t('.sklad_des')%></p>
             </div>
           </a>
         </li>
@@ -165,8 +165,8 @@
           <a href="#">
             <img src="/assets/landpageimg/portfolio/2.png" alt="Portfolio item" />
             <div class="no-text">
-              <p>Наш салон</p>
-              <p class="description">Автосалон площадью 600 кв. м позволяет предоставить вниманию покупателя полный модельный ряд автомобилей, в том числе премиум сегмент с VIP зоной.</p>
+              <p><%=t('.salon')%></p>
+              <p class="description"><%=t('.salon_des')%></p>
             </div>
           </a>
         </li>
@@ -177,8 +177,8 @@
           <a href="#">
             <img src="/assets/landpageimg/portfolio/3.png" alt="Portfolio item" />
             <div class="no-text">
-              <p>Великолепный сервис!</p>
-              <p class="description">Это было бы невозможным без высококвалифицированных специалистов, которые имеют успешный многолетний опыт продаж и обслуживания автомобилей. </p>
+              <p><%=t('.service')%></p>
+              <p class="description"><%=t('.service_des')%></p>
             </div>
           </a>
         </li>
@@ -190,8 +190,8 @@
           <a href="#">
             <img src="/assets/landpageimg/portfolio/4.png" alt="Portfolio item" />
             <div class="no-text">
-              <p>Наши награды!</p>
-              <p class="description">Открывшись в самый разгар кризиса в 2008 году, наш магазин уже на следующий год занял твердую лидерскую позицию на рынке, а в 2011 году получил награду «За наибольший рост продаж», что свидетельствует о профессионализме и способности удовлетворить даже самые изощренные пожелания клиента.</p>
+              <p><%=t('.awards')%></p>
+              <p class="description"><%=t('.awards_des')%></p>
             </div>
           </a>
         </li>
@@ -202,8 +202,8 @@
           <a href="#">
             <img src="/assets/landpageimg/portfolio/5.png" alt="Portfolio item" />
             <div class="no-text">
-              <p>Награды от партнеров!</p>
-              <p class="description"> Наш партнер Hyundai Motor Company удостоил магазин награды «Deep implementation» (глубокая, сильная интеграция), чем подтверждается наше превосходство, а также гарантируется соответствие всем требованиям и нормам HMC.</p>
+              <p><%=t('.partners_awards')%></p>
+              <p class="description"><%=t('.partners_awards_des')%></p>
             </div>
           </a>
         </li>
@@ -215,8 +215,8 @@
           <a href="#">
             <img src="/assets/landpageimg/portfolio/6.png" alt="Portfolio item" />
             <div class="text">
-              <p>Концепция 3S </p>
-              <p class="description">Он объединяет такие структурные подразделения, как автосалон, станция технического обслуживания, специализированный магазин оригинальных автозапчастей и различных аксессуаров, которые работают 7 дней в неделю!</p>
+              <p><%=t('.3S')%></p>
+              <p class="description"><%=t('.3S_des')%></p>
             </div>
           </a>
         </li>
@@ -227,8 +227,8 @@
           <a href="#">
             <img src="/assets/landpageimg/portfolio/7.png" alt="Portfolio item" />
             <div class="text">
-              <p>Покупать у нас легко!</p>
-              <p class="description">Наш магазин предоставляет полный спектр услуг по различным видам кредитования, лизинга и автострахования. Наши специалисты смогут предложить кредит на самых выгодных условиях, программы различных банков, за счет чего всегда есть возможность подобрать оптимальную для клиента схему платежей.</p>
+              <p><%=t('.easy_shop')%></p>
+              <p class="description"><%=t('.easy_shop_des')%></p>
             </div>
           </a>
         </li>
@@ -239,8 +239,8 @@
           <a href="#">
             <img src="/assets/landpageimg/portfolio/8.png" alt="Portfolio item" />
             <div class="text">
-              <p>Тест-драйв!</p>
-              <p class="description">Благодаря возможности проведения тест-драйвов каждый клиент нашего магазина может совершить идеальную покупку — приобрести надежный, долговечный, безопасный автомобиль ультрасовременного дизайна по доступной цене.</p>
+              <p><%=t('.test_drive')%></p>
+              <p class="description"><%=t('.test_drive_des')%></p>
             </div>
           </a>
         </li>
@@ -251,8 +251,8 @@
           <a href="#">
             <img src="/assets/landpageimg/portfolio/9.png" alt="Portfolio item" />
             <div class="text">
-              <p>Наши клиенты всегда довольны!</p>
-              <p class="description"> Ждем Вас в нашем магазине и гарантируем, что Вы останетесь довольными работой наших специалистов!</p>
+              <p><%=t('.happy_clients')%></p>
+              <p class="description"><%=t('.happy_clients_des')%></p>
             </div>
           </a>
         </li>
@@ -261,7 +261,7 @@
 
       </ul>
 
-      <a href="#contact"><div class="read-more">Read more</div></a>
+      <a href="#contact"><div class="read-more"><%=t('.pokatatsya')%></div></a>
 
     </div>
 
@@ -281,7 +281,7 @@
 
     <div class="content">
 
-      <h2>Наши партнеры</h2>
+      <h2><%=t('.our_partners')%></h2>
 
       <div class="logo">
 
@@ -299,51 +299,33 @@
 
   <!-- Contact-->
 
-  <section class="contact" id="contact">
-    <h1>Contact</h1>
+  <section class="contact">
+    <h1 id="contact"><%=t('.request_test_drive')%></h1>
     <hr/>
 
     <div class="content">
 
       <div class="form">
+        <%= form_tag(about_mail_path, :method => "post", id: "send") do %>
+            <div class="column">
+            <%= text_field_tag :name, params[:name], placeholder: t('.name')%>
+              </div>
+            <div class="column-2">
+            <%= text_field_tag :email, params[:email], placeholder: t('.email')%>
+              </div>
+            <div class="column-3">
+            <%= text_area_tag :text_area, params[:text], placeholder: t('.other')%>
+              </div>
+            <%= submit_tag "GO!" %>
+        <% end %>
 
-        <form method="post" action="mail.php" name="kontakt">
-
-          <div class="column">
-            YOUR NAME<br/><br/>
-            <input name="name" id="name" value="" />
-          </div>
-
-          <div class="column-2">
-            YOUR E-MAIL<br/><br/>
-            <input name="email" id="email" value="" />
-          </div>
-
-
-          <div class="column-3">
-            MESSAGE<br/><br/>
-            <textarea id="message" name="message" ></textarea>
-          </div>
-
-          <div class="button">
-            <span><input class="submit" id="submit" name="submit" type="submit" value="SEND"></span>
-          </div>
-
-        </form>
 
       </div>
 
 
       <div class="contact-text">
 
-        To contact us please use the contact form visible<br/><br/>
-
-        When sending files, please use<br/>
-        the following e-mail<br/><br/>
-
-        <strong>Tomasz Mazurczak</strong><br/><br/>
-
-        e-mail: <strong>contact@thomsoon.com</strong>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.919127487383!2d36.22196459999999!3d50.0316112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a14aa1c825fb%3A0x5bc05fcc065de7be!2z0L_RgNC-0YHQvy4g0JvQtdC90ZbQvdCwLCA1Niwg0KXQsNGA0LrRltCyLCDQpdCw0YDQutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1440583882162" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 
       </div>
 
@@ -355,20 +337,16 @@
 
   <section class="footer">
 
-    <div class="logo"><img src="/assets/landpageimg/logo-footer.png"></div>
+    <div class="logo"><img src="/assets/home/logo_admin.png"></div>
     <div class="menu-footer">
 
-      <a href="#home">Home</a>
-      <a href="#">Privacy policy</a>
-      <a href="#">RSS</a>
-      <a href="#">Facebook</a>
-      <a href="#">Dribble</a>
-      <a href="#">Twitter</a>
-      <a href="#">Contact</a>
+      <a href="/"><%=t('.main')%></a>
+      <a href="/category"><%=t('.all_models')%></a>
+      <a href="/myaccount"><%=t('.my_account')%></a>
 
     </div>
 
-    <div class="copyright">© 2014. All Rights Reserved Thomsoon.com</div>
+    <div class="copyright">© 2015. <a href="/" style="color: grey"> <%=t('.one_of_the_best')%></a></div>
 
 
   </section>

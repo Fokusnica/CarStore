@@ -137,11 +137,11 @@
                     <tbody>
                     <tr>
                       <td height="50" align="center" valign="middle" style="font-family: Helvetica, arial, sans-serif; font-size: 13px;color: #282828" st-content="menu">
-                        <a href="file:///home/lu/Documents/Ruby/mail.html#" style="color: #fff;text-decoration: none;">Личный кабинет</a>
+                        <a href="https://carsstore.herokuapp.com/myaccount" style="color: #fff;text-decoration: none;"><%=t('.account')%></a>
                         &nbsp;&nbsp;&nbsp;
-                        <a href="file:///home/lu/Documents/Ruby/mail.html#" style="color: #fff;text-decoration: none;">Магазин</a>
+                        <a href="https://carsstore.herokuapp.com/" style="color: #fff;text-decoration: none;"><%=t('.store')%></a>
                         &nbsp;&nbsp;&nbsp;
-                        <a href="file:///home/lu/Documents/Ruby/mail.html#" style="color: #fff;text-decoration: none;">Контакты</a>
+                        <a href="https://carsstore.herokuapp.com/about" style="color: #fff;text-decoration: none;"><%=t('.contacts')%></a>
                         &nbsp;&nbsp;&nbsp;
                       </td>
                     </tr>
@@ -198,7 +198,7 @@
                     <tbody>
                     <!-- Title -->
                     <tr>
-                      <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:center; line-height: 24px;">Здравствуйте, <%= @user.name %></td>
+                      <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:center; line-height: 24px;"><%=t('.hello')%>, <%= @user.name %></td>
                     </tr>
                     <!-- End of Title -->
                     <!-- spacing -->
@@ -208,8 +208,7 @@
                     <!-- End of spacing -->
                     <!-- content -->
                     <tr>
-                      <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:center; line-height: 24px;">Благодарим Вас за регистрацию на нашем сайте.
-                        У нас вы сможете купить любую машину по самым актуальным ценам, а так же имеется возможность предзаказа самый новых моделей!</td>
+                      <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:center; line-height: 24px;"><%=t('.thanks_for_registration')%></td>
                     </tr>
                     <!-- End of content -->
                     <!-- Spacing -->
@@ -300,7 +299,7 @@
                           <tbody>
                           <!-- title -->
                           <tr>
-                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:left; line-height: 24px;">Удобный тест-драйв!</td>
+                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:left; line-height: 24px;"><%=t('.easy_test_drive')%></td>
                           </tr>
                           <!-- end of title -->
                           <!-- Spacing -->
@@ -310,7 +309,7 @@
                           <!-- /Spacing -->
                           <!-- content -->
                           <tr>
-                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:left; line-height: 24px;">ВЫ выбираете машину, место и время, а МЫ привозим туда машину для тест-драйва!</td>
+                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:left; line-height: 24px;"><%=t('.easy_test_drive_about')%></td>
                           </tr>
                           <!-- end of content -->
                           <!-- Spacing -->
@@ -321,21 +320,7 @@
                           <!-- read more -->
                           <tr>
                             <td>
-                              <table width="120" height="32" bgcolor="#a80000" align="left" valign="middle" border="0" cellpadding="0" cellspacing="0" style="border-radius:3px;" st-button="learnmore">
-                                <tbody>
-                                <tr>
-                                  <td height="9" align="center" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                                </tr>
-                                <tr>
-                                  <td height="14" align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight:bold;color: #ffffff; text-align:center; line-height: 14px; ; -webkit-text-size-adjust:none;" st-title="fulltext-btn">
-                                    <a style="text-decoration: none;color: #fff; text-align:center;" href="file:///home/lu/Documents/Ruby/mail.html#">Подробнее</a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td height="9" align="center" style="font-size:1px; line-height:1px;">&nbsp;</td>
-                                </tr>
-                                </tbody>
-                              </table>
+
                             </td>
                           </tr>
                           <!-- end of read more -->
@@ -440,7 +425,7 @@
                           <tbody>
                           <!-- title -->
                           <tr>
-                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:left; line-height: 24px;">Еще больше информации!</td>
+                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #282828; text-align:left; line-height: 24px;"><%=t('.more_info')%></td>
                           </tr>
                           <!-- end of title -->
                           <!-- Spacing -->
@@ -450,7 +435,7 @@
                           <!-- /Spacing -->
                           <!-- content -->
                           <tr>
-                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:left; line-height: 24px;">Более подробные детали о работе магазине, акциях и специальных предложениях вы можете узнать у нас на сайте!</td>
+                            <td style="font-family: Helvetica, arial, sans-serif; font-size: 14px; color: #889098; text-align:left; line-height: 24px;"><%=t('.more_info_about')%></td>
                           </tr>
                           <!-- end of content -->
                           <!-- Spacing -->
@@ -468,7 +453,7 @@
                                 </tr>
                                 <tr>
                                   <td height="14" align="center" valign="middle" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight:bold;color: #ffffff; text-align:center; line-height: 14px; ; -webkit-text-size-adjust:none;" st-title="fulltext-btn">
-                                    <a style="text-decoration: none;color: #fff; text-align:center;" href="file:///home/lu/Documents/Ruby/mail.html#">Подробнее</a>
+                                    <a style="text-decoration: none;color: #fff; text-align:center;" href="https://carsstore.herokuapp.com/about"><%=t('.podrobnee')%></a>
                                   </td>
                                 </tr>
                                 <tr>
@@ -538,7 +523,7 @@
                           font-family: abel;
                           font-size: 27px;
                           text-transform: uppercase; text-align: center;
-                  "><span style="color: #a80000">car</span>-store <span style="font-size: 13px; text-transform: none;"> Лучший магазин. Лучший сервис. Все для удобства клиента!</span></div>
+                  "><span style="color: #a80000">car</span>-store <span style="font-size: 13px; text-transform: none;"> <%=t('.about_store')%></span></div>
 
 
 

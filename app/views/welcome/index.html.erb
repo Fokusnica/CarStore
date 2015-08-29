@@ -67,7 +67,7 @@
               <div class="col-sm-6">
                 <h1><span>Car</span>-Store</h1>
 
-                <h2>Volkswagen New_Passat</h2>
+                <h2>Volkswagen New Passat</h2>
 
                 <p><%=t('.slider_five')%></p>
                 <button type="button" class="btn btn-default get"><%= t('.go') %></button>
@@ -102,12 +102,12 @@
       <div class="col-sm-9 padding-right">
         <div class="features_items"><!--features_items-->
           <h2 class="title text-center"><%=t('.pop_models')%></h2>
-          <% @products.first(6).each do |product| %>
+          <% @products.last(6).each do |product| %>
               <div class="col-sm-4">
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
-                      <%= image_tag(product.image.url, size: '255x210') %>
+                      <%= image_tag(product.image.url, size: '204x182') %>
                       <h2><%= product.price %></h2>
 
                       <p><%= product.title %></p>

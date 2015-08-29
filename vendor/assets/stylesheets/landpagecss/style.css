@@ -25,7 +25,7 @@
   background:white;
   z-index:99999;
 }
- 
+
 .preloader .item{
   position:absolute;
   width:100px;
@@ -34,7 +34,7 @@
   top:50%;
   margin-left:-50px;
   margin-top:-50px;
-} 
+}
 
 
 html, body{
@@ -140,9 +140,9 @@ h1 span{
   position:absolute;
   text-align:center;
   margin:auto;
-  top:0; 
-  left:0; 
-  bottom:0; 
+  top:0;
+  left:0;
+  bottom:0;
   right:0;
   width:700px;
   height:520px;
@@ -152,7 +152,7 @@ h1 span{
   width: 250px;
   height:123px;
   margin:0 auto 1px;
-  
+
 }
 
 
@@ -355,7 +355,7 @@ h1 span{
   margin: 0 auto;
   overflow: hidden;
     height: 900px
-  
+
 }
 
 .about-us h1{
@@ -477,7 +477,7 @@ h1 span{
 }
 
 
-.about-us .column-three{ 
+.about-us .column-three{
 /*  margin-top:40px;*/
   width:300px;
   float:left;
@@ -485,7 +485,7 @@ h1 span{
   height:350px;
 }
 
-.about-us .column-three .circle-three{ 
+.about-us .column-three .circle-three{
   height: 100px;
   position:relative;
   margin:0 auto;
@@ -503,7 +503,7 @@ h1 span{
 	transition: all 0.2s ease-in;
 }
 
-.about-us .column-three .circle-three:hover{ 
+.about-us .column-three .circle-three:hover{
   border:2px solid #ada074;
 }
 
@@ -660,8 +660,8 @@ h1 span{
     margin-left: 5px;
 }
 
-.clear { 
-    clear:both; 
+.clear {
+    clear:both;
 }
 
 /* Partners */
@@ -733,7 +733,7 @@ h1 span{
   background:white;
   z-index:10;
   overflow:hidden;
-  margin-bottom: 300px;  
+  margin-bottom: 300px;
 }
 
 
@@ -787,7 +787,7 @@ h1 span{
   height:auto;
   float:left;
   letter-spacing:1px;
-  margin-bottom:30px;  
+  margin-bottom:30px;
 }
 
 .contact .content .form .column-3{
@@ -856,22 +856,40 @@ textarea{
 textarea:focus{background:#f4f4f4;}
 
 
+/*input.submit{*/
+  /*width:100px;*/
+  /*height:34px;*/
+  /*float:right;*/
+  /*margin:20px 10px 0 0;*/
+  /*border:0;*/
+  /*font-weight:700;*/
+  /*text-align:right;*/
+  /*background:none;*/
+  /*-webkit-transition: all 0.6s ease-in;*/
+	/*-moz-transition: all 0.6s ease-in;*/
+	/*-ms-transition: all 0.6s ease-in;*/
+	/*-o-transition: all 0.6s ease-in;*/
+	/*transition: all 0.6s ease-in;*/
+/*}*/
+
 input.submit{
   width:100px;
-  height:34px;
+  height: 40px;
   float:right;
-  margin:20px 10px 0 0;
-  border:0;
+  /* margin:20px 10px 0 0; */
+  /* border:0; */
   font-weight:700;
-  text-align:right;
-  background:none;
+  /* text-align:right; */
+  /* background:none; */
   -webkit-transition: all 0.6s ease-in;
-	-moz-transition: all 0.6s ease-in;
-	-ms-transition: all 0.6s ease-in;
-	-o-transition: all 0.6s ease-in;
-	transition: all 0.6s ease-in;
-}
+  -moz-transition: all 0.6s ease-in;
+  -ms-transition: all 0.6s ease-in;
+  -o-transition: all 0.6s ease-in;
 
+  transition: all 0.6s ease-in;
+  /* border-radius: 13px; */
+  margin-right: 20px;
+}
 /* Footer */
 
 
@@ -889,6 +907,7 @@ input.submit{
   height:58px;
   margin: 0 auto;
   padding-top:50px;
+  padding-right:145px;
 
 }
 
@@ -898,7 +917,7 @@ input.submit{
   margin:0 auto;
   padding-top:30px;
   overflow: hidden;
-  position:relative;  
+  position:relative;
 }
 
 
