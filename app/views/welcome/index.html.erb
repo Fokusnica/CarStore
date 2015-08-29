@@ -158,7 +158,7 @@
                       <div class="single-products">
                         <div class="productinfo text-center">
                           <%= image_tag(product.image.url, size: '184x162') %>
-                          <h2><%= product.price %></h2>
+                          <h2>$<%= product.price %></h2>
 
                           <p><%= product.title %></p>
                           <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
@@ -438,7 +438,7 @@
                         <div class="single-products">
                           <div class="productinfo text-center">
                             <%= image_tag(product.image.url, size: '184x162') %>
-                            <h2><%= product.price %></h2>
+                            <h2>$<%= product.price %></h2>
 
                             <p><%= product.title %></p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
