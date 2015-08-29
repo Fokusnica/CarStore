@@ -102,7 +102,7 @@
       <div class="col-sm-9 padding-right">
         <div class="features_items"><!--features_items-->
           <h2 class="title text-center"><%=t('.pop_models')%></h2>
-          <% @products.last(6).each do |product| %>
+          <% @products.sample(6).each do |product| %>
               <div class="col-sm-4">
                 <div class="product-image-wrapper">
                   <div class="single-products">
@@ -432,7 +432,7 @@
           <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="item active">
-                <% @products.first(3).each do |product| %>
+                <% @products.sample(3).each do |product| %>
                     <div class="col-sm-4">
                       <div class="product-image-wrapper">
                         <div class="single-products">
@@ -450,7 +450,7 @@
                 <% end %>
               </div>
               <div class="item">
-                <% @products.last(3).each do |product| %>
+                <% @products.sample(3).each do |product| %>
                     <div class="col-sm-4">
                       <div class="product-image-wrapper">
                         <div class="single-products">
