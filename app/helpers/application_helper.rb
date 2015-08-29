@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def display_store_name
+    'Car Store'
+  end
+
   def display_email
     'octohellstore@gmail.com'
   end

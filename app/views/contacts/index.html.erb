@@ -1,16 +1,65 @@
-<div class="row">
-
-  <div class="col-md-3"></div>
-
-  <div class="col-md-3">
-    <h2><%= t('.our_contacts') %></h2>
-    <p><%= display_phone %></p>
-    <p><%= display_email %></p>
-    <p><%= t('.address') %></p>
+<div id="contact-page" class="container">
+  <div class="bg">
+    <div class="row">
+      <div class="col-sm-12">
+      <h2 class="title text-center"> <%= t('.contact_us') %> </h2>
+      <div id="gmap" class="contact-map text-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.919127487383!2d36.22196459999999!3d50.0316112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a14aa1c825fb%3A0x5bc05fcc065de7be!2z0L_RgNC-0YHQvy4g0JvQtdC90ZbQvdCwLCA1Niwg0KXQsNGA0LrRltCyLCDQpdCw0YDQutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1440583882162" width="700" height="375" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
-
-  <div class="col-md-6">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.919127487383!2d36.22196459999999!3d50.0316112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a14aa1c825fb%3A0x5bc05fcc065de7be!2z0L_RgNC-0YHQvy4g0JvQtdC90ZbQvdCwLCA1Niwg0KXQsNGA0LrRltCyLCDQpdCw0YDQutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1440583882162" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="contact-form">
+          <h2 class="title text-center"> <%= t('.get_in_touch') %> </h2>
+          <div class="status alert alert-success" style="display: none"></div>
+          <form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
+            <div class="form-group col-md-6">
+              <input type="text" name="name" class="form-control" required="required" placeholder="<%= t('.name') %>">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="email" name="email" class="form-control" required="required" placeholder="<%= t('.your_email') %>">
+            </div>
+            <div class="form-group col-md-12">
+              <input type="text" name="subject" class="form-control" required="required" placeholder="<%= t('.subject') %>">
+            </div>
+            <div class="form-group col-md-12">
+              <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="<%= t('.your_message_here') %>"></textarea>
+            </div>
+            <div class="form-group col-md-12">
+              <input type="submit" name="submit" class="btn btn-primary pull-right" value="<%= t('.submit') %>">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="contact-info">
+          <h2 class="title text-center"><%= t('.contact_info') %></h2>
+          <address>
+            <p><%= display_store_name %></p>
+            <p><%= t('.address') %></p>
+            <p><%= t('.phone') << ': ' << display_phone %></p>
+            <p><%= t('.email') << ': ' << display_email %></p>
+          </address>
+          <div class="social-networks">
+            <h2 class="title text-center"><%= t('.social_networking') %></h2>
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
 </div>
