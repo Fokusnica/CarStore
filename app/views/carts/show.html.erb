@@ -1,11 +1,15 @@
-<% if notice %>
-    <p id="notice"><%= notice %></p>
-<% end %>
-
 
 <div id="columns" class="container">
 
   <div id="center_column" class="center_column col-xs-12 col-sm-12">
+  <% if notice %>
+
+    <div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                <%= notice %>
+              </div>
+<% end %>
     <h1 id="cart_title" class="page-heading"><%= t('.ordering') %>
 			<span class="heading-counter"><%= t('.items_in_cart') %>:
 			<span id="summary_products_quantity"><%= @cart.line_items.count%></span>
@@ -20,7 +24,6 @@
         <th class="cart_avail item"><%= t('.availability') %></th>
         <th class="cart_unit item"><%= t('.price') %></th>
         <th class="cart_quantity item"><%= t('.quantity') %></th>
-        <th class="cart_delete last_item">&nbsp;</th>
         <th class="cart_total item"><%= t('.summ') %></th>
       </tr>
       </thead>
@@ -29,14 +32,11 @@
           <tr>
 
 
-            <td><%= image_tag('0.jpg', size: "130x98") %></td>
+            <td><%= image_tag(item.product.image.url, size: '130x98') %></td>
             <td><p class="product-name"><%= item.product.title%></p><small class="cart_ref"><%= item.product.description.html_safe %></td></small>
             <td><%= item.product.status ? t('.in_stock') : t('.out_of_stock') %></td>
             <td><span class="price"><%= item.product.price %></span></td>
             <td><%= item.quantity %></td>
-            <td>
-              <div><i class="icon-trash"></i></div>
-            </td>
             <td><span class="price"><%= @cart.total_of_product(item.product.id) %></span></td>
           </tr>
       <% end %>
