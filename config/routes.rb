@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   match "/about", to: "about#index", :via => 'get'
   post 'about/mail'
 
+  get '/contacts' => 'contacts#index'
+
   resources :product
 
   resources :category

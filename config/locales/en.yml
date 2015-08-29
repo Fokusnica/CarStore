@@ -171,6 +171,10 @@ en:
       all_models: "All models"
       my_account: "My account"
       one_of_the_best: "Car Store - One of the best auto showroom in Kharkov"
+  contacts:
+    index:
+      our_contacts: "Contact us"
+      address: "Lenina Ave 56, Kharkiv, 61000"
   user_mailer:
     greeting_mail:
       account: "My account"
