@@ -15,8 +15,8 @@ describe 'index page', js: true do
 
   pending 'should have search field'
 
-  peding 'should have recommended item carousel'
+  pending 'should have recommended item carousel'
 
-  peding 'should open videos'
+  pending 'should open videos'
 
 end

@@ -283,3 +283,37 @@ Started GET "/assets/home/map.png" for 127.0.0.1 at 2015-08-27 17:49:55 +0300
 Started GET "/assets/home/searchicon.png" for 127.0.0.1 at 2015-08-27 17:49:55 +0300
 Started GET "/assets/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2015-08-27 17:49:55 +0300
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (18.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Started GET "/" for 127.0.0.1 at 2015-08-29 19:34:04 +0300
+Processing by WelcomeController#index as HTML
+  [1m[36mCategory Load (92.8ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered category/_categories.html.erb (99.0ms)
+  [1m[35mProduct Load (30.1ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 6
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 4[0m
+  [1m[35mProduct Load (0.7ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 3
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" DESC LIMIT 3[0m
+  Rendered welcome/index.html.erb within layouts/application (464.8ms)
+Completed 200 OK in 674ms (Views: 247.0ms | ActiveRecord: 381.6ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-08-29 19:34:05 +0300
+Started GET "/assets/price-range.js" for 127.0.0.1 at 2015-08-29 19:34:05 +0300
+Started GET "/assets//bootstrap.min.js" for 127.0.0.1 at 2015-08-29 19:34:05 +0300
+Started GET "/assets/jquery.scrollUp.min.js" for 127.0.0.1 at 2015-08-29 19:34:05 +0300
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-08-29 19:34:05 +0300
+Started GET "/assets/jquery.prettyPhoto.js" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/main.js" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/home/logo.png" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/slider/slide1.jpg" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/slider/slide2.jpg" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/slider/slide3.jpg" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/slider/slide4.jpg" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/slider/slide5.jpg" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/home/iframe1.png" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/home/iframe2.png" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/home/iframe3.png" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/home/iframe4.png" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/home/map.png" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/home/searchicon.png" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+Started GET "/assets/fontawesome-webfont.woff?v=4.0.3" for 127.0.0.1 at 2015-08-29 19:34:06 +0300
+  [1m[35m (0.3ms)[0m  ROLLBACK
