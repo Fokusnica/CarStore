@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+<table id="order-list" class="table table-bordered footab default footable-loaded footable">
+  <thead>
+  <tr>
+    <th>Код Заказа:</th>
+    <th>Сумма</th>
+    <th>Дата</th>
+    <th>Статус Заказа:</th>
+    <th>Информация о заказе</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @order_history.each do |order| %>
+  <tr>
+      <td><%= order.id %></td>
+      <td><%= order.price %></td>
+      <td><%= order.updated_at %></td>
+      <td><%= order.order_status_id %></td>
+      <td><%= link_to "Подробнее", order_path(:id => order.id) %> </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+      </div>
+    </div>
+

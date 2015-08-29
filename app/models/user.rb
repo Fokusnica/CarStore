@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   belongs_to :group_user
   belongs_to :cart
+  has_many :addresses
+  has_many :orders
   after_update :send_another_spam_mail
 
 

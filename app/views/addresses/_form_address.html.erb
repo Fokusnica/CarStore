@@ -1,0 +1,33 @@
+2<%= form_for(:address, ) do |f| %>
+
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, size: 40 %>
+    </div>
+    <div class="field">
+      <%= f.label :address %><br>
+      <%= f.text_area :address, rows: 3, cols: 40 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.phone_field :phone, size: 40 %>
+    </div>
+    <div class="field">
+      <%= f.label :country %><br>
+      <%= f.text_field :country, size: 40 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :city %><br>
+      <%= f.text_field :city, size: 40 %>
+    </div>
+
+
+
+    <div class="actions">
+      <%= f.submit 'Сохранить' %>
+    </div>
+
+<% end %>
