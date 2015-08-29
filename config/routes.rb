@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'search/show'
   match "/about", to: "about#index", :via => 'get'
   post 'about/mail'
+  get "/payment_delivery", to: "payment_delivery#index"
 
   resources :product
 
