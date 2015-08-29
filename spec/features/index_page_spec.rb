@@ -7,16 +7,29 @@ describe 'index page', js: true do
     expect(page).to have_content('octohellstore@gmail.com')
   end
 
-  pending 'should open personal page'
+  it 'should have slider' do
+    visit root_path
+    expect(page).to have_css('div#slider-carousel')
+  end
 
-  pending 'should have slider'
+  it 'should have categories' do
+    visit root_path
+    expect(page).to have_css('div.category-products')
+  end
 
-  pending 'should have categories'
+  it 'should have search field' do
+    visit root_path
+    expect(page).to have_css('input#search')
+  end
 
-  pending 'should have search field'
+  it 'should have recommended items' do
+    visit root_path
+    expect(page).to have_css('div.recommended_items')
+  end
 
-  pending 'should have recommended item carousel'
-
-  pending 'should open videos'
+  it 'should have video gallery' do
+    visit root_path
+    expect(page).to have_css('div.video-gallery')
+  end
 
 end
