@@ -7,16 +7,16 @@ describe 'index page', js: true do
     expect(page).to have_content('octohellstore@gmail.com')
   end
 
-=begin
-  pending 'should open personal page' do
-  end
+  pending 'should open personal page'
 
-  pending 'should have slider' do
-  end
+  pending 'should have slider'
 
-  pending 'should have categories' do
-  end
-=end
+  pending 'should have categories'
 
+  pending 'should have search field'
+
+  peding 'should have recommended item carousel'
+
+  peding 'should open videos'
 
 end
