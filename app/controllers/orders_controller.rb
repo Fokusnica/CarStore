@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
       return
     end
     @order = Order.new
-
+    byebug
   end
 
   def show

@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   post 'about/mail'
 
   resources :product
-  resources :addresses
+  resources :addresses do
+    collection do
+      get 'user_addresses'
+    end
+  end
   resources :orders do
     collection do
       get 'order_history'

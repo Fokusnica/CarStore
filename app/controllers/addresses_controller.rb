@@ -18,6 +18,7 @@ class AddressesController < ApplicationController
 
   end
 
+
   def create
 
     @address = Address.new(address_params.merge(:user_id => current_user.id))
@@ -30,10 +31,31 @@ class AddressesController < ApplicationController
     end
   end
 
+  def update
+    if @address.update(address_params)
+      redirect_to user_addresses_addresses_path
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @address.destroy
+    respond_to do |format|
+      format.html { redirect_to user_addresses_addresses_path, notice: 'Address deleted' }
+      format.json { head :no_content }
+    end
+  end
+
+  def user_addresses
+
+    @user_addresses = Address.where(:user_id => current_user.id)
+  end
+
   private
 
   def set_address
-    @user_address = Address.find(params[:id])
+    @address = Address.find(params[:id])
   end
 
   def address_params
