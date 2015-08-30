@@ -4,8 +4,8 @@
       <div class="col-sm-8">
         <div class="contact-form">
           <div class="form-group col-md-12">
-          <h3 style="color: #A80000; text-align: center;">Оформить заказ на этот адрес</h3>
-            Вы можете оформить заказ на выбранный адрес и оплатить его позже.
+          <h3 style="color: #A80000; text-align: center;"><%=t('.this_address_order')%></h3>
+            <%=t('.this_address_order_info')%>
             </div>
 
           <h2 class="title text-center"><%=t('.ordering')%></h2>
@@ -21,8 +21,8 @@
           <%= render ('address_form') %>
 
           <div class="form-group col-md-12">
-          <h3 style="color: #A80000; text-align: center;">Оформить и оплатить заказ</h3>
-          Оплата через систему платежей <span style="color: green">LiqPay</span>
+          <h3 style="color: #A80000; text-align: center;"><%=t('.checkout_pay')%></h3>
+          <%=t('.liqpay_pay')%> <span style="color: green">LiqPay</span>
         </div>
           <table class="table table-bordered">
 
@@ -39,7 +39,7 @@
             <tfoot>
             <tr class="item">
               <td colspan="1">
-                <strong>Цена за товары </strong>
+                <strong><%=t('.items_price')%> </strong>
 
                 <strong><%=t('.items')%></strong>
 
@@ -53,7 +53,7 @@
                 <strong><%=t('.delivery')%></strong>
               </td>
               <td colspan="4">
-                <span class="price-shipping">Пока на шару</span>
+                <span class="price-shipping"><%=t('.delivery_free')%></span>
               </td>
             </tr>
             <tr class="totalprice item">

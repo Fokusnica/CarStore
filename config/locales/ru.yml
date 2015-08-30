@@ -71,6 +71,8 @@ ru:
       create_order: "Оформить заказ"
   orders:
     address_form:
+      add_address: "Добавление адреса"
+      add_address_order: "Добавление нового адреса в заказ"
       address_nick: "Псевдоним адреса"
       address_full: "Улица и дом "
       phone: "Телефон"
