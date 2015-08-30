@@ -1,16 +1,13 @@
+
 <%= form_for(@order) do |f| %>
 
 
     <div class="form-group col-md-6">
-
-      <p>Сумма заказа: <%= @cart.total_summ %></p><br>
-    </div>
-    <div class="form-group col-md-6">
-      <%= f.label :address %><br>
+      <%= f.label "Выбрать адрес" %><br>
       <%= f.collection_select :address_id, current_user.addresses, :id, :name, class: "form-control" %>
     </div>
-    <div class="form-group col-md-12">
-      <%= f.submit "Создать", class: "btn btn-primary pull-right" %>
+    <div class="form-group col-md-6">
+      <%= f.submit "Оформить заказ", class: "btn btn-primary pull-left" %>
     </div>
 
 

@@ -3,14 +3,26 @@
     <div class="row">
       <div class="col-sm-8">
         <div class="contact-form">
-          <h2 class="title text-center">Оформление заказа</h2>
+          <div class="form-group col-md-12">
+          <h3 style="color: #A80000; text-align: center;">Оформить заказ на этот адрес</h3>
+            Вы можете оформить заказ на выбранный адрес и оплатить его позже.
+            </div>
 
-        <div id="test">
-          <% if user_signed_in? %>
-              <%= render ('address_form') %>
-          <% end %>
-</div>
+          <div id="order_form">
+            <%= render 'order_form' %>
+          </div>
+          <div id="new_order_form">
+
+          </div>
+
+          <%= render ('address_form') %>
+
+          <div class="form-group col-md-12">
+          <h3 style="color: #A80000; text-align: center;">Оформить и оплатить заказ</h3>
+          Оплата через систему платежей <span style="color: green">LiqPay</span>
+        </div>
           <table class="table table-bordered">
+
             <thead>
             <tr>
               <th class="item">Наименование</th>
@@ -24,10 +36,10 @@
             <tfoot>
             <tr class="item">
               <td colspan="1">
-                <strong>Товары </strong>
+                <strong>Цена за товары </strong>
               </td>
               <td colspan="4">
-                <span class="price">4900.0</span>
+                <span class="price"><%= @cart.total_summ %></span>
               </td>
             </tr>
             <tr class="item">
@@ -35,7 +47,7 @@
                 <strong>Доставка </strong>
               </td>
               <td colspan="4">
-                <span class="price-shipping">0 грн.</span>
+                <span class="price-shipping">Пока на шару</span>
               </td>
             </tr>
             <tr class="totalprice item">
@@ -43,7 +55,7 @@
                 <strong>Итого, к оплате:</strong>
               </td>
               <td colspan="4">
-                <span class="price">4900.0</span>
+                <span class="price"><%= @cart.total_summ %></span>
               </td>
             </tr>
             </tfoot>
@@ -51,37 +63,35 @@
             <!-- Customized products -->
             <!-- Classic products -->
             <% @cart.line_items.each do |item| %>
-            <tr class="item">
+                <tr class="item">
 
-              <td class="bold">
-                <label for="cb_70">
-                  <%= item.product.title %>
-                </label>
-              </td>
-              <td class="return_quantity">
-                <%= item.quantity %>
-              <td class="price">
-                <label for="cb_70">
-                  <%= item.product.price %>
-                </label>
-              </td>
-              <td class="price">
-                <label for="cb_70">
-                  <%= (item.quantity * item.product.price) %>
-                </label>
-              </td>
+                  <td class="bold">
+                    <label for="cb_70">
+                      <%= item.product.title %>
+                    </label>
+                  </td>
+                  <td class="return_quantity">
+                    <%= item.quantity %>
+                  <td class="price">
+                    <label for="cb_70">
+                      <%= item.product.price %>
+                    </label>
+                  </td>
+                  <td class="price">
+                    <label for="cb_70">
+                      <%= (item.quantity * item.product.price) %>
+                    </label>
+                  </td>
 
-            </tr>
-<% end %>
+                </tr>
+            <% end %>
             </tbody>
           </table>
+          <form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/checkout">
 
-          <div id="order_form">
-         <%= render 'order_form' %>
-            </div>
-          <div id="new_order_form">
+            <input type="image" src="//static.liqpay.com/buttons/p11ru.radius.png" name="btn_text"/>
+          </form>
 
-          </div>
 
         </div>
       </div>
@@ -90,41 +100,43 @@
 </div>
 
 <script>
-  function test_ajax() {
-      $.ajax({
-          method: "POST",
-          url: "<%= ajax_addresses_path %>",
-          data: { address: {
-              name: $('#name').val(),
-              address: $('#address_street').val(),
-              phone: $('#phone').val(),
-              country: $('#country').val(),
-              city: $('#city').val(),
-              user_id: <%= current_user.id %>,
-              title: $('#title').val()}
-          },
-          dataType: "json",
-          statusCode: {
-              201: function () {
-                 $('#address').empty();
-                  console.log('delete address');
+    function test_ajax() {
+        $.ajax({
+            method: "POST",
+            url: "<%= ajax_addresses_path %>",
+            data: {
+                address: {
+                    name: $('#name').val(),
+                    address: $('#address_street').val(),
+                    phone: $('#phone').val(),
+                    country: $('#country').val(),
+                    city: $('#city').val(),
+                    user_id: <%= current_user.id %>,
+                    title: $('#title').val()
+                }
+            },
+            dataType: "json",
+            statusCode: {
+                201: function () {
+                    $('#address').empty();
+                    console.log('delete address');
 
 
-              },
-          },
-          success : function (data) {
-             console.log(data);
-              $('#order_address_id').append($('<option>', {
-                  value: data.id,
-                  text: data.name
-              }));
-              $("#order_address_id option[value=" + data.id + "]").attr('selected','selected');
-              console.log('insert part')
-          },
-          error : function(){
-              alert("Error!");
-          }
-      })
+                },
+            },
+            success: function (data) {
+                console.log(data);
+                $('#order_address_id').append($('<option>', {
+                    value: data.id,
+                    text: data.name
+                }));
+                $("#order_address_id option[value=" + data.id + "]").attr('selected', 'selected');
+                console.log('insert part')
+            },
+            error: function () {
+                alert("Error!");
+            }
+        })
 
-  }
+    }
 </script>
