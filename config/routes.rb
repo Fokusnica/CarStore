@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post 'about/mail'
   get "/payment_delivery", to: "payment_delivery#index"
 
+  get '/contacts' => 'contacts#index'
+
   resources :product
   resources :addresses do
     collection do
