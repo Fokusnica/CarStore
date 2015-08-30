@@ -18,13 +18,26 @@ class AddressesController < ApplicationController
 
   end
 
+  def ajax
+    @address = Address.new(ajax_params)
+    respond_to do |format|
+      if @address.save
+        format.html { redirect_to user_addresses_addresses_path, notice: 'Address was successfully created.' }
+        format.json { render :show, status: :created, location: @address }
+      else
+        render text: "Fuck!"
+      end
+    end
+  end
+
 
   def create
 
     @address = Address.new(address_params.merge(:user_id => current_user.id))
     respond_to do |format|
       if @address.save
-        format.html { redirect_to @address, notice: 'Address was successfully created.' }
+        format.html { redirect_to user_addresses_addresses_path, notice: 'Address was successfully created.' }
+        format.json { render :show, status: :created, location: @address }
       else
         render text: "Fuck!"
       end
@@ -59,7 +72,11 @@ class AddressesController < ApplicationController
   end
 
   def address_params
-    params.require(:address).permit(:name, :address, :phone, :country, :city)
+    params.require(:address).permit(:name, :address, :phone, :country, :city, )
+  end
+
+  def ajax_params
+    params.require(:address).permit(:name, :address, :phone, :country, :city, :user_id, :title)
   end
 
 

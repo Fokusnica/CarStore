@@ -1,5 +1,11 @@
 <div class="container">
   <div class="row">
+    <% if notice %>
+
+        <div class="alert alert-success" role="alert">
+          <%= notice %>
+        </div>
+    <% end %>
 <table id="order-list" class="table table-bordered footab default footable-loaded footable">
   <thead>
   <tr>
@@ -16,7 +22,8 @@
       <td><%= order.id %></td>
       <td><%= order.price %></td>
       <td><%= order.updated_at %></td>
-      <td><%= order.order_status_id %></td>
+    <td><span style="background-color:#4169E1; border-color:#4169E1;" class="label">Ожидание оплаты</span></td>
+
       <td><%= link_to "Подробнее", order_path(:id => order.id) %> </td>
   </tr>
   <% end %>

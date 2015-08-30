@@ -88,7 +88,7 @@
           <ul class="nav navbar-nav collapse navbar-collapse">
             <li><a href="/" class="active"><%= t('.main') %></a></li>
             <li class="dropdown">
-              <%= link_to  :controller => :category, :action => :index do %>
+              <%= link_to  category_index_path do %>
               <%= t('.categories') %><i class="fa fa-angle-down"></i>
                   <% end %>
               <ul role="menu" class="sub-menu">

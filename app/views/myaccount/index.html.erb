@@ -23,7 +23,10 @@
                         <i class="fa fa-building-o"></i><span>Мои адреса</span>
                     <% end %>
                   </li>
-                  <li><a href="/" title="Информация"><i class="icon-user"></i><span>Моя информация</span></a>
+                  <li>
+                    <%= link_to info_myaccount_index_path do %>
+                        <i class="icon-user"></i><span>Моя информация</span>
+                    <% end %>
                   </li>
                 </ul>
               </div>

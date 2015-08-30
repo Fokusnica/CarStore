@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :addresses do
     collection do
       get 'user_addresses'
+      post 'ajax'
     end
   end
   resources :orders do
@@ -21,7 +22,13 @@ Rails.application.routes.draw do
   resources :category
   resources :line_items
   resources :carts
-  resources :myaccount
+  resources :myaccount do
+    collection do
+      get 'info'
+    end
+  end
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'welcome#index'

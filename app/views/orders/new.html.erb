@@ -5,32 +5,126 @@
         <div class="contact-form">
           <h2 class="title text-center">Оформление заказа</h2>
 
-
-          <% if !user_signed_in? %>
-              <%= render ('addresses/form_address') %>
+        <div id="test">
+          <% if user_signed_in? %>
+              <%= render ('address_form') %>
           <% end %>
+</div>
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th class="item">Наименование</th>
+              <th class="item">Количество</th>
+              <th class="item">Цена</th>
+              <th class="last_item">Сумма</th>
+            </tr>
+            </thead>
 
 
-          <%= form_for(@order) do |f| %>
+            <tfoot>
+            <tr class="item">
+              <td colspan="1">
+                <strong>Товары </strong>
+              </td>
+              <td colspan="4">
+                <span class="price">4900.0</span>
+              </td>
+            </tr>
+            <tr class="item">
+              <td colspan="1">
+                <strong>Доставка </strong>
+              </td>
+              <td colspan="4">
+                <span class="price-shipping">0 грн.</span>
+              </td>
+            </tr>
+            <tr class="totalprice item">
+              <td colspan="1">
+                <strong>Итого, к оплате:</strong>
+              </td>
+              <td colspan="4">
+                <span class="price">4900.0</span>
+              </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <!-- Customized products -->
+            <!-- Classic products -->
+            <% @cart.line_items.each do |item| %>
+            <tr class="item">
 
+              <td class="bold">
+                <label for="cb_70">
+                  <%= item.product.title %>
+                </label>
+              </td>
+              <td class="return_quantity">
+                <%= item.quantity %>
+              <td class="price">
+                <label for="cb_70">
+                  <%= item.product.price %>
+                </label>
+              </td>
+              <td class="price">
+                <label for="cb_70">
+                  <%= (item.quantity * item.product.price) %>
+                </label>
+              </td>
 
-              <div class="form-group col-md-6">
+            </tr>
+<% end %>
+            </tbody>
+          </table>
 
-                <p>Сумма заказа: <%= @cart.total_summ %></p><br>
-              </div>
-              <div class="form-group col-md-6">
-                <%= f.label :address %><br>
-                <%= f.collection_select :address_id, current_user.addresses, :id, :title, class: "form-control" %>
-              </div>
-              <div class="form-group col-md-12">
-                <%= f.submit "Создать", class: "btn btn-primary pull-right" %>
-              </div>
+          <div id="order_form">
+         <%= render 'order_form' %>
+            </div>
+          <div id="new_order_form">
 
-
-          <% end %>
+          </div>
 
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  function test_ajax() {
+      $.ajax({
+          method: "POST",
+          url: "<%= ajax_addresses_path %>",
+          data: { address: {
+              name: $('#name').val(),
+              address: $('#address_street').val(),
+              phone: $('#phone').val(),
+              country: $('#country').val(),
+              city: $('#city').val(),
+              user_id: <%= current_user.id %>,
+              title: $('#title').val()}
+          },
+          dataType: "json",
+          statusCode: {
+              201: function () {
+                 $('#address').empty();
+                  console.log('delete address');
+
+
+              },
+          },
+          success : function (data) {
+             console.log(data);
+              $('#order_address_id').append($('<option>', {
+                  value: data.id,
+                  text: data.name
+              }));
+              $("#order_address_id option[value=" + data.id + "]").attr('selected','selected');
+              console.log('insert part')
+          },
+          error : function(){
+              alert("Error!");
+          }
+      })
+
+  }
+</script>

@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
       return
     end
     @order = Order.new
-    byebug
+
   end
 
   def show
@@ -26,6 +26,7 @@ class OrdersController < ApplicationController
 
     @order = Order.new(order_params.merge(:price => @cart.total_summ, :user_id => current_user.id,))
     @order.add_line_items_from_cart(@cart)
+    @order.order_status_id = 1
 
 
     respond_to do |format|
@@ -33,8 +34,9 @@ class OrdersController < ApplicationController
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         current_user.cart_id = nil
-        format.html { redirect_to root_path, notice:
-                                               'Thank you for your order.' }
+        format.html { redirect_to order_history_orders_path, notice:
+                                               'Спасибо за Ваш заказ!.' }
+        format.js {}
         format.json { render action: 'show', status: :created,
                              location: @order }
       else
@@ -50,6 +52,7 @@ class OrdersController < ApplicationController
   def order_history
 
     @order_history = Order.where(:user_id => current_user.id)
+
   end
 
 
