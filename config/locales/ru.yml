@@ -189,6 +189,28 @@ ru:
       cars_payment_cash: "Наличными в автосалоне при получении автомобиля"
       cars_payment_bank: "По безналичному расчету в кассе отделения любого банка или с расчетного счета вашей фирмы"
       cars_payment_cart: "Любой картой Visa и MasterCard любого банка"
+  addresses:
+    form_address:
+      address: "Адрес"
+      address_nick: "Псевдоним адреса"
+      address_full: "Улица и дом доставки"
+      phone: "Телефон"
+      country: "Страна"
+      city: "Город"
+      name_surname: "ФИО получателя"
+      add: "Добавить"
+    user_addresses:
+      new_address: "Новый адрес"
+      nick: "Псевдоним"
+      address: "Адрес"
+      phone: "Телефон"
+      country: "Страна"
+      city: "Город"
+      name_surname: "ФИО получателя"
+      act: "Действия"
+      edit: "Редактировать"
+      delete: "Удалить"
+      sure: "Вы уверены?"
   myaccount:
     login:
       sign_in: "Войти"
