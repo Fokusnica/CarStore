@@ -18,8 +18,8 @@
         <div class="col-sm-6">
           <div class="contactinfo">
             <ul class="nav nav-pills">
-              <li><a href="#"><i class="fa fa-phone"></i> +8 057 111 11 11</a></li>
-              <li><a href="#"><i class="fa fa-envelope"></i> octohellstore@gmail.com</a></li>
+              <li><a href="#"><i class="fa fa-phone"></i> <%= display_phone %> </a></li>
+              <li><a href="#"><i class="fa fa-envelope"></i> <%= display_email %> </a></li>
             </ul>
           </div>
         </div>
@@ -104,7 +104,7 @@
                 <li><a href="#"><%= t('.brands') %></a></li>
               </ul>
             </li>
-            <li><a href="contact-us.html"><%= t('.contacts') %></a></li>
+            <li> <%= link_to t('.contacts'), contacts_path %> </li>
           </ul>
         </div>
       </div>
@@ -224,7 +224,7 @@
             <ul class="nav nav-pills nav-stacked">
               <li><a href="#"><%= t('.feedbacks') %></a></li>
               <li><a href="#"><%= t('.site_map') %></a></li>
-              <li><a href="#"><%= t('.contacts') %></a></li>
+              <li><%= link_to t('.contacts'), contacts_path %></li>
             </ul>
           </div>
         </div>
