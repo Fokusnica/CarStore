@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>CarStore</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="description" content="Car Store - Один из лучших автосалонов Харькова"/>
@@ -26,6 +26,21 @@
         <div class="col-sm-6">
           <div class="social-icons pull-right">
             <ul class="nav navbar-nav">
+              <li>
+                <% if session[:locale] == 'en' %>
+                    <%= link_to localizations_change_locale_path(:locale => "ru"), method: :post do %>
+
+                        Language: <i class="fa fa-clipboard"></i>
+
+                    <% end %>
+                <% else %>
+                    <%= link_to localizations_change_locale_path(:locale => "en"), method: :post do %>
+
+                        Язык: <i class="fa fa-clipboard"></i>
+
+                    <% end %>
+                <% end %>
+              </li>
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -36,14 +51,15 @@
         </div>
       </div>
     </div>
-  </div><!--/header_top-->
+  </div>
+  <!--/header_top-->
 
   <div class="header-middle"><!--header-middle-->
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
           <div class="logo pull-left">
-            <a href="/" id="logo"><img src="/assets/home/logo.png" alt="" /></a>
+            <a href="/" id="logo"><img src="/assets/home/logo.png" alt=""/></a>
           </div>
         </div>
         <div class="col-sm-8">
@@ -55,7 +71,7 @@
               <% unless session[:cart_id].nil? %>
                   <li><%= link_to(cart_url(session[:cart_id])) do %>
                         <i class="fa fa-shopping-cart"></i><%= t('.cart') %>
-                    <%  end %>
+                    <% end %>
                   </li>
               <% end %>
               <li>
@@ -70,7 +86,8 @@
         </div>
       </div>
     </div>
-  </div><!--/header-middle-->
+  </div>
+  <!--/header-middle-->
 </header>
 <div class="header-bottom"><!--header-bottom-->
   <div class="container">
@@ -88,13 +105,13 @@
           <ul class="nav navbar-nav collapse navbar-collapse">
             <li><a href="/" class="active"><%= t('.main') %></a></li>
             <li class="dropdown">
-              <%= link_to  category_index_path do %>
-              <%= t('.categories') %><i class="fa fa-angle-down"></i>
-                  <% end %>
+              <%= link_to category_index_path do %>
+                  <%= t('.categories') %><i class="fa fa-angle-down"></i>
+              <% end %>
               <ul role="menu" class="sub-menu">
 
                 <% @categories.each do |category| %>
-                    <% if category.category_id.nil?%>
+                    <% if category.category_id.nil? %>
                         <li><%= link_to category.name, category_path(category) %></li>
                     <% end %>
                 <% end %>
@@ -114,14 +131,15 @@
       <div class="col-sm-3">
         <div class="search_box pull-right">
           <%= form_tag(search_show_path, :method => "get", id: "search-form") do %>
-              <%= text_field_tag :search, params[:search], placeholder: t('.search')%>
+              <%= text_field_tag :search, params[:search], placeholder: t('.search') %>
               <%= submit_tag "GO!", style: "display:none" %>
           <% end %>
         </div>
       </div>
     </div>
   </div>
-</div><!--/header-bottom-->
+</div>
+<!--/header-bottom-->
 </header><!--/header-->
 
 <%= yield %>
@@ -134,6 +152,7 @@
         <div class="col-sm-2">
           <div class="companyinfo">
             <h2><span>car</span>-store</h2>
+
             <p><%= t('.motiv_text') %></p>
           </div>
         </div>
@@ -142,13 +161,15 @@
             <div class="video-gallery text-center">
               <a href="https://www.youtube.com/watch?v=5aMuy6-939g">
                 <div class="iframe-img">
-                  <img src="/assets/home/iframe1.png" alt="" />
+                  <img src="/assets/home/iframe1.png" alt=""/>
                 </div>
                 <div class="overlay-icon">
                   <i class="fa fa-play-circle-o"></i>
                 </div>
               </a>
+
               <p>The Volkswagen Passat</p>
+
               <h2><%= t('.video_text_one') %></h2>
             </div>
           </div>
@@ -157,13 +178,15 @@
             <div class="video-gallery text-center">
               <a href="https://www.youtube.com/watch?v=RklCOb6DaQM">
                 <div class="iframe-img">
-                  <img src="/assets/home/iframe2.png" alt="" />
+                  <img src="/assets/home/iframe2.png" alt=""/>
                 </div>
                 <div class="overlay-icon">
                   <i class="fa fa-play-circle-o"></i>
                 </div>
               </a>
+
               <p>The Audi A7</p>
+
               <h2><%= t('.video_text_two') %></h2>
             </div>
           </div>
@@ -172,13 +195,15 @@
             <div class="video-gallery text-center">
               <a href="https://www.youtube.com/watch?v=v1F73OXKbVU">
                 <div class="iframe-img">
-                  <img src="/assets/home/iframe3.png" alt="" />
+                  <img src="/assets/home/iframe3.png" alt=""/>
                 </div>
                 <div class="overlay-icon">
                   <i class="fa fa-play-circle-o"></i>
                 </div>
               </a>
+
               <p>Skoda Rapid trailer</p>
+
               <h2><%= t('.video_text_three') %></h2>
             </div>
           </div>
@@ -187,20 +212,23 @@
             <div class="video-gallery text-center">
               <a href="https://www.youtube.com/watch?v=PgrtJ9YJbCM">
                 <div class="iframe-img">
-                  <img src="/assets/home/iframe4.png" alt="" />
+                  <img src="/assets/home/iframe4.png" alt=""/>
                 </div>
                 <div class="overlay-icon">
                   <i class="fa fa-play-circle-o"></i>
                 </div>
               </a>
+
               <p>2015 Porsche Cayenne</p>
+
               <h2><%= t('.video_text_four') %></h2>
             </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="address">
-            <img src="/assets/home/map.png" alt="" />
+            <img src="/assets/home/map.png" alt=""/>
+
             <p><%= t('.situation') %></p>
           </div>
         </div>
@@ -236,7 +264,7 @@
             <h2><%= t('.categories') %></h2>
             <ul class="nav nav-pills nav-stacked">
               <% @categories.each do |category| %>
-                  <% if category.category_id.nil?%>
+                  <% if category.category_id.nil? %>
                       <li><%= link_to category.name, category_path(category) %></li>
                   <% end %>
               <% end %>
@@ -257,10 +285,11 @@
         <div class="col-sm-3 col-sm-offset-1">
           <div class="single-widget">
             <h2><%= t('.subscribe') %></h2>
+
             <form action="#" class="searchform">
-              <input type="text" placeholder="Ваш E-mail" />
+              <input type="text" placeholder="Ваш E-mail"/>
               <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-              <p><%= t('.news_text_one') %><br /> <%= t('.news_text_two') %></p>
+              <p><%= t('.news_text_one') %><br/> <%= t('.news_text_two') %></p>
             </form>
           </div>
         </div>
@@ -273,13 +302,14 @@
     <div class="container">
       <div class="row">
         <p class="pull-left">Copyright © 2015 Car-Store Inc. All rights reserved.</p>
+
         <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
       </div>
     </div>
   </div>
 
-</footer><!--/Footer-->
-
+</footer>
+<!--/Footer-->
 
 
 <script src="/assets//bootstrap.min.js"></script>
