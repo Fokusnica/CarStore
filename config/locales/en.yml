@@ -1,24 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   welcome:
     index:
@@ -88,41 +67,59 @@ en:
       delivery: "Delivery"
       delivery_price: "Free"
       total: "Total"
-  layouts:
-    application:
-      account: "Account"
-      bookmarks: "Bookmarks"
-      ordering: "Ordering"
-      cart: "Cart"
-      sign_out: "Sign out"
-      sign_in: "Sign in"
-      main: "Main"
-      categories: "Categories"
-      store: "Store"
-      pay_deliv: "Delivery and payment"
-      sale: "Sale"
-      brands: "Brands"
-      contacts: "Contacts"
-      search: "Search"
-      motiv_text: "The best store. The best service. All for customer convenience!"
-      video_text_one: "New!"
-      video_text_two: "Sportback in Dubai"
-      video_text_three: "New!"
-      video_text_four: "New!"
-      situation: "Ukraine. Kharkiv. Kharkiv Reg."
-      service: "Service"
-      new: "News"
-      q_cert: "Quality certifications"
-      about_us: "About us"
-      feedbacks: "Feedbacks about the store"
-      site_map: "Site map"
-      customer: "Customer"
-      orders_history: "Order history"
-      wish_list: "Wish List"
-      subscription: "Subscription"
-      subscribe: "Subscribe!"
-      news_text_one: "Stay up to date about our store"
-      news_text_two: "subscribe to our news!"
+      empty_cart: "Empty cart"
+      create_order: "Checkout"
+  orders:
+    address_form:
+      add_address: "Add address"
+      add_address_order: "Add new address to order"
+      address_nick: "Address nick"
+      address_full: "Street and house"
+      phone: "Phone"
+      country: "Country"
+      city: "City"
+      name_surname: "Name and surname"
+      add: "Add"
+    order_form:
+      order_summ: "Order price"
+      create: "Create"
+      select_address: "Select address"
+      checkout: "Checkout"
+    new:
+      ordering: "Checkout"
+      item_name: "Item"
+      quantity: "Quantity"
+      price: "Price"
+      summ: "Summ"
+      items: "Items"
+      delivery: "Delivery"
+      total_summ: "Total payment"
+      this_address_order: "This address checkout"
+      this_address_order_info: "You can checkout for the selected address and pay for it later."
+      checkout_pay: "Checkout and pay"
+      liqpay_pay: "Payment through payment system"
+      items_price: "Items prices"
+      delivery_free: "Free"
+    order_history:
+      order_code: "Order code"
+      summ: "Summ"
+      date: "Date"
+      order_status: "Order status"
+      order_info: "Order information"
+      status: "Waiting for payment"
+      more: "More"
+    show:
+      status: "Waiting for payment"
+      date: "Date"
+      status_ord: "Status"
+      delivery_address: "Delivery address"
+      item_name: "Item"
+      quantity: "Quantity"
+      price: "Price"
+      summ: "Summ"
+      items: "Items"
+      delivery: "Delivery"
+      total_summ: "Total payment"
   about:
     index:
       header: "Car Store - One of the best auto showroom in Kharkov"
@@ -198,3 +195,100 @@ en:
       more_info_about: "Further details about the store, promotions and special offers you can find on our website!"
       podrobnee: "More info"
       about_store: "The best store. The best service. All for customer convenience!"
+  layouts:
+    application:
+      account: "Account"
+      bookmarks: "Bookmarks"
+      ordering: "Ordering"
+      cart: "Cart"
+      sign_out: "Sign out"
+      sign_in: "Sign in"
+      main: "Main"
+      categories: "Categories"
+      store: "Store"
+      pay_deliv: "Delivery and payment"
+      sale: "Sale"
+      brands: "Brands"
+      contacts: "Contacts"
+      search: "Search"
+      motiv_text: "The best store. The best service. All for customer convenience!"
+      video_text_one: "New!"
+      video_text_two: "Sportback in Dubai"
+      video_text_three: "New!"
+      video_text_four: "New!"
+      situation: "Ukraine. Kharkiv. Kharkiv Reg."
+      service: "Service"
+      new: "News"
+      q_cert: "Quality certifications"
+      about_us: "About us"
+      feedbacks: "Feedbacks about the store"
+      site_map: "Site map"
+      customer: "Customer"
+      orders_history: "Order history"
+      wish_list: "Wish List"
+      subscription: "Subscription"
+      subscribe: "Subscribe!"
+      news_text_one: "Stay up to date about our store"
+      news_text_two: "subscribe to our news!"
+  payment_delivery:
+    index:
+      for_your_convenience: "For your convenience we offer delivery and pickup cars purchased in our store."
+      cars_delivery: "Delivery is carried out:"
+      cars_delivery_about: "Within an hour after ordering your car can be picked up at our showroom"
+      cars_delivery_when: "Every day, seven days a week, at any time convenient for you within working hours of showroom"
+      cars_delivery_how: "-during the order confirmation the operator will inform the presence of a car in a showroom;"
+      cars_delivery_where: "-If you want to pick up the car yourself, but the car is currently not available in the showroom, it can be delivered to any convenient place for you;"
+      cars_payment: "Car payment: "
+      cars_payment_cash: "Cash when receiving the car in the showroom"
+      cars_payment_bank: "By bank transfer in the cash department of any bank or checking account of your firm"
+      cars_payment_cart: "Visa and MasterCard of any bank"
+  addresses:
+    form_address:
+      address: "Address"
+      address_nick: "Address nick"
+      address_full: "Street and house for delivery"
+      phone: "Phone"
+      country: "Country"
+      city: "City"
+      name_surname: "Name and surname"
+      add: "Add"
+    user_addresses:
+      new_address: "New address"
+      nick: "Nick"
+      address: "Address"
+      phone: "Phone"
+      country: "Country"
+      city: "City"
+      name_surname: "Name and surname"
+      act: "Action"
+      edit: "Edit"
+      delete: "Delete"
+      sure: "Are you sure?"
+  myaccount:
+    login:
+      sign_in: "Sign in"
+      remember_me: "Remember me"
+      or: "OR"
+      register: "Register"
+      p_name: "Enter name"
+      p_mail: "Enter Email"
+      p_passw: "Enter password"
+      p_passw_conf: "Confirm password"
+      edit_profile: "Edit profile"
+      p_passw_last: "Enter new password"
+      reload: "Update"
+    index:
+      my_account: "My account"
+      account_welcome: "Welcome to your account. Here you can manage your personal data and orders."
+      my_orders: "My orders"
+      my_address: "My addresses"
+      my_info: "My information"
+      my_wish: "My wish list"
+      my_mails: "My mails"
+      main: "Main"
+    info:
+      edit_profile: "Edit profile"
+      p_passw: "Enter password"
+      p_passw_conf: "Confirm password"
+      p_passw_last: "Enter your previous password"
+      reload: "Update"
