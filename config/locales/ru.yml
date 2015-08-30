@@ -67,6 +67,8 @@ ru:
       delivery: "Доставка"
       delivery_price: "Бесплатно"
       total: "Всего"
+      empty_cart: "Очистить корзину"
+      create_order: "Оформить заказ"
   about:
     index:
       header: "Car Store - Один из лучших автосалонов Харькова"
