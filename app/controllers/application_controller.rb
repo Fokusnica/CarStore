@@ -4,13 +4,17 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
 
-    #
-    # if Cart.exists?(session[:cart_id])
-    #   @cart = Cart.find(session[:cart_id])
-    #   @user = User.find(current_user.id)
-    #   @user.cart_id = @cart.id
-    #   @user.save
-    # end
+
+    @user = User.find(current_user.id)
+
+    if Cart.exists?(@user.cart_id)
+      if !session[:cart_id].nil?
+        @user.cart_id = session[:cart_id]
+        @user.save
+      else
+        session[:cart_id] = @user.cart_id
+      end
+    end
 
     sign_in_url = new_user_session_url
     if request.referer == sign_in_url

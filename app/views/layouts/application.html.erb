@@ -52,7 +52,7 @@
               <li><a href="/myaccount"><i class="fa fa-user"></i><%= t('.account') %></a></li>
               <li><a href="#"><i class="fa fa-star"></i><%= t('.bookmarks') %></a></li>
               <li><a href="checkout.html"><i class="fa fa-crosshairs"></i><%= t('.ordering') %></a></li>
-              <% unless session[:cart_id].nil? %>
+              <% unless session[:cart_id].nil? || @user %>
                   <li><%= link_to(cart_url(session[:cart_id])) do %>
                         <i class="fa fa-shopping-cart"></i><%= t('.cart') %>
                     <%  end %>
@@ -87,7 +87,7 @@
         <div class="mainmenu pull-left">
           <ul class="nav navbar-nav collapse navbar-collapse">
             <li><a href="/" class="active"><%= t('.main') %></a></li>
-            <li class="dropdown"><a href="#"><%= t('.categories') %><i class="fa fa-angle-down"></i></a>
+            <li class="dropdown"><a href="category"><%= t('.categories') %><i class="fa fa-angle-down"></i></a>
               <ul role="menu" class="sub-menu">
 
                 <% @categories.each do |category| %>
