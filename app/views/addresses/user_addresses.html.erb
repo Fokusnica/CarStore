@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <td><%= link_to 'Новый адрес', new_address_path, class: 'btn btn-default add-to-cart' %> </td>
+    <table id="order-list" class="table table-bordered footab default footable-loaded footable">
+      <thead>
+      <tr>
+        <th>Псевдоним</th>
+        <th>Адрес</th>
+        <th>Телефон</th>
+        <th>Страна</th>
+        <th>Город</th>
+        <th>ФИО получателя</th>
+        <th colspan="2">Действия</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @user_addresses.each do |address| %>
+          <tr>
+            <td><%= address.name %></td>
+            <td><%= address.address %></td>
+            <td><%= address.phone %></td>
+            <td><%= address.country %></td>
+            <td><%= address.city %></td>
+            <td><%= address.title %></td>
+            <td><%= link_to 'редактировать', edit_address_path(address), class: 'btn btn-default add-to-cart' %> </td>
+            <td><%= button_to 'Удалить', address, method: :delete,  data: { confirm: 'Are you sure?' }, class: 'btn btn-default add-to-cart' %> </td>
+
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+

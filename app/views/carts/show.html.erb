@@ -2,16 +2,16 @@
 <div id="columns" class="container">
 
   <div id="center_column" class="center_column col-xs-12 col-sm-12">
-  <% if notice %>
+    <% if notice %>
 
-    <div class="alert alert-danger" role="alert">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>
-                <%= notice %>
-              </div>
-<% end %>
+        <div class="alert alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          <%= notice %>
+        </div>
+    <% end %>
     <h1 id="cart_title" class="page-heading"><%= t('.ordering') %>
-			<span class="heading-counter"><%= t('.items_in_cart') %>:
+      <span class="heading-counter"><%= t('.items_in_cart') %>:
 			<span id="summary_products_quantity"><%= @cart.line_items.count%></span>
 		</span>
     </h1>
@@ -46,6 +46,8 @@
       <tr class="cart_total_price">
         <td rowspan="3" colspan="2" id="cart_voucher" class="cart_voucher">
           <%= button_to 'Empty cart', @cart, method: :delete,  data: { confirm: 'Are you sure?' }, class: 'btn btn-default add-to-cart' %>
+          <%= button_to "Оформить заказ", new_order_path, class: 'btn btn-default add-to-cart', method: :get %>
+
         </td>
         <td colspan="3" class="text-right"><%= t('.total_summ') %></td>
         <td colspan="2" class="price" id="total_product"><%= @cart.total_summ %></td>

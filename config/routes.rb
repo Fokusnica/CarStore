@@ -8,11 +8,27 @@ Rails.application.routes.draw do
   get '/contacts' => 'contacts#index'
 
   resources :product
-
+  resources :addresses do
+    collection do
+      get 'user_addresses'
+      post 'ajax'
+    end
+  end
+  resources :orders do
+    collection do
+      get 'order_history'
+    end
+  end
   resources :category
   resources :line_items
   resources :carts
-  resources :myaccount
+  resources :myaccount do
+    collection do
+      get 'info'
+    end
+  end
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'welcome#index'
