@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-8">
         <div class="contact-form">
-          <h2 class="title text-center">Оформление заказа</h2>
+          <h2 class="title text-center"><%=t('.ordering')%></h2>
 
         <div id="test">
           <% if user_signed_in? %>
@@ -13,10 +13,10 @@
           <table class="table table-bordered">
             <thead>
             <tr>
-              <th class="item">Наименование</th>
-              <th class="item">Количество</th>
-              <th class="item">Цена</th>
-              <th class="last_item">Сумма</th>
+              <th class="item"><%=t('.item_name')%></th>
+              <th class="item"><%=t('.quantity')%></th>
+              <th class="item"><%=t('.price')%></th>
+              <th class="last_item"><%=t('.summ')%></th>
             </tr>
             </thead>
 
@@ -24,7 +24,7 @@
             <tfoot>
             <tr class="item">
               <td colspan="1">
-                <strong>Товары </strong>
+                <strong><%=t('.items')%></strong>
               </td>
               <td colspan="4">
                 <span class="price">4900.0</span>
@@ -32,7 +32,7 @@
             </tr>
             <tr class="item">
               <td colspan="1">
-                <strong>Доставка </strong>
+                <strong><%=t('.delivery')%></strong>
               </td>
               <td colspan="4">
                 <span class="price-shipping">0 грн.</span>
@@ -40,7 +40,7 @@
             </tr>
             <tr class="totalprice item">
               <td colspan="1">
-                <strong>Итого, к оплате:</strong>
+                <strong><%=t('.total_summ')%>: </strong>
               </td>
               <td colspan="4">
                 <span class="price">4900.0</span>

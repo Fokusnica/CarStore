@@ -69,6 +69,47 @@ ru:
       total: "Всего"
       empty_cart: "Очистить корзину"
       create_order: "Оформить заказ"
+  orders:
+    address_form:
+      address_nick: "Псевдоним адреса"
+      address_full: "Улица и дом "
+      phone: "Телефон"
+      country: "Страна"
+      city: "Город"
+      name_surname: "ФИО "
+      add: "Добавить"
+    order_form:
+      order_summ: "Сумма заказа"
+      create: "Создать"
+    new:
+      ordering: "Оформление заказа"
+      item_name: "Наименование"
+      quantity: "Количество"
+      price: "Цена"
+      summ: "Сумма"
+      items: "Товары"
+      delivery: "Доставка"
+      total_summ: "Итого, к оплате"
+    order_history:
+      order_code: "Код Заказа"
+      summ: "Сумма"
+      date: "Дата"
+      order_status: "Статус Заказа"
+      order_info: "Информация о заказе"
+      status: "Ожидание оплаты"
+      more: "Подробнее"
+    show:
+      status: "Ожидание оплаты"
+      date: "Дата"
+      status_ord: "Статус"
+      delivery_address: "Адрес доставки"
+      item_name: "Наименование"
+      quantity: "Количество"
+      price: "Цена"
+      summ: "Сумма"
+      items: "Товары"
+      delivery: "Доставка"
+      total_summ: "Итого, к оплате"
   about:
     index:
       header: "Car Store - Один из лучших автосалонов Харькова"
