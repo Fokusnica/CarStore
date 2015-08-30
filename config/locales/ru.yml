@@ -189,6 +189,34 @@ ru:
       cars_payment_cash: "Наличными в автосалоне при получении автомобиля"
       cars_payment_bank: "По безналичному расчету в кассе отделения любого банка или с расчетного счета вашей фирмы"
       cars_payment_cart: "Любой картой Visa и MasterCard любого банка"
+  myaccount:
+    login:
+      sign_in: "Войти"
+      remember_me: "Запомнить меня"
+      or: "ИЛИ"
+      register: "Зарегистрироваться"
+      p_name: "Введите Имя"
+      p_mail: "Введите Email"
+      p_passw: "Введите Пароль"
+      p_passw_conf: "Повторите Пароль"
+      edit_profile: "Редактирование Профиля"
+      p_passw_last: "Введите прошлый пароль"
+      reload: "Обновить"
+    index:
+      my_account: "Моя учетная запись"
+      account_welcome: "Добро пожаловать в вашу учетную запись. Здесь вы можете управлять личными данными и заказами."
+      my_orders: "Мои заказы"
+      my_address: "Мои адреса"
+      my_info: "Моя информация"
+      my_wish: "Моё избранное"
+      my_mails: "Мои оповещения"
+      main: "Главная"
+    info:
+      edit_profile: "Редактирование Профиля"
+      p_passw: "Введите Пароль"
+      p_passw_conf: "Повторите Пароль"
+      p_passw_last: "Введите прошлый пароль"
+      reload: "Обновить"
   views:
     pagination:
       first: "<<"
