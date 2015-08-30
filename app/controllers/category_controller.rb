@@ -2,6 +2,7 @@ class CategoryController < ApplicationController
   def index
 
     @products =  Product.order(:title).page(params[:page]).per(15)
+    @categories = Category.all
 
   end
 

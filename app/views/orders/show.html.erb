@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <table class="detail_step_by_step table table-bordered">
+      <thead>
+      <tr>
+        <th class="first_item">Дата</th>
+        <th class="last_item">Статус</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr class="last_item alternate_item">
+        <td class="step-by-step-date"><%= @order.updated_at.to_s %></td>
+        <td><span style="background-color:#4169E1; border-color:#4169E1;" class="label">Ожидание оплаты</span></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <ul class="address alternate_item box">
+          <li><h3 class="page-subheading">Адрес доставки</h3></li>
+          <li><span class="address_Customer:name"><%= @order.address.name %></span></li>
+          <li><span class="address_Country:name"><%= @order.address.country %></span></li>
+          <li><span class="address_city"><%= @order.address.city %></span></li>
+          <li><span class="address_address1"><%= @order.address.address %></span></li>
+          <li><span class="address_phone"<%= @order.address.phone %></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th class="item">Наименование</th>
+        <th class="item">Количество</th>
+        <th class="item">Цена</th>
+        <th class="last_item">Сумма</th>
+      </tr>
+      </thead>
+
+
+      <tfoot>
+      <tr class="item">
+        <td colspan="1">
+          <strong>Товары </strong>
+        </td>
+        <td colspan="4">
+          <span class="price"><%= @order.price %></span>
+        </td>
+      </tr>
+      <tr class="item">
+        <td colspan="1">
+          <strong>Доставка </strong>
+        </td>
+        <td colspan="4">
+          <span class="price-shipping">0 грн.</span>
+        </td>
+      </tr>
+      <tr class="totalprice item">
+        <td colspan="1">
+          <strong>Итого, к оплате:</strong>
+        </td>
+        <td colspan="4">
+          <span class="price"><%= @order.price %></span>
+        </td>
+      </tr>
+      </tfoot>
+      <tbody>
+      <!-- Customized products -->
+      <!-- Classic products -->
+      <% @order.line_items.each do |item| %>
+          <tr class="item">
+
+
+            <td class="bold">
+              <label for="cb_70">
+                <%= item.product.title %>
+              </label>
+            </td>
+            <td class="return_quantity">
+              <%= item.quantity %>
+            <td class="price">
+              <label for="cb_70">
+                <%= item.product.price %>
+              </label>
+            </td>
+            <td class="price">
+              <label for="cb_70">
+                <%= (item.quantity * item.product.price) %>
+              </label>
+            </td>
+
+          </tr>
+      <% end %>
+
+      </tbody>
+    </table>
+  </div>
+</div>

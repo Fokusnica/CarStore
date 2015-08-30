@@ -17,7 +17,7 @@
                 <h2>Porsche Macan Turbo</h2>
 
                 <p><%=t('.slider_one')%></p>
-                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
+
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide1.jpg" class="girl img-responsive" alt=""/>
@@ -30,7 +30,7 @@
                 <h2>Audi A6</h2>
 
                 <p><%=t('.slider_two')%> </p>
-                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
+
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide2.jpg" class="girl img-responsive" alt=""/>
@@ -44,7 +44,7 @@
                 <h2>Suzuki Vitara</h2>
 
                 <p><%=t('.slider_three')%></p>
-                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
+
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide3.jpg" class="girl img-responsive" alt=""/>
@@ -57,7 +57,7 @@
                 <h2>Škoda Octavia RS</h2>
 
                 <p><%=t('.slider_four')%></p>
-                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
+
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide4.jpg" class="girl img-responsive" alt=""/>
@@ -70,7 +70,7 @@
                 <h2>Volkswagen New Passat</h2>
 
                 <p><%=t('.slider_five')%></p>
-                <button type="button" class="btn btn-default get"><%= t('.go') %></button>
+
               </div>
               <div class="col-sm-6">
                 <img src="/assets/slider/slide5.jpg" class="girl img-responsive" alt=""/>
@@ -100,34 +100,35 @@
       <%= render 'category/categories' %>
 
       <div class="col-sm-9 padding-right">
+        <% if notice %>
+
+            <div class="alert alert-success" role="alert">
+              <%= notice %>
+            </div>
+        <% end %>
         <div class="features_items"><!--features_items-->
           <h2 class="title text-center"><%=t('.pop_models')%></h2>
-          <% @products.last(6).each do |product| %>
+          <% @products.sample(6).each do |product| %>
               <div class="col-sm-4">
                 <div class="product-image-wrapper">
                   <div class="single-products">
                     <div class="productinfo text-center">
                       <%= image_tag(product.image.url, size: '204x182') %>
-                      <h2><%= product.price %></h2>
+                      <h2>$<%= product.price %></h2>
 
                       <p><%= product.title %></p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-                    <div class="product-overlay">
-                      <div class="overlay-content">
-                        <h2><%= product.price %></h2>
 
-                        <p><%= product.description.html_safe %></p>
-                        <%= button_to line_items_path(product_id: product), {class: 'btn btn-default add-to-cart'} do %>
+                       <%= button_to line_items_path(product_id: product), {class: 'btn btn-default add-to-cart'} do %>
                             <i class="fa fa-shopping-cart"></i>
                             <%= t('.add_to_cart')%>
                         <% end %>
-                        <%= link_to product_path(product), {class: 'btn btn-default add-to-cart'} do %>
+
+                      <%= link_to product_path(product), {class: 'btn btn-default add-to-cart'} do %>
                             <i class="fa fa-eye"></i>
                             <%=t('.watch')%>
                         <% end %>
-                      </div>
                     </div>
+
                   </div>
                   <div class="choose">
                     <ul class="nav nav-pills nav-justified">
@@ -163,7 +164,7 @@
                       <div class="single-products">
                         <div class="productinfo text-center">
                           <%= image_tag(product.image.url, size: '184x162') %>
-                          <h2><%= product.price %></h2>
+                          <h2>$<%= product.price %></h2>
 
                           <p><%= product.title %></p>
                           <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
@@ -437,13 +438,13 @@
           <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="item active">
-                <% @products.first(3).each do |product| %>
+                <% @products.sample(3).each do |product| %>
                     <div class="col-sm-4">
                       <div class="product-image-wrapper">
                         <div class="single-products">
                           <div class="productinfo text-center">
                             <%= image_tag(product.image.url, size: '184x162') %>
-                            <h2><%= product.price %></h2>
+                            <h2>$<%= product.price %></h2>
 
                             <p><%= product.title %></p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
@@ -455,7 +456,7 @@
                 <% end %>
               </div>
               <div class="item">
-                <% @products.last(3).each do |product| %>
+                <% @products.sample(3).each do |product| %>
                     <div class="col-sm-4">
                       <div class="product-image-wrapper">
                         <div class="single-products">

@@ -115,6 +115,20 @@ ru:
       all_models: "Все модели"
       my_account: "Мой аккаунт"
       one_of_the_best: "Car Store - Один из лучших автосалонов Харькова"
+  contacts:
+    index:
+      contact_us: "Свяжитесь с нами"
+      get_in_touch: "Форма обратной связи"
+      name: "Ваше имя"
+      your_email: "Ваш email"
+      subject: "Тема"
+      your_message_here: "Ваше письмо"
+      submit: "Отправить"
+      contact_info: "Контактная информация"
+      phone: "Телефон"
+      email: "Email"
+      social_networking: "Социальные сети"
+      address: "Проспект Ленина 56, Харьков, 61000"
   user_mailer:
     greeting_mail:
       account: "Личный кабинет"

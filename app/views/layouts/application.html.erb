@@ -18,8 +18,8 @@
         <div class="col-sm-6">
           <div class="contactinfo">
             <ul class="nav nav-pills">
-              <li><a href="#"><i class="fa fa-phone"></i> +8 057 111 11 11</a></li>
-              <li><a href="#"><i class="fa fa-envelope"></i> octohellstore@gmail.com</a></li>
+              <li><a href="#"><i class="fa fa-phone"></i> <%= display_phone %> </a></li>
+              <li><a href="#"><i class="fa fa-envelope"></i> <%= display_email %> </a></li>
             </ul>
           </div>
         </div>
@@ -87,7 +87,10 @@
         <div class="mainmenu pull-left">
           <ul class="nav navbar-nav collapse navbar-collapse">
             <li><a href="/" class="active"><%= t('.main') %></a></li>
-            <li class="dropdown"><a href="#"><%= t('.categories') %><i class="fa fa-angle-down"></i></a>
+            <li class="dropdown">
+              <%= link_to  category_index_path do %>
+              <%= t('.categories') %><i class="fa fa-angle-down"></i>
+                  <% end %>
               <ul role="menu" class="sub-menu">
 
                 <% @categories.each do |category| %>
@@ -99,12 +102,12 @@
             </li>
             <li class="dropdown"><a href="#"><%= t('.store') %><i class="fa fa-angle-down"></i></a>
               <ul role="menu" class="sub-menu">
-                <li><a href="#"><%= t('.pay_deliv') %></a></li>
+                <li><%= link_to t('.pay_deliv'), payment_delivery_path %></li>
                 <li><a href="#"><%= t('.sale') %></a></li>
                 <li><a href="#"><%= t('.brands') %></a></li>
               </ul>
             </li>
-            <li><a href="contact-us.html"><%= t('.contacts') %></a></li>
+            <li> <%= link_to t('.contacts'), contacts_path %> </li>
           </ul>
         </div>
       </div>
@@ -213,7 +216,7 @@
             <h2><%= t('.service') %></h2>
             <ul class="nav nav-pills nav-stacked">
               <li><a href="#"><%= t('.new') %></a></li>
-              <li><a href="#"><%= t('.pay_deliv') %></a></li>
+              <li><%= link_to t('.pay_deliv'), payment_delivery_path %></li>
               <li><a href="#"><%= t('.q_cert') %></a></li>
             </ul>
           </div>
@@ -224,7 +227,7 @@
             <ul class="nav nav-pills nav-stacked">
               <li><a href="#"><%= t('.feedbacks') %></a></li>
               <li><a href="#"><%= t('.site_map') %></a></li>
-              <li><a href="#"><%= t('.contacts') %></a></li>
+              <li><%= link_to t('.contacts'), contacts_path %></li>
             </ul>
           </div>
         </div>
@@ -244,7 +247,7 @@
           <div class="single-widget">
             <h2><%= t('.customer') %> </h2>
             <ul class="nav nav-pills nav-stacked">
-              <li><a href="#"><%= t('.account') %></a></li>
+              <li><a href="/myaccount"><%= t('.account') %></a></li>
               <li><a href="#"><%= t('.orders_history') %></a></li>
               <li><a href="#"><%= t('.wish_list') %></a></li>
               <li><a href="#"><%= t('.subscription') %></a></li>

@@ -61,6 +61,11 @@ group :development, :test do
   gem 'rails-erd', require:false
 
   gem 'mailcatcher'
+  gem 'meta_request'
+
+  gem 'capybara'
+
+  gem 'selenium-webdriver'
 
 end
 
