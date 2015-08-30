@@ -52,7 +52,7 @@
                         <% end %>
 								</span>
               <p><b><%=t('.availability')%>:</b> <%= @product.status ? t('.in_stock') : t('.out_of_stock') %></p>
-              <p><b><%=t('.manufacturer')%>:</b> New</p>
+              <p><b><%=t('.manufacturer')%>:</b> <%= @product.manufacturer %></p>
             </div><!--/product-information-->
           </div>
         </div><!--/product-details-->
