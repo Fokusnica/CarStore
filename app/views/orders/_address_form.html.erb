@@ -1,23 +1,28 @@
 <div id="address">
-  <div class="form-group col-md-6">
-    <input type="text" name="name" id="name" class="form-control" required="required" placeholder=<%=t('.address_nick')%>>
+  <div class="form-group col-md-12">
+  <h3 style="color: #A80000; text-align: center;">Добавление адреса
+    </h3>
+    Добавление нового адреса в заказ
   </div>
   <div class="form-group col-md-6">
-    <input type="text" name="address" id="address_street" class="form-control" required="required" placeholder=<%=t('.address_full')%>>
+    <input type="text" name="name" id="name" class="form-control" required="required" placeholder="Псевдоним адреса">
   </div>
   <div class="form-group col-md-6">
-    <input type="tel" name="phone" id="phone" class="form-control" required="required" placeholder=<%=t('.phone')%>>
+    <input type="text" name="address" id="address_street" class="form-control" required="required" placeholder="Улица, дом">
   </div>
   <div class="form-group col-md-6">
-    <input type="text" name="country" id="country" class="form-control" required="required" placeholder=<%=t('.country')%>>
+    <input type="tel" name="phone" id="phone" class="form-control" required="required" placeholder="Телефон">
   </div>
   <div class="form-group col-md-6">
-    <input type="text" name="city" id="city" class="form-control" required="required" placeholder=<%=t('.city')%>>
+    <input type="text" name="country" id="country" class="form-control" required="required" placeholder="Страна">
   </div>
   <div class="form-group col-md-6">
-    <input type="text" name="title" id="title" class="form-control" required="required" placeholder=<%=t('.name_surname')%>>
+    <input type="text" name="city" id="city" class="form-control" required="required" placeholder="Город">
+  </div>
+  <div class="form-group col-md-6">
+    <input type="text" name="title" id="title" class="form-control" required="required" placeholder="ФИО">
   </div>
   <div class="form-group col-md-12">
-    <button onclick="test_ajax()"><%=t('.add')%></button>
+    <button class="btn btn-primary pull-left" onclick="test_ajax()">Добавить</button>
   </div>
 </div>

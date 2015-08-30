@@ -3502,7 +3502,7 @@ h2.title {
 }
 
 .cart_product {
-  display: block;
+  /*display: block;*/
   margin: 15px -70px 10px 25px;
 }
 

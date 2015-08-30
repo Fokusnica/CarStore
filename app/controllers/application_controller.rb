@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include ListOfCategories
   before_action :list
+  before_action :get_locale
 
   def after_sign_in_path_for(resource)
 
@@ -24,6 +25,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def get_locale
+    I18n.locale = session[:locale] || I18n.default_locale
+  end
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
