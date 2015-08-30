@@ -8,6 +8,9 @@
             Вы можете оформить заказ на выбранный адрес и оплатить его позже.
             </div>
 
+          <h2 class="title text-center"><%=t('.ordering')%></h2>
+
+
           <div id="order_form">
             <%= render 'order_form' %>
           </div>
@@ -25,10 +28,10 @@
 
             <thead>
             <tr>
-              <th class="item">Наименование</th>
-              <th class="item">Количество</th>
-              <th class="item">Цена</th>
-              <th class="last_item">Сумма</th>
+              <th class="item"><%=t('.item_name')%></th>
+              <th class="item"><%=t('.quantity')%></th>
+              <th class="item"><%=t('.price')%></th>
+              <th class="last_item"><%=t('.summ')%></th>
             </tr>
             </thead>
 
@@ -37,6 +40,9 @@
             <tr class="item">
               <td colspan="1">
                 <strong>Цена за товары </strong>
+
+                <strong><%=t('.items')%></strong>
+
               </td>
               <td colspan="4">
                 <span class="price"><%= @cart.total_summ %></span>
@@ -44,7 +50,7 @@
             </tr>
             <tr class="item">
               <td colspan="1">
-                <strong>Доставка </strong>
+                <strong><%=t('.delivery')%></strong>
               </td>
               <td colspan="4">
                 <span class="price-shipping">Пока на шару</span>
@@ -52,7 +58,7 @@
             </tr>
             <tr class="totalprice item">
               <td colspan="1">
-                <strong>Итого, к оплате:</strong>
+                <strong><%=t('.total_summ')%>: </strong>
               </td>
               <td colspan="4">
                 <span class="price"><%= @cart.total_summ %></span>
@@ -88,8 +94,9 @@
             </tbody>
           </table>
           <form method="POST" accept-charset="utf-8" action="https://www.liqpay.com/api/checkout">
-
-            <input type="image" src="//static.liqpay.com/buttons/p11ru.radius.png" name="btn_text"/>
+            <input type="hidden" name="data" value="eyJ2ZXJzaW9uIjozLCJwdWJsaWNfa2V5IjoiaTUzOTE1Mjg0OTgwIiwiYW1vdW50IjoiNSIsImN1cnJlbmN5IjoiVUFIIiwiZGVzY3JpcHRpb24iOiJNeSBnb29kcyIsInR5cGUiOiJidXkiLCJzYW5kYm94IjoiMSIsImxhbmd1YWdlIjoicnUiLCJwYXlfd2F5IjoiY2FyZCxsaXFwYXksZGVsYXllZCxpbnZvaWNlLHByaXZhdDI0In0=" />
+            <input type="hidden" name="signature" value="2V/EihYB7sMtYyS8mRPhaC/TSbs=" />
+            <input type="image" src="//static.liqpay.com/buttons/p11ru.radius.png" name="btn_text" />
           </form>
 
 
@@ -140,3 +147,5 @@
 
     }
 </script>
+
+
