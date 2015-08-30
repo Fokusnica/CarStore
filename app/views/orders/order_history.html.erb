@@ -9,11 +9,11 @@
 <table id="order-list" class="table table-bordered footab default footable-loaded footable">
   <thead>
   <tr>
-    <th>Код Заказа:</th>
-    <th>Сумма</th>
-    <th>Дата</th>
-    <th>Статус Заказа:</th>
-    <th>Информация о заказе</th>
+    <th><%=t('.order_code')%>: </th>
+    <th><%=t('.summ')%></th>
+    <th><%=t('.date')%></th>
+    <th><%=t('.order_status')%>: </th>
+    <th><%=t('.order_info')%></th>
   </tr>
   </thead>
   <tbody>
@@ -22,9 +22,9 @@
       <td><%= order.id %></td>
       <td><%= order.price %></td>
       <td><%= order.updated_at %></td>
-    <td><span style="background-color:#4169E1; border-color:#4169E1;" class="label">Ожидание оплаты</span></td>
+    <td><span style="background-color:#4169E1; border-color:#4169E1;" class="label"><%=t('.status')%></span></td>
 
-      <td><%= link_to "Подробнее", order_path(:id => order.id) %> </td>
+      <td><%= link_to t('.more'), order_path(:id => order.id) %> </td>
   </tr>
   <% end %>
   </tbody>

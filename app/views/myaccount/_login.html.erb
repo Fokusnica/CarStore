@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-sm-4 col-sm-offset-1">
             <div class="login-form"><!--login form-->
-              <h2>Зайди если осмелишься!</h2>
+              <h2><%=t('.sign_in')%></h2>
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                   <%= devise_error_messages! %>
                   <%= f.email_field :email, autofocus: true %>
@@ -13,28 +13,28 @@
                   <% if devise_mapping.rememberable? -%>
                               <span>
                      <%= f.check_box :remember_me %>
-                                запомнить меня
+                                <%=t('.remember_me')%>
 							</span>
 
                   <% end -%>
-                  <%= f.submit "Войти", class: "btn btn-success" %>
+                  <%= f.submit t('.sign_in'), class: "btn btn-success" %>
               <% end %>
             </div>
             <!--/login form-->
           </div>
           <div class="col-sm-1">
-            <h2 class="or">ИЛИ</h2>
+            <h2 class="or"><%=t('.or')%></h2>
           </div>
           <div class="col-sm-4">
             <div class="signup-form"><!--sign up form-->
-              <h2>Зарегистрироваться!</h2>
+              <h2><%=t('.register')%></h2>
               <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                   <%= devise_error_messages! %>
-                  <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Введите Имя" %>
-                  <%= f.email_field :email, class: "form-control", placeholder: "Введите Email" %>
-                  <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Введите Пароль" %>
-                  <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите Пароль" %>
-                  <%= f.submit "Зарегистрироваться", class: "btn btn-success" %>
+                  <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: t('.p_name') %>
+                  <%= f.email_field :email, class: "form-control", placeholder: t('.p_mail')  %>
+                  <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: t('.p_passw') %>
+                  <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: t('.p_passw_conf') %>
+                  <%= f.submit t('.register'), class: "btn btn-success" %>
               <% end %>
             </div>
             <!--/sign up form-->
@@ -48,7 +48,7 @@
         <div class="row">
           <div class="col-sm-8">
             <div class="contact-form">
-              <h2 class="title text-center">Редактирование Профиля</h2>
+              <h2 class="title text-center"><%=t('.edit_profile')%></h2>
 
               <div class="status alert alert-success" style="display: none"></div>
 
@@ -63,18 +63,18 @@
                     <%= f.email_field :email, class: "form-control", value: current_user.email %>
                   </div>
                   <div class="form-group col-md-6">
-                    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Введите Пароль" %>
+                    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: t('.p_passw') %>
                   </div>
                   <div class="form-group col-md-6">
-                    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите Пароль" %>
+                    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: t('.p_passw_conf') %>
                   </div>
                   <div class="form-group col-md-6">
-                    <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Введите прошлый пароль!" %>
+                    <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: t('.p_passw_last') %>
                   </div>
 
 
                   <div class="form-group col-md-12">
-                    <%= f.submit "Обновить", class: "btn btn-primary pull-right" %>
+                    <%= f.submit t('.reload'), class: "btn btn-primary pull-right" %>
                   </div>
               <% end %>
             </div>

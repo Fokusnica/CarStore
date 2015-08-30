@@ -3,41 +3,41 @@
     <div class="row">
       <div class="col-sm-8">
         <div class="contact-form">
-          <h2 class="title text-center">Адрес</h2>
+          <h2 class="title text-center"><%=t('.address')%></h2>
           <%= form_for(@address) do |f| %>
 
 
               <div class="form-group col-md-6">
-                <%= f.label "Псевдоним адреса" %><br>
+                <%= f.label t('.address_nick') %><br>
                 <%= f.text_field :name, class: "form-control", size: 40 %>
               </div>
               <div class="form-group col-md-12">
-                <%= f.label "Улица и дом доставки" %><br>
+                <%= f.label t('.address_full') %><br>
                 <%= f.text_area :address, class: "form-control", rows: 3, cols: 40 %>
               </div>
 
               <div class="form-group col-md-6">
-                <%= f.label "Телефон" %><br>
+                <%= f.label t('.phone') %><br>
                 <%= f.phone_field :phone, class: "form-control", size: 40 %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.label "Страна" %><br>
+                <%= f.label t('.country') %><br>
                 <%= f.text_field :country, class: "form-control", size: 40 %>
               </div>
 
               <div class="form-group col-md-6">
-                <%= f.label "Город" %><br>
+                <%= f.label t('.city') %><br>
                 <%= f.text_field :city, class: "form-control", size: 40 %>
               </div>
 
               <div class="form-group col-md-6">
-                <%= f.label "ФИО получателя" %><br>
+                <%= f.label t('.name_surname') %><br>
                 <%= f.text_field :title, class: "form-control", size: 40 %>
               </div>
 
 
               <div class="form-group col-md-12">
-                <%= f.submit "Добавить", class: "btn btn-primary pull-right" %>
+                <%= f.submit t('.add'), class: "btn btn-primary pull-right" %>
               </div>
 
           <% end %>

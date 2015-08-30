@@ -7,25 +7,24 @@
             <%= render 'login' %>
         <% else %>
 
-            <h1 class="page-heading">Моя учетная запись</h1>
+            <h1 class="page-heading"><%=t('.my_account')%></h1>
 
-            <p class="info-account" style="text-align: center">Добро пожаловать в вашу учетную запись. Здесь вы можете
-              управлять личными данными и заказами.</p>
+            <p class="info-account" style="text-align: center"><%=t('.account_welcome')%></p>
 
             <div class="row addresses-lists">
               <div class="col-xs-12 col-sm-6 col-lg-6">
                 <ul class="myaccount-link-list">
                   <li><%= link_to order_history_orders_path do %>
-                        <i class="icon-list-ol"></i><span>Мои заказы</span>
+                        <i class="icon-list-ol"></i><span><%=t('.my_orders')%></span>
                     <% end %>
                   </li>
                   <li><%= link_to user_addresses_addresses_path do %>
-                        <i class="fa fa-building-o"></i><span>Мои адреса</span>
+                        <i class="fa fa-building-o"></i><span><%=t('.my_address')%></span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to info_myaccount_index_path do %>
-                        <i class="icon-user"></i><span>Моя информация</span>
+                        <i class="icon-user"></i><span><%=t('.my_info')%></span>
                     <% end %>
                   </li>
                 </ul>
@@ -35,16 +34,16 @@
 
                   <!-- MODULE WishList -->
                   <li class="lnk_wishlist">
-                    <a href="/" title="Моё избранное">
+                    <a href="/" title=<%=t('.my_wish')%>>
                       <i class="icon-heart"></i>
-                      <span>Моё избранное</span>
+                      <span><%=t('.my_wish')%></span>
                     </a>
                   </li>
                   <!-- END : MODULE WishList -->
                   <li class="mailalerts">
-                    <a href="/" title="Мои оповещения" rel="nofollow">
+                    <a href="/" title=<%=t('.my_mails')%> rel="nofollow">
                       <i class="icon-envelope"></i>
-                      <span>Мои оповещения</span>
+                      <span><%=t('.my_mails')%></span>
                     </a>
                   </li>
 
@@ -53,7 +52,7 @@
             </div>
             <ul class="footer_links clearfix">
               <li>
-                <a class="btn btn-default button button-small" href="/" title="Главная"><span><i class="icon-chevron-left"></i> Главная</span></a>
+                <a class="btn btn-default button button-small" href="/" title=<%=t('.main')%>><span><i class="icon-chevron-left"></i><%=t('.main')%> </span></a>
               </li>
             </ul>
         <% end %>
