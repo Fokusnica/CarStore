@@ -3,15 +3,15 @@
     <table class="detail_step_by_step table table-bordered">
       <thead>
       <tr>
-        <th class="first_item">Дата</th>
-        <th class="last_item">Статус</th>
+        <th class="first_item"><%=t('.date')%></th>
+        <th class="last_item"><%=t('.status_ord')%></th>
       </tr>
       </thead>
       <tbody>
 
       <tr class="last_item alternate_item">
         <td class="step-by-step-date"><%= @order.updated_at.to_s %></td>
-        <td><span style="background-color:#4169E1; border-color:#4169E1;" class="label">Ожидание оплаты</span></td>
+        <td><span style="background-color:#4169E1; border-color:#4169E1;" class="label"><%=t('.status')%></span></td>
       </tr>
       </tbody>
     </table>
@@ -19,7 +19,7 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6">
         <ul class="address alternate_item box">
-          <li><h3 class="page-subheading">Адрес доставки</h3></li>
+          <li><h3 class="page-subheading"><%=t('.delivery_address')%></h3></li>
           <li><span class="address_Customer:name"><%= @order.address.name %></span></li>
           <li><span class="address_Country:name"><%= @order.address.country %></span></li>
           <li><span class="address_city"><%= @order.address.city %></span></li>
@@ -32,10 +32,10 @@
     <table class="table table-bordered">
       <thead>
       <tr>
-        <th class="item">Наименование</th>
-        <th class="item">Количество</th>
-        <th class="item">Цена</th>
-        <th class="last_item">Сумма</th>
+        <th class="item"><%=t('.item_name')%></th>
+        <th class="item"><%=t('.quantity')%></th>
+        <th class="item"><%=t('.price')%></th>
+        <th class="last_item"><%=t('.summ')%></th>
       </tr>
       </thead>
 
@@ -43,7 +43,7 @@
       <tfoot>
       <tr class="item">
         <td colspan="1">
-          <strong>Товары </strong>
+          <strong><%=t('.items')%></strong>
         </td>
         <td colspan="4">
           <span class="price"><%= @order.price %></span>
@@ -51,7 +51,7 @@
       </tr>
       <tr class="item">
         <td colspan="1">
-          <strong>Доставка </strong>
+          <strong><%=t('.delivery')%></strong>
         </td>
         <td colspan="4">
           <span class="price-shipping">0 грн.</span>
@@ -59,7 +59,7 @@
       </tr>
       <tr class="totalprice item">
         <td colspan="1">
-          <strong>Итого, к оплате:</strong>
+          <strong><%=t('.total_summ')%> :</strong>
         </td>
         <td colspan="4">
           <span class="price"><%= @order.price %></span>

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-8">
         <div class="contact-form">
-          <h2 class="title text-center">Редактирование Профиля</h2>
+          <h2 class="title text-center"><%=t('.edit_profile')%></h2>
 
           <div class="status alert alert-success" style="display: none"></div>
 
@@ -18,18 +18,18 @@
                 <%= f.email_field :email, class: "form-control", value: current_user.email %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Введите Пароль" %>
+                <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: t('.p_passw') %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Повторите Пароль" %>
+                <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: t('.p_passw_conf') %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Введите прошлый пароль!" %>
+                <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: t('.p_passw_last') %>
               </div>
 
 
               <div class="form-group col-md-12">
-                <%= f.submit "Обновить", class: "btn btn-primary pull-right" %>
+                <%= f.submit t('.reload'), class: "btn btn-primary pull-right" %>
               </div>
           <% end %>
         </div>
