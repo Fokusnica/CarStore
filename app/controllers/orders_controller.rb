@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
       return
     end
     if !user_signed_in?
-      redirect_to myaccount_index_path, notice: "Зарегистрируйся уже, так Олег просил"
+      redirect_to myaccount_index_path, notice: "Пожалуйста, зарегистрируйтесь или войдите"
 
     end
     @order = Order.new
