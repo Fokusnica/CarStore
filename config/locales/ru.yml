@@ -92,6 +92,10 @@ ru:
       items: "Товары"
       delivery: "Доставка"
       total_summ: "Итого, к оплате"
+      this_address_order_info: "Вы можете оформить заказ на выбранный адрес и оплатить его позже."
+      this_address_order: "Оформить заказ на этот адрес"
+      liqpay_pay: "Оплата через систему платежей"
+      delivery_free: "Бесплатно"
     order_history:
       order_code: "Код Заказа"
       summ: "Сумма"
