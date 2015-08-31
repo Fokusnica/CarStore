@@ -3,11 +3,11 @@
 
 
     <div class="form-group col-md-6">
-      <%= f.label "Выбрать адрес" %><br>
+      <%= f.label t('.select_address') %><br>
       <%= f.collection_select :address_id, current_user.addresses, :id, :name, class: "form-control" %>
     </div>
     <div class="form-group col-md-6">
-      <%= f.submit "Оформить заказ", class: "btn btn-primary pull-left" %>
+      <%= f.submit t('.checkout'), class: "btn btn-primary pull-left" %>
     </div>
 
 
