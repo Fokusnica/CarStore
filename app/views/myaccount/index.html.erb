@@ -2,6 +2,13 @@
   <div id="my-account">
     <div class="row">
       <div id="center_column" class="center_column col-xs-12 col-sm-12">
+        <% if notice.present? %>
+            <div class="alert alert-danger" role="alert">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+              <%= notice %>
+            </div>
+        <% end %>
         <% if !user_signed_in? %>
 
             <%= render 'login' %>

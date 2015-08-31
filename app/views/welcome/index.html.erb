@@ -156,7 +156,7 @@
             </ul>
           </div>
           <div class="tab-content">
-            <div class="tab-pane fade active in" id="tshirt">
+            <div class="tab-pane fade active in" id="volkswagen">
 
               <% @products.first(4).each do |product| %>
                   <div class="col-sm-3">
@@ -177,256 +177,120 @@
 
             </div>
 
-            <div class="tab-pane fade" id="blazers">
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
+            <div class="tab-pane fade" id="skoda">
 
+              <% @products.sample(4).each do |product| %>
+                  <div class="col-sm-3">
+                    <div class="product-image-wrapper">
+                      <div class="single-products">
+                        <div class="productinfo text-center">
+                          <%= image_tag(product.image.url, size: '184x162') %>
+                          <h2>$<%= product.price %></h2>
 
-                      <h2>$56</h2>
+                          <p><%= product.title %></p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                        </div>
 
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                      </div>
                     </div>
-
                   </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
+              <% end %>
             </div>
 
-            <div class="tab-pane fade" id="sunglass">
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
+            <div class="tab-pane fade" id="audi">
+              <% @products.sample(4).each do |product| %>
+                  <div class="col-sm-3">
+                    <div class="product-image-wrapper">
+                      <div class="single-products">
+                        <div class="productinfo text-center">
+                          <%= image_tag(product.image.url, size: '184x162') %>
+                          <h2>$<%= product.price %></h2>
 
+                          <p><%= product.title %></p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                        </div>
 
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                      </div>
                     </div>
-
                   </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
+              <% end %>
             </div>
 
-            <div class="tab-pane fade" id="kids">
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
+            <div class="tab-pane fade" id="bentley">
+              <% @products.sample(4).each do |product| %>
+                  <div class="col-sm-3">
+                    <div class="product-image-wrapper">
+                      <div class="single-products">
+                        <div class="productinfo text-center">
+                          <%= image_tag(product.image.url, size: '184x162') %>
+                          <h2>$<%= product.price %></h2>
 
+                          <p><%= product.title %></p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                        </div>
 
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                      </div>
                     </div>
-
                   </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
-
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
+              <% end %>
             </div>
 
-            <div class="tab-pane fade" id="poloshirt">
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
+            <div class="tab-pane fade" id="bugatti">
+              <% @products.sample(4).each do |product| %>
+                  <div class="col-sm-3">
+                    <div class="product-image-wrapper">
+                      <div class="single-products">
+                        <div class="productinfo text-center">
+                          <%= image_tag(product.image.url, size: '184x162') %>
+                          <h2>$<%= product.price %></h2>
 
+                          <p><%= product.title %></p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                        </div>
 
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                      </div>
                     </div>
-
                   </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
+              <% end %>
 
+            </div>
+            <div class="tab-pane fade" id="lamborghini">
+              <% @products.sample(4).each do |product| %>
+                  <div class="col-sm-3">
+                    <div class="product-image-wrapper">
+                      <div class="single-products">
+                        <div class="productinfo text-center">
+                          <%= image_tag(product.image.url, size: '184x162') %>
+                          <h2>$<%= product.price %></h2>
 
-                      <h2>$56</h2>
+                          <p><%= product.title %></p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                        </div>
 
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                      </div>
                     </div>
-
                   </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
+              <% end %>
 
+            </div>
+            <div class="tab-pane fade" id="porshe">
+              <% @products.sample(4).each do |product| %>
+                  <div class="col-sm-3">
+                    <div class="product-image-wrapper">
+                      <div class="single-products">
+                        <div class="productinfo text-center">
+                          <%= image_tag(product.image.url, size: '184x162') %>
+                          <h2>$<%= product.price %></h2>
 
-                      <h2>$56</h2>
+                          <p><%= product.title %></p>
+                          <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                        </div>
 
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
+                      </div>
                     </div>
-
                   </div>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <div class="product-image-wrapper">
-                  <div class="single-products">
-                    <div class="productinfo text-center">
+              <% end %>
 
-
-                      <h2>$56</h2>
-
-                      <p>Easy Polo Black Edition</p>
-                      <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><%= t('.add_to_cart')%></a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -13,6 +13,10 @@ class OrdersController < ApplicationController
       redirect_to root_path, notice: "Your cart is empty"
       return
     end
+    if !user_signed_in?
+      redirect_to myaccount_index_path, notice: "Пожалуйста, зарегистрируйтесь или войдите"
+
+    end
     @order = Order.new
 
   end
@@ -22,6 +26,7 @@ class OrdersController < ApplicationController
   end
 
   def create
+
 
 
     @order = Order.new(order_params.merge(:price => @cart.total_summ, :user_id => current_user.id,))
