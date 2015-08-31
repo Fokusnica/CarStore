@@ -197,6 +197,7 @@ en:
       about_store: "The best store. The best service. All for customer convenience!"
   layouts:
     application:
+      about: "About us"
       account: "Account"
       bookmarks: "Bookmarks"
       ordering: "Ordering"

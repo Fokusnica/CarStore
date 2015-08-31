@@ -189,6 +189,7 @@ ru:
       about_store: "Лучший магазин. Лучший сервис. Все для удобства клиента!"
   layouts:
     application:
+      about: "О нас"
       account: "Личный кабинет"
       bookmarks: "Закладки"
       ordering: "Оформление"
