@@ -24,7 +24,7 @@
                 <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: t('.p_passw_conf') %>
               </div>
               <div class="form-group col-md-6">
-                <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: t('.p_passw_last') %>
+                <%= f.password_field :current_password, autocomplete: "off", :required => true, class: "form-control", placeholder: t('.p_passw_last') %>
               </div>
 
 
