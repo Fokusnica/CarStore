@@ -237,7 +237,7 @@ ru:
   addresses:
     form_address:
       address: "Адрес"
-      address_nick: "Псевдоним адреса"
+      address_nick: "Дом, работа, соседка"
       address_full: "Улица и дом доставки"
       phone: "Телефон"
       country: "Страна"
