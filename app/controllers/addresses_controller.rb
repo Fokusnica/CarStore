@@ -72,7 +72,7 @@ class AddressesController < ApplicationController
   end
 
   def address_params
-    params.require(:address).permit(:name, :address, :phone, :country, :city, )
+    params.require(:address).permit(:name, :address, :phone, :country, :city, :title)
   end
 
   def ajax_params
